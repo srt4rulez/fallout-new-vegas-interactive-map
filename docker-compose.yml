@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  web:
+    image: node:lts-alpine3.12
+    command: sh -c "yarn install && yarn start"
+    ports:
+      - 3000:3000
+    working_dir: /code
+    volumes:
+      - ./:/code
