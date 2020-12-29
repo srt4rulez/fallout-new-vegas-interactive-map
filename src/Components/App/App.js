@@ -8,9 +8,27 @@ class App extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            markers: markers,
-        };
+        this.state = {};
+    }
+
+    componentDidMount() {
+        const localStorageMarkersJson= window.localStorage.getItem('markers') || '[]';
+
+        const localStorageMarkers = JSON.parse(localStorageMarkersJson);
+
+        const newMarkers = markers.map((marker) => {
+            const localStorageMarker = localStorageMarkers.find((item) => item.id === marker.id);
+
+            if (localStorageMarker) {
+                marker.isFound = localStorageMarker.isFound;
+            }
+
+            return marker;
+        });
+
+        this.setState({
+            markers: newMarkers,
+        });
     }
 
     handleMarkButtonClick = (marker = {}) => (event) => {
@@ -26,16 +44,47 @@ class App extends Component {
 
             const newMarkers = [...prevState.markers];
 
-            newMarkers[index] = {
+            const newMarker = {
                 ...oldMarker,
                 isFound: !oldMarker.isFound,
             };
+
+            this.updateLocalStorageMarker(newMarker);
+
+            newMarkers[index] = newMarker;
 
             return {
                 markers: newMarkers,
             };
         });
 
+    };
+
+    /**
+     * Set the marker in local storage as found or not.
+     *
+     * @param {Object} marker
+     */
+    updateLocalStorageMarker = (marker = {}) => {
+        const localStorageMarkersJson= window.localStorage.getItem('markers') || '[]';
+
+        const localStorageMarkers = [...JSON.parse(localStorageMarkersJson)];
+
+        const index = localStorageMarkers.findIndex((item) => item.id === marker.id);
+
+        if (index === -1) {
+            localStorageMarkers.push({
+                id: marker.id,
+                isFound: marker.isFound,
+            });
+        } else {
+            localStorageMarkers[index] = {
+                ...localStorageMarkers[index],
+                isFound: marker.isFound,
+            };
+        }
+
+        window.localStorage.setItem('markers', JSON.stringify(localStorageMarkers));
     };
 
     render() {
