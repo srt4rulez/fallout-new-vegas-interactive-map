@@ -1,0 +1,64 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import './MojaveWastelandMap.css';
+import {
+    MapContainer,
+    ImageOverlay,
+    // Marker,
+    // Popup,
+} from 'react-leaflet';
+import * as L from 'leaflet';
+import mojaveWastelandMapImageSrc from './mojave-wasteland-map.jpg';
+
+const propTypes = {
+    className: PropTypes.string,
+};
+
+const defaultProps = {
+    className: '',
+};
+
+/**
+ * @type {Object}
+ *
+ * @see https://react-leaflet.js.org/docs/api-map#mapcontainer
+ *
+ * These props are immutable.
+ */
+const mapOptions = {
+    maxZoom: 4,
+    crs: L.CRS.Simple,
+    bounds: [
+        [0, 0],
+        [1024, 1024], // for now, this is just the size of the map image.
+    ],
+};
+
+const MojaveWastelandMap = (props) => {
+
+    return (
+
+        <MapContainer
+            className={classNames([
+                'mojave-wasteland-map',
+                props.className,
+            ])}
+            {...mapOptions}
+        >
+
+            <ImageOverlay
+                url={mojaveWastelandMapImageSrc}
+                bounds={mapOptions.bounds}
+            />
+
+        </MapContainer>
+
+    );
+
+};
+
+MojaveWastelandMap.propTypes = propTypes;
+MojaveWastelandMap.defaultProps = defaultProps;
+
+export default MojaveWastelandMap;
