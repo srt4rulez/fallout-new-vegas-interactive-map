@@ -5,18 +5,19 @@ import './MojaveWastelandMap.css';
 import {
     MapContainer,
     ImageOverlay,
-    // Marker,
-    // Popup,
 } from 'react-leaflet';
 import * as L from 'leaflet';
 import mojaveWastelandMapImageSrc from './mojave-wasteland-map.jpg';
+import MojaveWastelandMarker from 'Components/MojaveWastelandMarker/MojaveWastelandMarker';
 
 const propTypes = {
     className: PropTypes.string,
+    markers: PropTypes.array,
 };
 
 const defaultProps = {
     className: '',
+    markers: [],
 };
 
 /**
@@ -51,6 +52,29 @@ const MojaveWastelandMap = (props) => {
                 url={mojaveWastelandMapImageSrc}
                 bounds={mapOptions.bounds}
             />
+
+            {props.markers.map((marker) => {
+
+                if (!marker.lat || !marker.lng) {
+                    return null;
+                }
+
+                return (
+
+                    <MojaveWastelandMarker
+                        key={marker.id}
+                        lat={marker.lat}
+                        lng={marker.lng}
+                        isFound={marker.isFound}
+                        url={marker.url}
+                        title={marker.title}
+                        desc={marker.desc}
+                        imgSrc={marker.imgSrc}
+                    />
+
+                );
+
+            })}
 
         </MapContainer>
 

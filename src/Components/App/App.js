@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import MojaveWastelandMap from 'Components/MojaveWastelandMap/MojaveWastelandMap';
+import markers from 'Data/markers.json';
 
 const App = (props) => {
 
@@ -12,6 +13,7 @@ const App = (props) => {
 
             <MojaveWastelandMap
                 className="app__mojave-wasteland-map"
+                markers={markers}
             />
 
         </div>
