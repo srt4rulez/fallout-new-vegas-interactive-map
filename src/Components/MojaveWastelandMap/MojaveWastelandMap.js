@@ -13,11 +13,13 @@ import MojaveWastelandMarker from 'Components/MojaveWastelandMarker/MojaveWastel
 const propTypes = {
     className: PropTypes.string,
     markers: PropTypes.array,
+    onMarkButtonClick: PropTypes.func,
 };
 
 const defaultProps = {
     className: '',
     markers: [],
+    onMarkButtonClick: (marker = {}) => (event) => {},
 };
 
 /**
@@ -70,6 +72,7 @@ const MojaveWastelandMap = (props) => {
                         title={marker.title}
                         desc={marker.desc}
                         imgSrc={marker.imgSrc}
+                        onMarkButtonClick={props.onMarkButtonClick(marker)}
                     />
 
                 );

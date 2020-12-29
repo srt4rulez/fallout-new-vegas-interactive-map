@@ -17,6 +17,7 @@ const propTypes = {
     title: PropTypes.string,
     desc: PropTypes.string,
     imgSrc: PropTypes.string,
+    onMarkButtonClick: PropTypes.func,
 };
 
 const defaultProps = {
@@ -26,6 +27,7 @@ const defaultProps = {
     title: '',
     desc: '',
     imgSrc: '',
+    onMarkButtonClick: (event) => {},
 };
 
 const MojaveWastelandMarker = (props) => {
@@ -76,6 +78,7 @@ const MojaveWastelandMarker = (props) => {
 
                 <button
                     type="button"
+                    onClick={props.onMarkButtonClick}
                 >
 
                     {props.isFound ? 'Mark As Not Found' : 'Mark As Found'}

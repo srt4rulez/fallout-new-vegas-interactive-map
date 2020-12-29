@@ -1,25 +1,63 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import MojaveWastelandMap from 'Components/MojaveWastelandMap/MojaveWastelandMap';
 import markers from 'Data/markers.json';
 
-const App = (props) => {
+class App extends Component {
 
-    return (
+    constructor(props) {
+        super(props);
 
-        <div
-            className="app"
-        >
+        this.state = {
+            markers: markers,
+        };
+    }
 
-            <MojaveWastelandMap
-                className="app__mojave-wasteland-map"
-                markers={markers}
-            />
+    handleMarkButtonClick = (marker = {}) => (event) => {
 
-        </div>
+        this.setState((prevState) => {
+            const index = prevState.markers.findIndex((item) => item.id === marker.id);
 
-    );
+            if (index === -1) {
+                return {};
+            }
 
-};
+            const oldMarker = prevState.markers[index] || {};
+
+            const newMarkers = [...prevState.markers];
+
+            newMarkers[index] = {
+                ...oldMarker,
+                isFound: !oldMarker.isFound,
+            };
+
+            return {
+                markers: newMarkers,
+            };
+        });
+
+    };
+
+    render() {
+
+        return (
+
+            <div
+                className="app"
+            >
+
+                <MojaveWastelandMap
+                    className="app__mojave-wasteland-map"
+                    markers={this.state.markers}
+                    onMarkButtonClick={this.handleMarkButtonClick}
+                />
+
+            </div>
+
+        );
+
+    }
+
+}
 
 export default App;
