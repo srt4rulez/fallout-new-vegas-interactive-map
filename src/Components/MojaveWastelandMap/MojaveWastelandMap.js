@@ -73,6 +73,7 @@ const MojaveWastelandMap = (props) => {
                         desc={marker.desc}
                         imgSrc={marker.imgSrc}
                         onMarkButtonClick={props.onMarkButtonClick(marker)}
+                        type={marker.type}
                     />
 
                 );

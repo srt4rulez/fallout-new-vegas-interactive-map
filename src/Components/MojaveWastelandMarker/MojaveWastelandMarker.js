@@ -18,6 +18,7 @@ const propTypes = {
     desc: PropTypes.string,
     imgSrc: PropTypes.string,
     onMarkButtonClick: PropTypes.func,
+    type: PropTypes.string,
 };
 
 const defaultProps = {
@@ -28,6 +29,17 @@ const defaultProps = {
     desc: '',
     imgSrc: '',
     onMarkButtonClick: (event) => {},
+    type: '',
+};
+
+const typeLabelMap = {
+    'snow_globe': 'snow globe',
+    'skill_book': 'skill book',
+};
+
+const typeColorMap = {
+    'snow_globe': 'is-link',
+    'skill_book': 'is-warning',
 };
 
 const MojaveWastelandMarker = (props) => {
@@ -45,7 +57,9 @@ const MojaveWastelandMarker = (props) => {
 
             <Popup>
 
-                <h2>
+                <h2
+                    className="title is-4"
+                >
                     <a
                         href={props.url}
                         rel="noreferrer"
@@ -55,10 +69,24 @@ const MojaveWastelandMarker = (props) => {
                     </a>
                 </h2>
 
+                {typeLabelMap[props.type] && (
+
+                    <div
+                        className="tags has-addons is-justify-content-center"
+                    >
+
+                        <span className="tag is-dark mb-0">type</span>
+
+                        <span className={classNames('tag', typeColorMap[props.type], 'mb-0')}>{typeLabelMap[props.type]}</span>
+
+                    </div>
+
+                )}
+
                 {props.desc && (
 
                     <p
-                        className="mojave-wasteland-marker__popup-desc"
+                        className="content"
                         dangerouslySetInnerHTML={{
                             __html: DOMPurify.sanitize(props.desc),
                         }}
@@ -68,15 +96,21 @@ const MojaveWastelandMarker = (props) => {
 
                 {props.imgSrc && (
 
-                    <img
-                        className="mojave-wasteland-marker__popup-img"
-                        src={props.imgSrc}
-                        alt={props.title}
-                    />
+                    <figure
+                        className="image block"
+                    >
+
+                        <img
+                            src={props.imgSrc}
+                            alt={props.title}
+                        />
+
+                    </figure>
 
                 )}
 
                 <button
+                    className="button is-fullwidth"
                     type="button"
                     onClick={props.onMarkButtonClick}
                 >
