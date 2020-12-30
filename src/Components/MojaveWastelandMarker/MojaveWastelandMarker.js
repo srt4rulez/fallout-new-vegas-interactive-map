@@ -35,11 +35,13 @@ const defaultProps = {
 const typeLabelMap = {
     'snow_globe': 'snow globe',
     'skill_book': 'skill book',
+    'unique_weapon': 'unique weapon',
 };
 
 const typeColorMap = {
     'snow_globe': 'is-link',
     'skill_book': 'is-warning',
+    'unique_weapon': 'is-primary',
 };
 
 const MojaveWastelandMarker = (props) => {
