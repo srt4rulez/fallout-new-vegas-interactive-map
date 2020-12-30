@@ -2,7 +2,7 @@
     {
         "id": "snow-globe-goodsprings",
         "title": "Goodsprings",
-        "desc": "<a href=\"https://fallout.fandom.com/wiki/Goodsprings_Cemetery\" target=\"_blank\">Goodsprings Cemetery</a>, at the foot of the small, rectangular gravestone and disturbed earth, close to the water tower.",
+        "desc": "<a href=\"https://fallout.fandom.com/wiki/Goodsprings_Cemetery\" rel=\"noreferrer\" target=\"_blank\">Goodsprings Cemetery</a>, at the foot of the small, rectangular gravestone and disturbed earth, close to the water tower.",
         "url": "https://fallout.fandom.com/wiki/Snow_globe_-_Goodsprings",
         "imgSrc": "assets/snow-globe-goodsprings.webp",
         "type": "snow_globe",
@@ -12,7 +12,7 @@
     {
         "id": "skill-book-casotm-goodsprings",
         "title": "Chinese Army: Special Ops Training Manual - Goodsprings",
-        "desc": "In the <a href=\"https://fallout.fandom.com/wiki/Goodsprings_home\">Goodsprings</a> home inhabited by Trudy and Sunny Smiles, east from the <a href=\"https://fallout.fandom.com/wiki/Goodsprings_schoolhouse\">schoolhouse</a>, on a bookshelf",
+        "desc": "In the <a href=\"https://fallout.fandom.com/wiki/Goodsprings_home\" rel=\"noreferrer\" target=\"_blank\">Goodsprings</a> home inhabited by Trudy and Sunny Smiles, east from the <a href=\"https://fallout.fandom.com/wiki/Goodsprings_schoolhouse\" rel=\"noreferrer\" target=\"_blank\">schoolhouse</a>, on a bookshelf",
         "url": "https://fallout.fandom.com/wiki/Chinese_Army:_Special_Ops_Training_Manual_(Fallout:_New_Vegas)",
         "imgSrc": "assets/special-ops-training-manual-goodsprings-home.webp",
         "type": "skill_book",
