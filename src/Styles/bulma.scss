@@ -1,0 +1,15 @@
+$family-sans-serif: 'Roboto', sans-serif;
+
+@import '~bulma/sass/utilities/_all.sass';
+
+// Reset leaflet container links to bulma's link color.
+.leaflet-container a {
+    color: $link;
+}
+
+@import '~bulma/sass/base/_all.sass';
+
+// Reset leaflet font family too...
+.leaflet-container {
+    font-family: $body-family;
+}

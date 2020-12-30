@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import './MojaveWastelandMarker.css';
+import './MojaveWastelandMarker.scss';
 import {
     Marker,
     Popup,

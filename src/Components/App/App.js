@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import MojaveWastelandMap from 'Components/MojaveWastelandMap/MojaveWastelandMap';
 import markers from 'Data/markers.json';
 
