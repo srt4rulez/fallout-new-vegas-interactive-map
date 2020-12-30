@@ -14,8 +14,10 @@ $family-sans-serif: 'Roboto', sans-serif;
 @import '~bulma/sass/elements/other.sass';
 @import '~bulma/sass/elements/button.sass';
 @import '~bulma/sass/elements/tag.sass';
+@import '~bulma/sass/elements/box.sass';
 @import '~bulma/sass/helpers/spacing.sass';
 @import '~bulma/sass/helpers/flexbox.sass';
+@import '~bulma/sass/helpers/typography.sass';
 
 // Reset leaflet font family too...
 .leaflet-container {
