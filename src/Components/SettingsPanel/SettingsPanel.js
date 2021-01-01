@@ -12,6 +12,7 @@ const propTypes = {
     onMarkButtonClick: PropTypes.func,
     isFoundMarkersShown: PropTypes.bool,
     onClickShowFoundMarkers: PropTypes.func,
+    appVersion: PropTypes.string,
 };
 
 const defaultProps = {
@@ -20,6 +21,7 @@ const defaultProps = {
     onMarkButtonClick: () => {},
     isFoundMarkersShown: true,
     onClickShowFoundMarkers: () => {},
+    appVersion: '',
 };
 
 const SettingsPanel = (props) => {
@@ -151,6 +153,10 @@ const SettingsPanel = (props) => {
                 >
                     srt4rulez
                 </a>
+
+                {' | '}
+
+                v{props.appVersion}
 
                 {' | '}
 

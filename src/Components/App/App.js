@@ -3,6 +3,7 @@ import './App.scss';
 import MojaveWastelandMap from 'Components/MojaveWastelandMap/MojaveWastelandMap';
 import markers from 'Data/markers.json';
 import SettingsPanel from 'Components/SettingsPanel/SettingsPanel';
+import packageJson from './../../../package.json';
 
 class App extends Component {
 
@@ -11,6 +12,8 @@ class App extends Component {
 
         this.state = {};
     }
+
+    static version = packageJson.version;
 
     componentDidMount() {
         const localStorageMarkersJson= window.localStorage.getItem('markers') || '[]';
@@ -163,6 +166,7 @@ class App extends Component {
             >
 
                 <SettingsPanel
+                    appVersion={App.version}
                     className="app__settings-panel"
                     markers={this.state.markers}
                     onMarkButtonClick={this.handleMarkButtonClick}
