@@ -8,6 +8,10 @@ import {
 } from 'react-leaflet';
 import * as L from 'leaflet';
 import DOMPurify from 'dompurify';
+import {
+    typeLabelMap,
+    typeColorMap,
+} from 'Data/marker-types';
 
 const propTypes = {
     className: PropTypes.string,
@@ -31,20 +35,6 @@ const defaultProps = {
     imgSrc: '',
     onMarkButtonClick: (event) => {},
     type: '',
-};
-
-const typeLabelMap = {
-    'snow_globe': 'snow globe',
-    'skill_book': 'skill book',
-    'unique_weapon': 'unique weapon',
-};
-
-// Based on bulma css color types.
-// TODO: Move to separate file.
-const typeColorMap = {
-    'snow_globe': 'link',
-    'skill_book': 'warning',
-    'unique_weapon': 'primary',
 };
 
 const MojaveWastelandMarker = (props) => {
@@ -116,6 +106,7 @@ const MojaveWastelandMarker = (props) => {
                             className={classNames([
                                 'tag',
                                 'mb-0',
+                                'is-lowercase',
                                 `is-${typeColorMap[props.type]}`,
                             ])}
                         >
@@ -152,15 +143,20 @@ const MojaveWastelandMarker = (props) => {
 
                 )}
 
-                <button
-                    className="button is-fullwidth"
-                    type="button"
-                    onClick={props.onMarkButtonClick}
+                <label
+                    className="checkbox button is-fullwidth"
                 >
 
-                    {props.isFound ? 'Mark As Not Found' : 'Mark As Found'}
+                    <input
+                        className="mr-1"
+                        onChange={props.onMarkButtonClick}
+                        type="checkbox"
+                        checked={props.isFound}
+                    />
 
-                </button>
+                    Mark As Found
+
+                </label>
 
             </Popup>
 
