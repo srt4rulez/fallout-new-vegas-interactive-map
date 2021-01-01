@@ -8,11 +8,13 @@ import MarkerTypePanel from 'Components/MarkerTypePanel/MarkerTypePanel';
 const propTypes = {
     className: PropTypes.string,
     markers: PropTypes.array,
+    onMarkButtonClick: PropTypes.func,
 };
 
 const defaultProps = {
     className: '',
     markers: [],
+    onMarkButtonClick: () => {},
 };
 
 const SettingsPanel = (props) => {
@@ -62,18 +64,21 @@ const SettingsPanel = (props) => {
                     className="settings-panel__marker-type-panel"
                     type="skill_book"
                     markers={skillBookMarkers}
+                    onMarkButtonClick={props.onMarkButtonClick}
                 />
 
                 <MarkerTypePanel
                     className="settings-panel__marker-type-panel"
                     type="snow_globe"
                     markers={snowGlobeMarkers}
+                    onMarkButtonClick={props.onMarkButtonClick}
                 />
 
                 <MarkerTypePanel
                     className="settings-panel__marker-type-panel"
                     type="unique_weapon"
                     markers={uniqueWeaponMarkers}
+                    onMarkButtonClick={props.onMarkButtonClick}
                 />
 
             </div>

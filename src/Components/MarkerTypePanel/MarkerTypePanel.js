@@ -11,12 +11,14 @@ const propTypes = {
     className: PropTypes.string,
     type: PropTypes.string, // TODO
     markers: PropTypes.array,
+    onMarkButtonClick: PropTypes.func,
 };
 
 const defaultProps = {
     className: '',
     type: '',
     markers: [],
+    onMarkButtonClick: (marker = {}) => (event) => {},
 };
 
 const MarkerTypePanel = (props) => {
@@ -64,6 +66,7 @@ const MarkerTypePanel = (props) => {
                                 className={classNames('marker-type-panel__item-checkbox')}
                                 type="checkbox"
                                 checked={marker.isFound}
+                                onChange={props.onMarkButtonClick(marker)}
                             />
 
                             <button

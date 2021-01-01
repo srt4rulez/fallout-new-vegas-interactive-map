@@ -99,6 +99,7 @@ class App extends Component {
                 <SettingsPanel
                     className="app__settings-panel"
                     markers={this.state.markers}
+                    onMarkButtonClick={this.handleMarkButtonClick}
                 />
 
                 <MojaveWastelandMap
