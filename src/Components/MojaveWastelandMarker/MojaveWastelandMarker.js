@@ -6,6 +6,7 @@ import {
     Marker,
     Popup,
 } from 'react-leaflet';
+import * as L from 'leaflet';
 import DOMPurify from 'dompurify';
 
 const propTypes = {
@@ -38,13 +39,40 @@ const typeLabelMap = {
     'unique_weapon': 'unique weapon',
 };
 
+// Based on bulma css color types.
+// TODO: Move to separate file.
 const typeColorMap = {
-    'snow_globe': 'is-link',
-    'skill_book': 'is-warning',
-    'unique_weapon': 'is-primary',
+    'snow_globe': 'link',
+    'skill_book': 'warning',
+    'unique_weapon': 'primary',
 };
 
 const MojaveWastelandMarker = (props) => {
+
+    const iconSizeX = 25.5;
+    const iconSizeY = 34; // update this value first, then check width for setting X.
+
+    const icon = L.divIcon({
+        className: 'mojave-wasteland-marker__icon-wrapper',
+        html: `
+            <i
+                class="mojave-wasteland-marker__icon fas fa-map-marker-alt has-text-${typeColorMap[props.type]}"
+                style="font-size: ${iconSizeY}px;"
+            />
+        `,
+        iconSize: [
+            iconSizeX,
+            iconSizeY,
+        ],
+        iconAnchor: [
+            (iconSizeX / 2), // assuming the "pin" of the icon is in the middle of the icon.
+            iconSizeY,
+        ],
+        popupAnchor: [
+            0,
+            (-(iconSizeY) - 3), // 3 = spacing between icon and popup arrow.
+        ],
+    });
 
     return (
 
@@ -55,6 +83,7 @@ const MojaveWastelandMarker = (props) => {
             ])}
             position={[props.lat, props.lng]}
             opacity={props.isFound ? 0.5 : 1}
+            icon={icon}
         >
 
             <Popup>
@@ -77,9 +106,21 @@ const MojaveWastelandMarker = (props) => {
                         className="tags has-addons is-justify-content-center"
                     >
 
-                        <span className="tag is-dark mb-0">type</span>
+                        <span
+                            className="tag is-dark mb-0"
+                        >
+                            type
+                        </span>
 
-                        <span className={classNames('tag', typeColorMap[props.type], 'mb-0')}>{typeLabelMap[props.type]}</span>
+                        <span
+                            className={classNames([
+                                'tag',
+                                'mb-0',
+                                `is-${typeColorMap[props.type]}`,
+                            ])}
+                        >
+                            {typeLabelMap[props.type]}
+                        </span>
 
                     </div>
 
