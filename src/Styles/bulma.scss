@@ -19,6 +19,7 @@ $family-sans-serif: 'Roboto', sans-serif;
 @import '~bulma/sass/helpers/flexbox.sass';
 @import '~bulma/sass/helpers/typography.sass';
 @import '~bulma/sass/helpers/color.sass';
+@import '~bulma/sass/form/_all.sass';
 
 // Reset leaflet font family too...
 .leaflet-container {
