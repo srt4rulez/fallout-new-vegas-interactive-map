@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './MarkerTypePanel.scss';
+import {
+    typeLabelMap,
+    typeColorMap,
+} from 'Data/marker-types';
 
 const propTypes = {
     className: PropTypes.string,
@@ -13,12 +17,6 @@ const defaultProps = {
     className: '',
     type: '',
     markers: [],
-};
-
-const typeLabelMap = {
-    'snow_globe': 'Snow Globes',
-    'skill_book': 'Skill Books',
-    'unique_weapon': 'Unique Weapons',
 };
 
 const MarkerTypePanel = (props) => {
@@ -36,6 +34,15 @@ const MarkerTypePanel = (props) => {
                 className={classNames('marker-type-panel__header')}
             >
 
+                <i
+                    className={classNames([
+                        'marker-type-panel__icon',
+                        'fas',
+                        'fa-map-marker-alt',
+                        `has-text-${typeColorMap[props.type]}`,
+                    ])}
+                />
+
                 {typeLabelMap[props.type] || 'Misc'}
 
             </header>
@@ -49,16 +56,23 @@ const MarkerTypePanel = (props) => {
                     return (
 
                         <li
+                            key={marker.id}
                             className={classNames('marker-type-panel__list-item')}
                         >
 
-                            <a
+                            <input
+                                className={classNames('marker-type-panel__item-checkbox')}
+                                type="checkbox"
+                                checked={marker.isFound}
+                            />
+
+                            <button
                                 className={classNames('marker-type-panel__item-link')}
                             >
 
                                 {marker.title}
 
-                            </a>
+                            </button>
 
                         </li>
 
