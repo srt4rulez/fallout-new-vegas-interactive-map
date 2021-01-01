@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.scss';
 import MojaveWastelandMap from 'Components/MojaveWastelandMap/MojaveWastelandMap';
 import markers from 'Data/markers.json';
+import SettingsPanel from 'Components/SettingsPanel/SettingsPanel';
 
 class App extends Component {
 
@@ -94,6 +95,11 @@ class App extends Component {
             <div
                 className="app"
             >
+
+                <SettingsPanel
+                    className="app__settings-panel"
+                    markers={this.state.markers}
+                />
 
                 <MojaveWastelandMap
                     className="app__mojave-wasteland-map"
