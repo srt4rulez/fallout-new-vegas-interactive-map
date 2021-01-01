@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './MarkerTypePanel.scss';
 import {
+    typeMap,
     typeLabelMap,
     typeColorMap,
 } from 'Data/marker-types';
 
 const propTypes = {
     className: PropTypes.string,
-    type: PropTypes.string, // TODO
+    type: PropTypes.oneOf(Object.values(typeMap)),
     markers: PropTypes.array,
     onMarkButtonClick: PropTypes.func,
 };

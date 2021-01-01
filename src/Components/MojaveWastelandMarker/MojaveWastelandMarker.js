@@ -9,6 +9,7 @@ import {
 import * as L from 'leaflet';
 import DOMPurify from 'dompurify';
 import {
+    typeMap,
     typeLabelMap,
     typeColorMap,
 } from 'Data/marker-types';
@@ -23,7 +24,7 @@ const propTypes = {
     desc: PropTypes.string,
     imgSrc: PropTypes.string,
     onMarkButtonClick: PropTypes.func,
-    type: PropTypes.string,
+    type: PropTypes.oneOf(Object.values(typeMap)),
 };
 
 const defaultProps = {
