@@ -1,18 +1,41 @@
 @import '~bulma/sass/utilities/_all.sass';
 
+%button-reset {
+    // Reset button styles to look more like a link.
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    color: $link;
+    font-size: 1rem;
+    text-align: left;
+
+    &:hover,
+    &:focus {
+        color: $link-hover;
+    }
+}
+
 .marker-type-panel {
     &__header {
         display: flex;
         align-items: center;
-        font-size: 1rem;
-        text-transform: uppercase;
-        font-weight: 700;
         margin-bottom: 0.5rem;
     }
 
     &__icon {
         font-size: 25px;
         margin-right: 0.5rem;
+    }
+
+    &__header-btn {
+        @extend %button-reset;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: 700;
     }
 
     &__item-checkbox {
@@ -27,21 +50,6 @@
     }
 
     &__item-link {
-        // Reset button styles to look more like a link.
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        text-decoration: none;
-        display: inline;
-        margin: 0;
-        padding: 0;
-        color: $link;
-        font-size: 1rem;
-        text-align: left;
-
-        &:hover,
-        &:focus {
-            color: $link-hover;
-        }
+        @extend %button-reset;
     }
 }

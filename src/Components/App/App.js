@@ -110,6 +110,50 @@ class App extends Component {
 
     };
 
+    /**
+     * Only show the currently clicked marker type.
+     *
+     * @param {String} type
+     */
+    handleTypeClick = (type) => () => {
+
+        this.setState((prevState) => {
+
+            const newMarkers = [...prevState.markers].map((marker) => {
+                return {
+                    ...marker,
+                    isHidden: marker.type !== type,
+                };
+            });
+
+            return {
+                markers: newMarkers,
+            };
+        });
+
+    };
+
+    /**
+     * Un-hide all marker types.
+     */
+    handleShowAllClick = () => {
+
+        this.setState((prevState) => {
+
+            const newMarkers = [...prevState.markers].map((marker) => {
+                return {
+                    ...marker,
+                    isHidden: false,
+                };
+            });
+
+            return {
+                markers: newMarkers,
+            };
+        });
+
+    };
+
     render() {
 
         return (
@@ -124,6 +168,8 @@ class App extends Component {
                     onMarkButtonClick={this.handleMarkButtonClick}
                     isFoundMarkersShown={this.state.isFoundMarkersShown}
                     onClickShowFoundMarkers={this.handleShowFoundMarkersClick}
+                    onTypeClick={this.handleTypeClick}
+                    onShowAllClick={this.handleShowAllClick}
                 />
 
                 <MojaveWastelandMap

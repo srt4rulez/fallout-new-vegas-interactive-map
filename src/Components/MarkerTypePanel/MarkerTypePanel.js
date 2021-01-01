@@ -13,6 +13,7 @@ const propTypes = {
     type: PropTypes.oneOf(Object.values(typeMap)),
     markers: PropTypes.array,
     onMarkButtonClick: PropTypes.func,
+    onTypeClick: PropTypes.func,
 };
 
 const defaultProps = {
@@ -20,6 +21,7 @@ const defaultProps = {
     type: '',
     markers: [],
     onMarkButtonClick: (marker = {}) => (event) => {},
+    onTypeClick: () => {},
 };
 
 const MarkerTypePanel = (props) => {
@@ -46,7 +48,16 @@ const MarkerTypePanel = (props) => {
                     ])}
                 />
 
-                {typeLabelMap[props.type] || 'Misc'}
+                <button
+                    type="button"
+                    className={classNames('marker-type-panel__header-btn')}
+                    title="Only show this marker type"
+                    onClick={props.onTypeClick}
+                >
+
+                    {typeLabelMap[props.type] || 'Misc'}
+
+                </button>
 
             </header>
 
@@ -68,6 +79,7 @@ const MarkerTypePanel = (props) => {
                                 type="checkbox"
                                 checked={marker.isFound}
                                 onChange={props.onMarkButtonClick(marker)}
+                                title="Mark As Found"
                             />
 
                             <button

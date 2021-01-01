@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import './SettingsPanel.scss';
 import FalloutNVLogoImageSrc from './fallout-nv-logo.png';
 import MarkerTypePanel from 'Components/MarkerTypePanel/MarkerTypePanel';
+import { typeMap } from 'Data/marker-types';
 
 const propTypes = {
     className: PropTypes.string,
@@ -58,22 +59,50 @@ const SettingsPanel = (props) => {
                     Interactive Map
                 </h2>
 
-                <label
-                    className="checkbox"
-                    title="If checked, markers 'marked as found' will still appear on the map."
+                <div
+                    className="buttons is-centered"
                 >
 
-                    <input
-                        type="checkbox"
-                        checked={props.isFoundMarkersShown}
-                        onChange={props.onClickShowFoundMarkers}
-                    />
+                    <button
+                        className="button"
+                        type="button"
+                        onClick={props.onShowAllClick}
+                        title="Show all marker types"
+                    >
 
-                    {' '}
+                        <span
+                            className="icon"
+                        >
 
-                    Show Found Markers
+                            <i
+                                className="far fa-eye"
+                            />
 
-                </label>
+                        </span>
+
+                        <span>Show All Types</span>
+
+                    </button>
+
+                    <label
+                        className="settings-panel__show-found-markers-btn checkbox button"
+                        title="If checked, markers 'marked as found' will still appear on the map."
+                    >
+
+                        <input
+                            className="mr-1"
+                            type="checkbox"
+                            checked={props.isFoundMarkersShown}
+                            onChange={props.onClickShowFoundMarkers}
+                        />
+
+                        {' '}
+
+                        Show Found Markers
+
+                    </label>
+
+                </div>
 
             </header>
 
@@ -83,23 +112,26 @@ const SettingsPanel = (props) => {
 
                 <MarkerTypePanel
                     className="settings-panel__marker-type-panel"
-                    type="skill_book"
+                    type={typeMap.SkillBook}
                     markers={skillBookMarkers}
                     onMarkButtonClick={props.onMarkButtonClick}
+                    onTypeClick={props.onTypeClick(typeMap.SkillBook)}
                 />
 
                 <MarkerTypePanel
                     className="settings-panel__marker-type-panel"
-                    type="snow_globe"
+                    type={typeMap.SnowGlobe}
                     markers={snowGlobeMarkers}
                     onMarkButtonClick={props.onMarkButtonClick}
+                    onTypeClick={props.onTypeClick(typeMap.SnowGlobe)}
                 />
 
                 <MarkerTypePanel
                     className="settings-panel__marker-type-panel"
-                    type="unique_weapon"
+                    type={typeMap.UniqueWeapon}
                     markers={uniqueWeaponMarkers}
                     onMarkButtonClick={props.onMarkButtonClick}
+                    onTypeClick={props.onTypeClick(typeMap.UniqueWeapon)}
                 />
 
             </div>

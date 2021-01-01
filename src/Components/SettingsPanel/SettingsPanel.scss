@@ -17,6 +17,10 @@
         margin: 0 auto;
     }
 
+    &__show-found-markers-btn {
+        display: flex;
+    }
+
     &__content {
         overflow-y: auto;
         flex-grow: 1;

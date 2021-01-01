@@ -68,6 +68,10 @@ const MojaveWastelandMap = (props) => {
                     return null;
                 }
 
+                if (marker.isHidden) {
+                    return null;
+                }
+
                 return (
 
                     <MojaveWastelandMarker
