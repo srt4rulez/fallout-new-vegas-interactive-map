@@ -14,12 +14,14 @@ const propTypes = {
     className: PropTypes.string,
     markers: PropTypes.array,
     onMarkButtonClick: PropTypes.func,
+    isFoundMarkersShown: PropTypes.bool,
 };
 
 const defaultProps = {
     className: '',
     markers: [],
     onMarkButtonClick: (marker = {}) => (event) => {},
+    isFoundMarkersShown: true,
 };
 
 /**
@@ -58,6 +60,11 @@ const MojaveWastelandMap = (props) => {
             {props.markers.map((marker) => {
 
                 if (!marker.lat || !marker.lng) {
+                    return null;
+                }
+
+                // Don't render found items.
+                if (!props.isFoundMarkersShown && marker.isFound) {
                     return null;
                 }
 

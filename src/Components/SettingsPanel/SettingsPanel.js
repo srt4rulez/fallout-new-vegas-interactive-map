@@ -9,12 +9,16 @@ const propTypes = {
     className: PropTypes.string,
     markers: PropTypes.array,
     onMarkButtonClick: PropTypes.func,
+    isFoundMarkersShown: PropTypes.bool,
+    onClickShowFoundMarkers: PropTypes.func,
 };
 
 const defaultProps = {
     className: '',
     markers: [],
     onMarkButtonClick: () => {},
+    isFoundMarkersShown: true,
+    onClickShowFoundMarkers: () => {},
 };
 
 const SettingsPanel = (props) => {
@@ -53,6 +57,23 @@ const SettingsPanel = (props) => {
                 >
                     Interactive Map
                 </h2>
+
+                <label
+                    className="checkbox"
+                    title="If checked, markers 'marked as found' will still appear on the map."
+                >
+
+                    <input
+                        type="checkbox"
+                        checked={props.isFoundMarkersShown}
+                        onChange={props.onClickShowFoundMarkers}
+                    />
+
+                    {' '}
+
+                    Show Found Markers
+
+                </label>
 
             </header>
 

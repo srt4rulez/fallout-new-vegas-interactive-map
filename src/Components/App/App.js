@@ -27,8 +27,15 @@ class App extends Component {
             return marker;
         });
 
+        const localStorageIsFoundMarkersShown = window.localStorage.getItem('isFoundMarkersShown');
+
+        const defaultIsFoundMarkersShown = true;
+
+        const isFoundMarkersShown = localStorageIsFoundMarkersShown === null ? defaultIsFoundMarkersShown : localStorageIsFoundMarkersShown === '1';
+
         this.setState({
             markers: newMarkers,
+            isFoundMarkersShown: isFoundMarkersShown,
         });
     }
 
@@ -88,6 +95,21 @@ class App extends Component {
         window.localStorage.setItem('markers', JSON.stringify(localStorageMarkers));
     };
 
+    handleShowFoundMarkersClick = () => {
+
+        this.setState((prevState) => {
+
+            const newState = !prevState.isFoundMarkersShown;
+
+            window.localStorage.setItem('isFoundMarkersShown', newState ? '1' : '0');
+
+            return {
+                isFoundMarkersShown: newState,
+            };
+        });
+
+    };
+
     render() {
 
         return (
@@ -100,12 +122,15 @@ class App extends Component {
                     className="app__settings-panel"
                     markers={this.state.markers}
                     onMarkButtonClick={this.handleMarkButtonClick}
+                    isFoundMarkersShown={this.state.isFoundMarkersShown}
+                    onClickShowFoundMarkers={this.handleShowFoundMarkersClick}
                 />
 
                 <MojaveWastelandMap
                     className="app__mojave-wasteland-map"
                     markers={this.state.markers}
                     onMarkButtonClick={this.handleMarkButtonClick}
+                    isFoundMarkersShown={this.state.isFoundMarkersShown}
                 />
 
             </div>
