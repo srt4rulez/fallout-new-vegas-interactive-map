@@ -14,6 +14,7 @@ const propTypes = {
     markers: PropTypes.array,
     onMarkButtonClick: PropTypes.func,
     onTypeClick: PropTypes.func,
+    onMarkerTitleClick: PropTypes.func,
 };
 
 const defaultProps = {
@@ -21,7 +22,8 @@ const defaultProps = {
     type: '',
     markers: [],
     onMarkButtonClick: (marker = {}) => (event) => {},
-    onTypeClick: () => {},
+    onTypeClick: (event) => {},
+    onMarkerTitleClick: (marker = {}) => (event) => {},
 };
 
 const MarkerTypePanel = (props) => {
@@ -84,6 +86,7 @@ const MarkerTypePanel = (props) => {
 
                             <button
                                 className={classNames('marker-type-panel__item-link')}
+                                onClick={props.onMarkerTitleClick(marker)}
                             >
 
                                 {marker.title}

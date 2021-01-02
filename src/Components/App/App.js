@@ -11,6 +11,12 @@ class App extends Component {
         super(props);
 
         this.state = {};
+
+        // Only used with L.Map API.
+        this.markers = {};
+
+        // L.Map instance.
+        this.mojaveWastelandMap = null;
     }
 
     static version = packageJson.version;
@@ -157,6 +163,68 @@ class App extends Component {
 
     };
 
+    /**
+     * @param {L.Map} map
+     */
+    handleMapCreation = (map) => {
+
+        this.mojaveWastelandMap = map;
+
+    };
+
+    handleMarkerTitleClick = (markerData = {}) => () => {
+
+        if (!this.mojaveWastelandMap) {
+            return;
+        }
+
+        // Go to the marker on the map.
+        this.mojaveWastelandMap.panTo([
+            markerData.lat,
+            markerData.lng,
+        ]);
+
+        /**
+         * @var {L.Marker|null}
+         */
+        const marker = this.markers[markerData.id] || null;
+
+        if (marker) {
+            // Open the popup of the marker.
+            marker.openPopup([markerData.lat, markerData.lng]);
+        }
+
+    };
+
+    /**
+     * When a marker is added to the map, add it to our markers property for use
+     * with handleMarkerTitleClick.
+     *
+     * @param {Event} event
+     */
+    handleMarkerAdd = (event) => {
+
+        /**
+         * @var {L.Marker}
+         */
+        const marker = event.target;
+
+        const markerLatLng = marker.getLatLng();
+
+        const lat = markerLatLng.lat;
+        const lng = markerLatLng.lng;
+
+        /**
+         * @var {Object}
+         */
+        const markerData = this.state.markers.find((item) => item.lat === lat && item.lng === lng);
+
+        if (markerData) {
+            this.markers[markerData.id] = marker;
+        }
+
+    };
+
     render() {
 
         return (
@@ -174,6 +242,7 @@ class App extends Component {
                     onClickShowFoundMarkers={this.handleShowFoundMarkersClick}
                     onTypeClick={this.handleTypeClick}
                     onShowAllClick={this.handleShowAllClick}
+                    onMarkerTitleClick={this.handleMarkerTitleClick}
                 />
 
                 <MojaveWastelandMap
@@ -181,6 +250,8 @@ class App extends Component {
                     markers={this.state.markers}
                     onMarkButtonClick={this.handleMarkButtonClick}
                     isFoundMarkersShown={this.state.isFoundMarkersShown}
+                    onMapCreation={this.handleMapCreation}
+                    onMarkerAdd={this.handleMarkerAdd}
                 />
 
             </div>

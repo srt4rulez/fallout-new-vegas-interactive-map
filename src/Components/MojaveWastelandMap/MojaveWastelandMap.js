@@ -15,6 +15,8 @@ const propTypes = {
     markers: PropTypes.array,
     onMarkButtonClick: PropTypes.func,
     isFoundMarkersShown: PropTypes.bool,
+    onMapCreation: PropTypes.func,
+    onMarkerAdd: PropTypes.func,
 };
 
 const defaultProps = {
@@ -22,6 +24,8 @@ const defaultProps = {
     markers: [],
     onMarkButtonClick: (marker = {}) => (event) => {},
     isFoundMarkersShown: true,
+    onMapCreation: () => {},
+    onMarkerAdd: () => {},
 };
 
 /**
@@ -50,6 +54,7 @@ const MojaveWastelandMap = (props) => {
                 props.className,
             ])}
             {...mapOptions}
+            whenCreated={props.onMapCreation}
         >
 
             <ImageOverlay
@@ -85,6 +90,7 @@ const MojaveWastelandMap = (props) => {
                         imgSrc={marker.imgSrc}
                         onMarkButtonClick={props.onMarkButtonClick(marker)}
                         type={marker.type}
+                        onAdd={props.onMarkerAdd}
                     />
 
                 );

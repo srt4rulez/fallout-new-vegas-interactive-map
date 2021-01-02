@@ -13,6 +13,7 @@ const propTypes = {
     isFoundMarkersShown: PropTypes.bool,
     onClickShowFoundMarkers: PropTypes.func,
     appVersion: PropTypes.string,
+    onMarkerTitleClick: PropTypes.func,
 };
 
 const defaultProps = {
@@ -22,6 +23,7 @@ const defaultProps = {
     isFoundMarkersShown: true,
     onClickShowFoundMarkers: () => {},
     appVersion: '',
+    onMarkerTitleClick: () => {},
 };
 
 const SettingsPanel = (props) => {
@@ -118,6 +120,7 @@ const SettingsPanel = (props) => {
                     markers={skillBookMarkers}
                     onMarkButtonClick={props.onMarkButtonClick}
                     onTypeClick={props.onTypeClick(typeMap.SkillBook)}
+                    onMarkerTitleClick={props.onMarkerTitleClick}
                 />
 
                 <MarkerTypePanel
@@ -126,6 +129,7 @@ const SettingsPanel = (props) => {
                     markers={snowGlobeMarkers}
                     onMarkButtonClick={props.onMarkButtonClick}
                     onTypeClick={props.onTypeClick(typeMap.SnowGlobe)}
+                    onMarkerTitleClick={props.onMarkerTitleClick}
                 />
 
                 <MarkerTypePanel
@@ -134,6 +138,7 @@ const SettingsPanel = (props) => {
                     markers={uniqueWeaponMarkers}
                     onMarkButtonClick={props.onMarkButtonClick}
                     onTypeClick={props.onTypeClick(typeMap.UniqueWeapon)}
+                    onMarkerTitleClick={props.onMarkerTitleClick}
                 />
 
             </div>

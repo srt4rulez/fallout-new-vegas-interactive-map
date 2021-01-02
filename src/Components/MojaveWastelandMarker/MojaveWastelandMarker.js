@@ -25,6 +25,7 @@ const propTypes = {
     imgSrc: PropTypes.string,
     onMarkButtonClick: PropTypes.func,
     type: PropTypes.oneOf(Object.values(typeMap)),
+    onAdd: PropTypes.func,
 };
 
 const defaultProps = {
@@ -36,6 +37,7 @@ const defaultProps = {
     imgSrc: '',
     onMarkButtonClick: (event) => {},
     type: '',
+    onAdd: () => {},
 };
 
 const MojaveWastelandMarker = (props) => {
@@ -75,6 +77,9 @@ const MojaveWastelandMarker = (props) => {
             position={[props.lat, props.lng]}
             opacity={props.isFound ? 0.5 : 1}
             icon={icon}
+            eventHandlers={{
+                add: props.onAdd,
+            }}
         >
 
             <Popup>
