@@ -29,11 +29,15 @@ class App extends Component {
         const newMarkers = markers.map((marker) => {
             const localStorageMarker = localStorageMarkers.find((item) => item.id === marker.id);
 
+            const newMarker = {
+                ...marker
+            };
+
             if (localStorageMarker) {
-                marker.isFound = localStorageMarker.isFound;
+                newMarker.isFound = localStorageMarker.isFound;
             }
 
-            return marker;
+            return newMarker;
         });
 
         const localStorageIsFoundMarkersShown = window.localStorage.getItem('isFoundMarkersShown');
