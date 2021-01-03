@@ -174,6 +174,13 @@ class App extends Component {
 
         this.mojaveWastelandMap = map;
 
+        map.on('click', (event) => {
+            // Allow figuring out what lat + lng we are clicking.
+            if (window.debug === true) {
+                console.log(event.latlng);
+            }
+        });
+
     };
 
     handleMarkerTitleClick = (markerData = {}) => () => {
