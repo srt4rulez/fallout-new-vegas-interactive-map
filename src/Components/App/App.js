@@ -14,9 +14,6 @@ class App extends Component {
 
         // Only used with L.Map API.
         this.markers = {};
-
-        // L.Map instance.
-        this.mojaveWastelandMap = null;
     }
 
     static version = packageJson.version;
@@ -172,8 +169,6 @@ class App extends Component {
      */
     handleMapCreation = (map) => {
 
-        this.mojaveWastelandMap = map;
-
         map.on('click', (event) => {
             // Allow figuring out what lat + lng we are clicking.
             if (window.debug === true) {
@@ -184,16 +179,6 @@ class App extends Component {
     };
 
     handleMarkerTitleClick = (markerData = {}) => () => {
-
-        if (!this.mojaveWastelandMap) {
-            return;
-        }
-
-        // Go to the marker on the map.
-        this.mojaveWastelandMap.panTo([
-            markerData.lat,
-            markerData.lng,
-        ]);
 
         /**
          * @var {L.Marker|null}

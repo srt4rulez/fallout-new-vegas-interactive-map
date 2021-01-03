@@ -82,7 +82,9 @@ const MojaveWastelandMarker = (props) => {
             }}
         >
 
-            <Popup>
+            <Popup
+                maxWidth={350}
+            >
 
                 <h2
                     className="title is-4"
@@ -126,7 +128,7 @@ const MojaveWastelandMarker = (props) => {
                 {props.desc && (
 
                     <p
-                        className="content"
+                        className={classNames('mojave-wasteland-marker__desc', 'content')}
                         dangerouslySetInnerHTML={{
                             __html: DOMPurify.sanitize(props.desc),
                         }}
