@@ -1,0 +1,82 @@
+[
+    {
+        "id": "snow-globe-goodsprings",
+        "type": "snow_globe",
+        "title": "Goodsprings",
+        "desc": "<a href=\"https://fallout.fandom.com/wiki/Goodsprings_Cemetery\" rel=\"noreferrer\" target=\"_blank\">Goodsprings Cemetery</a>, at the foot of the small, rectangular gravestone and disturbed earth, close to the water tower.",
+        "url": "https://fallout.fandom.com/wiki/Snow_globe_-_Goodsprings",
+        "imgSrc": "assets/snow-globe-goodsprings.webp",
+        "lat": 472,
+        "lng": 365.5
+    },
+    {
+        "id": "snow-globe-hooverdam",
+        "type": "snow_globe",
+        "title": "Hoover Dam",
+        "desc": "<a href=\"https://fallout.fandom.com/wiki/Hoover_Dam_visitor_center\" rel=\"noreferrer\" target=\"_blank\">Hoover Dam visitor center</a>, on one of the two large curved desks, near the terminal inside the visitor center.",
+        "url": "https://fallout.fandom.com/wiki/Snow_globe_-_Hoover_Dam",
+        "imgSrc": "assets/snow-globe-hooverdam.webp",
+        "lat": 519,
+        "lng": 820
+    },
+    {
+        "id": "snow-globe-nellis-afb",
+        "type": "snow_globe",
+        "title": "Nellis AFB",
+        "desc": "<a href=\"https://fallout.fandom.com/wiki/Nellis_Air_Force_Base\" rel=\"noreferrer\" target=\"_blank\">Nellis Air Force Base</a>, on the corner table, under the mural, inside <a href=\"https://fallout.fandom.com/wiki/Pete_(Fallout:_New_Vegas)\" rel=\"noreferrer\" target=\"_blank\">Pete's</a> <a href=\"https://fallout.fandom.com/wiki/Nellis_Boomer_museum\" rel=\"noreferrer\" target=\"_blank\">\"museum\"</a> curve-roofed shack.",
+        "url": "https://fallout.fandom.com/wiki/Snow_globe_-_Nellis_AFB",
+        "imgSrc": "assets/snow-globe-nellis-afb.webp",
+        "lat": 913,
+        "lng": 685
+    },
+    {
+        "id": "skill-book-casotm-goodsprings",
+        "type": "skill_book",
+        "title": "Chinese Army: Special Ops Training Manual - Goodsprings",
+        "desc": "In the <a href=\"https://fallout.fandom.com/wiki/Goodsprings_home\" rel=\"noreferrer\" target=\"_blank\">Goodsprings</a> home inhabited by Trudy and Sunny Smiles, east from the <a href=\"https://fallout.fandom.com/wiki/Goodsprings_schoolhouse\" rel=\"noreferrer\" target=\"_blank\">schoolhouse</a>, on a bookshelf",
+        "url": "https://fallout.fandom.com/wiki/Chinese_Army:_Special_Ops_Training_Manual_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/special-ops-training-manual-goodsprings-home.webp",
+        "lat": 428.25,
+        "lng": 344.75
+    },
+    {
+        "id": "skill-book-wsg-lone-wolf-radio",
+        "type": "skill_book",
+        "title": "Wasteland Survival Guide - Lone Wolf Radio",
+        "desc": "Inside the radio trailer, near the mattress.",
+        "url": "https://fallout.fandom.com/wiki/Wasteland_Survival_Guide_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-wsg-lone-wolf-radio.webp",
+        "lat": 338,
+        "lng": 339.5
+    },
+    {
+        "id": "skill-book-wsg-matthews-animal-husbandry-farm",
+        "type": "skill_book",
+        "title": "Wasteland Survival Guide - Matthews Animal Husbandry Farm",
+        "desc": "Top balcony of the northern barn, near the barrel crate.",
+        "url": "https://fallout.fandom.com/wiki/Wasteland_Survival_Guide_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-wsg-matthews-animal-husbandry-farm.webp",
+        "lat": 94.25,
+        "lng": 596.5
+    },
+    {
+        "id": "unique-weapon-oh-baby",
+        "type": "unique_weapon",
+        "title": "Oh, Baby!",
+        "desc": "<a href=\"https://fallout.fandom.com/wiki/Charleston_Cave\" rel=\"noreferrer\" target=\"_blank\">Charleston Cave</a> - The weapon is in the far southwest open area of the cave, accessible via tunnels from the north and east. It is lying on the ground near the west wall, directly west of the eastern tunnel entrance. Next to the dead nightkin.",
+        "url": "https://fallout.fandom.com/wiki/Oh,_Baby!",
+        "imgSrc": "assets/unique-weapon-oh-baby.webp",
+        "lat": 796.5,
+        "lng": 203
+    },
+    {
+        "id": "unique-weapon-pushy",
+        "type": "unique_weapon",
+        "title": "Pushy",
+        "desc": "<a href=\"https://fallout.fandom.com/wiki/Ruby_Hill_mine\" rel=\"noreferrer\" target=\"_blank\">Ruby Hill mine</a> - Found on the body of a dead <a href=\"https://fallout.fandom.com/wiki/Jackal_gang_member\" rel=\"noreferrer\" target=\"_blank\">Jackal gang member</a>, lying near the dry tunnel entrance in the underground lake area.",
+        "url": "https://fallout.fandom.com/wiki/Pushy",
+        "imgSrc": "assets/unique-weapon-pushy.webp",
+        "lat": 840.5,
+        "lng": 311.5
+    }
+]

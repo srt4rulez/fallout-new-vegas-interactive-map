@@ -1,0 +1,11 @@
+@import 'Styles/leaflet.scss';
+@import 'Styles/bulma.scss';
+@import 'Styles/_font-awesome.scss';
+
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
