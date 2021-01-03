@@ -28,9 +28,9 @@ const defaultProps = {
 
 const SettingsPanel = (props) => {
 
-    const skillBookMarkers = props.markers.filter((marker) => marker.type === 'skill_book');
-    const snowGlobeMarkers = props.markers.filter((marker) => marker.type === 'snow_globe');
-    const uniqueWeaponMarkers = props.markers.filter((marker) => marker.type === 'unique_weapon');
+    const skillBookMarkers = props.markers.filter((marker) => marker.type === typeMap.SkillBook);
+    const snowGlobeMarkers = props.markers.filter((marker) => marker.type === typeMap.SnowGlobe);
+    const uniqueWeaponMarkers = props.markers.filter((marker) => marker.type === typeMap.UniqueWeapon);
 
     return (
 
