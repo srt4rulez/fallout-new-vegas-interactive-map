@@ -82,7 +82,9 @@ const MojaveWastelandMarker = (props) => {
             }}
         >
 
-            <Popup>
+            <Popup
+                maxWidth={350}
+            >
 
                 <h2
                     className="title is-4"
