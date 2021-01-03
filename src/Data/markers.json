@@ -100,6 +100,26 @@
         "lng": 596.5
     },
     {
+        "id": "skill-book-wsg-mesquite-mountains-camp-site",
+        "type": "skill_book",
+        "title": "Wasteland Survival Guide - Mesquite Mountains Camp Site",
+        "desc": "Inside the western tent, behind the bedding and toolbox, may glitch into the ground.",
+        "url": "https://fallout.fandom.com/wiki/Wasteland_Survival_Guide_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-wsg-mesquite-mountains-camp-site.webp",
+        "lat": 165.125,
+        "lng": 305.125
+    },
+    {
+        "id": "skill-book-wsg-scavenger-platform",
+        "type": "skill_book",
+        "title": "Wasteland Survival Guide - Scavenger platform",
+        "desc": "Among the books under the fallen metal bookshelf, on the northern platform section",
+        "url": "https://fallout.fandom.com/wiki/Wasteland_Survival_Guide_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-wsg-scavenger-platform.webp",
+        "lat": 617.75,
+        "lng": 763.5
+    },
+    {
         "id": "unique-weapon-oh-baby",
         "type": "unique_weapon",
         "title": "Oh, Baby!",
