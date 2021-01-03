@@ -126,7 +126,7 @@ const MojaveWastelandMarker = (props) => {
                 {props.desc && (
 
                     <p
-                        className="content"
+                        className={classNames('mojave-wasteland-marker__desc', 'content')}
                         dangerouslySetInnerHTML={{
                             __html: DOMPurify.sanitize(props.desc),
                         }}
