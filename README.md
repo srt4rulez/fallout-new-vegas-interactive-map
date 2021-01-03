@@ -31,6 +31,11 @@ in the browser. This is data that is saved in the browser and can survival refre
 This allows us to save your progress without having to store it in an external database. Your progress is only saved in 
 your current browser though. If you visit the application on another browser, you won't see your previous data.
 
+## Debugging Latitude and Longitude
+
+Open the developer tools in your browser (usually F12), go to the console tab, and type in "window.debug = true" and 
+press enter to enable debug mode. Clicking on the map will now log the latitude and longitude to the console.
+
 ## Development
 
 To work on this repository, install [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/), 
