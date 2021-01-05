@@ -19,32 +19,16 @@
     }
 }
 
-.marker-type-panel {
-    &__header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 0.5rem;
-    }
+.marker-list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.25rem;
 
-    &__icon {
-        font-size: 25px;
+    &__found-checkbox {
         margin-right: 0.5rem;
     }
 
-    &__header-btn {
+    &__button {
         @extend %button-reset;
-        font-size: 1rem;
-        text-transform: uppercase;
-        font-weight: 700;
-    }
-
-    &__sub-type-list-item {
-        margin-bottom: 1rem;
-    }
-
-    &__sub-type-label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: 700;
     }
 }
