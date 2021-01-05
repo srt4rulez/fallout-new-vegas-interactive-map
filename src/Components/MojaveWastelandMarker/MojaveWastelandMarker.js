@@ -12,6 +12,7 @@ import {
     typeMap,
     typeLabelMap,
     typeColorMap,
+    subTypeSkillBookLabelMap,
 } from 'Data/marker-types';
 
 const propTypes = {
@@ -25,6 +26,7 @@ const propTypes = {
     imgSrc: PropTypes.string,
     onMarkButtonClick: PropTypes.func,
     type: PropTypes.oneOf(Object.values(typeMap)),
+    subType: PropTypes.string,
     onAdd: PropTypes.func,
 };
 
@@ -37,6 +39,7 @@ const defaultProps = {
     imgSrc: '',
     onMarkButtonClick: (event) => {},
     type: '',
+    subType: '',
     onAdd: () => {},
 };
 
@@ -89,13 +92,19 @@ const MojaveWastelandMarker = (props) => {
                 <h2
                     className="title is-4"
                 >
+
                     <a
                         href={props.url}
                         rel="noreferrer"
                         target="_blank"
                     >
+
+                        {props.type === typeMap.SkillBook && subTypeSkillBookLabelMap[props.subType] && `${subTypeSkillBookLabelMap[props.subType]} - `}
+
                         {props.title}
+
                     </a>
+
                 </h2>
 
                 {typeLabelMap[props.type] && (
