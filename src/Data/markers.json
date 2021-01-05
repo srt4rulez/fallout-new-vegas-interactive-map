@@ -70,19 +70,54 @@
         "lng": 498.625
     },
     {
+        "id": "skill-book-casotm-camp-searchlight",
+        "type": "skill_book",
+        "sub_type": "casotm",
+        "title": "Camp Searchlight",
+        "desc": "In the <a href=\"https://fallout.fandom.com/wiki/Searchlight_east_church\">east church</a>'s <a href=\"https://fallout.fandom.com/wiki/Searchlight_church_basement\">basement</a>, by the eastern wall, at the foot of the metal shelves, on the floor.",
+        "url": "https://fallout.fandom.com/wiki/Chinese_Army:_Special_Ops_Training_Manual_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-casotm-camp-searchlight.webp",
+        "lat": 124.375,
+        "lng": 658.875
+    },
+    {
         "id": "skill-book-casotm-goodsprings",
         "type": "skill_book",
-        "title": "Chinese Army: Special Ops Training Manual - Goodsprings",
-        "desc": "In the <a href=\"https://fallout.fandom.com/wiki/Goodsprings_home\" rel=\"noreferrer\" target=\"_blank\">Goodsprings</a> home inhabited by Trudy and Sunny Smiles, east from the <a href=\"https://fallout.fandom.com/wiki/Goodsprings_schoolhouse\" rel=\"noreferrer\" target=\"_blank\">schoolhouse</a>, on a bookshelf",
+        "sub_type": "casotm",
+        "title": "Goodsprings",
+        "desc": "In the <a href=\"https://fallout.fandom.com/wiki/Goodsprings_home\">Goodsprings</a> home inhabited by Trudy and Sunny Smiles, east from the <a href=\"https://fallout.fandom.com/wiki/Goodsprings_schoolhouse\">schoolhouse</a>, on a bookshelf.",
         "url": "https://fallout.fandom.com/wiki/Chinese_Army:_Special_Ops_Training_Manual_(Fallout:_New_Vegas)",
-        "imgSrc": "assets/special-ops-training-manual-goodsprings-home.webp",
+        "imgSrc": "assets/skill-book-casotm-goodsprings.webp",
         "lat": 428.25,
         "lng": 344.75
     },
     {
+        "id": "skill-book-casotm-ncr-sharecropper-farms",
+        "type": "skill_book",
+        "sub_type": "casotm",
+        "title": "NCR Sharecropper Farms",
+        "desc": "On some papers, by the corner desk inside the <a href=\"https://fallout.fandom.com/wiki/Sharecropper_barracks\">sharecropper barracks</a> near the four water towers in the northeast corner of the fenced-in area.",
+        "url": "https://fallout.fandom.com/wiki/Chinese_Army:_Special_Ops_Training_Manual_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-casotm-ncr-sharecropper-farms.webp",
+        "lat": 714.5,
+        "lng": 538.25
+    },
+    {
+        "id": "skill-book-casotm-vault-3",
+        "type": "skill_book",
+        "sub_type": "casotm",
+        "title": "Vault 3",
+        "desc": "In the living quarters on a shelf, down the stairs from the recreation area through an Average locked door.",
+        "url": "https://fallout.fandom.com/wiki/Chinese_Army:_Special_Ops_Training_Manual_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-casotm-vault-3.webp",
+        "lat": 648.9375,
+        "lng": 452.5
+    },
+    {
         "id": "skill-book-wsg-lone-wolf-radio",
         "type": "skill_book",
-        "title": "Wasteland Survival Guide - Lone Wolf Radio",
+        "sub_type": "wsg",
+        "title": "Lone Wolf Radio",
         "desc": "Inside the radio trailer, near the mattress.",
         "url": "https://fallout.fandom.com/wiki/Wasteland_Survival_Guide_(Fallout:_New_Vegas)",
         "imgSrc": "assets/skill-book-wsg-lone-wolf-radio.webp",
@@ -92,7 +127,8 @@
     {
         "id": "skill-book-wsg-matthews-animal-husbandry-farm",
         "type": "skill_book",
-        "title": "Wasteland Survival Guide - Matthews Animal Husbandry Farm",
+        "sub_type": "wsg",
+        "title": "Matthews Animal Husbandry Farm",
         "desc": "Top balcony of the northern barn, near the barrel crate.",
         "url": "https://fallout.fandom.com/wiki/Wasteland_Survival_Guide_(Fallout:_New_Vegas)",
         "imgSrc": "assets/skill-book-wsg-matthews-animal-husbandry-farm.webp",
@@ -102,7 +138,8 @@
     {
         "id": "skill-book-wsg-mesquite-mountains-camp-site",
         "type": "skill_book",
-        "title": "Wasteland Survival Guide - Mesquite Mountains Camp Site",
+        "sub_type": "wsg",
+        "title": "Mesquite Mountains Camp Site",
         "desc": "Inside the western tent, behind the bedding and toolbox, may glitch into the ground.",
         "url": "https://fallout.fandom.com/wiki/Wasteland_Survival_Guide_(Fallout:_New_Vegas)",
         "imgSrc": "assets/skill-book-wsg-mesquite-mountains-camp-site.webp",
@@ -112,7 +149,8 @@
     {
         "id": "skill-book-wsg-scavenger-platform",
         "type": "skill_book",
-        "title": "Wasteland Survival Guide - Scavenger platform",
+        "sub_type": "wsg",
+        "title": "Scavenger Platform",
         "desc": "Among the books under the fallen metal bookshelf, on the northern platform section",
         "url": "https://fallout.fandom.com/wiki/Wasteland_Survival_Guide_(Fallout:_New_Vegas)",
         "imgSrc": "assets/skill-book-wsg-scavenger-platform.webp",
