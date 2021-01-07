@@ -20,11 +20,13 @@ const typeColorMap = {
 const subTypeSkillBookSubMap = {
     ChineseArmySpecialOpsTrainingManual: 'casotm',
     WastelandSurvivalGuide: 'wsg',
+    BigBookOfScience: 'bbos',
 };
 
 const subTypeSkillBookLabelMap = {
     [subTypeSkillBookSubMap.ChineseArmySpecialOpsTrainingManual]: 'Chinese Army: Special Ops Training Manual',
     [subTypeSkillBookSubMap.WastelandSurvivalGuide]: 'Wasteland Survival Guide',
+    [subTypeSkillBookSubMap.BigBookOfScience]: 'Big Book of Science',
 };
 
 export {

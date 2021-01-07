@@ -158,6 +158,60 @@
         "lng": 763.5
     },
     {
+        "id": "skill-book-bbos-brewers-beer-bootlegging",
+        "type": "skill_book",
+        "sub_type": "bbos",
+        "title": "Brewer's Beer Bootlegging",
+        "desc": "In the cellar, in the back room on a table to the left of the chemistry set.",
+        "url": "https://fallout.fandom.com/wiki/Big_Book_of_Science_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-bbos-brewers-beer-bootlegging.webp",
+        "lat": 731.5,
+        "lng": 403.5
+    },
+    {
+        "id": "skill-book-bbos-camp-forlorn-hope",
+        "type": "skill_book",
+        "sub_type": "bbos",
+        "title": "Camp Forlorn Hope",
+        "desc": "In the <a href=\"https://fallout.fandom.com/wiki/Camp_Forlorn_Hope_command_center\">command center</a>, in the southeast corner, on the desk.",
+        "url": "https://fallout.fandom.com/wiki/Big_Book_of_Science_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-bbos-camp-forlorn-hope.webp",
+        "lat": 403.25,
+        "lng": 766.25
+    },
+    {
+        "id": "skill-book-bbos-helios-one",
+        "type": "skill_book",
+        "sub_type": "bbos",
+        "title": "HELIOS One",
+        "desc": "Reward for distributing power through the network during <a href=\"https://fallout.fandom.com/wiki/That_Lucky_Old_Sun\">That Lucky Old Sun</a>.",
+        "url": "https://fallout.fandom.com/wiki/Big_Book_of_Science_(Fallout:_New_Vegas)",
+        "lat": 410.5,
+        "lng": 638.5
+    },
+    {
+        "id": "skill-book-bbos-nipton",
+        "type": "skill_book",
+        "sub_type": "bbos",
+        "title": "Nipton",
+        "desc": "On the desk in Mayor <a href=\"https://fallout.fandom.com/wiki/Joseph_B._Steyn\">Joseph B. Steyn</a>'s office on the top floor of the <a href=\"https://fallout.fandom.com/wiki/Nipton_Town_Hall\">Nipton Town Hall</a> building.",
+        "url": "https://fallout.fandom.com/wiki/Big_Book_of_Science_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-bbos-nipton.webp",
+        "lat": 134.5,
+        "lng": 463.5
+    },
+    {
+        "id": "skill-book-bbos-repconn-headquarters",
+        "type": "skill_book",
+        "sub_type": "bbos",
+        "title": "REPCONN Headquarters",
+        "desc": "Located on the ground floor through the door next to the radioactive barrel display, located on a shelf past the Hard locked door.",
+        "url": "https://fallout.fandom.com/wiki/Big_Book_of_Science_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-bbos-repconn-headquarters.webp",
+        "lat": 579.875,
+        "lng": 565
+    },
+    {
         "id": "unique-weapon-oh-baby",
         "type": "unique_weapon",
         "title": "Oh, Baby!",
