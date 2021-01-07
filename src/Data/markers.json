@@ -212,6 +212,50 @@
         "lng": 565
     },
     {
+        "id": "skill-book-dcjoim-followers-safehouse",
+        "type": "skill_book",
+        "sub_type": "dcjoim",
+        "title": "Followers Safehouse",
+        "desc": "On the bedside table shelf, by the bed on the right, in the second room. Entry requires a key.",
+        "url": "https://fallout.fandom.com/wiki/D.C._Journal_of_Internal_Medicine_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-dcjoim-followers-safehouse.webp",
+        "lat": 827,
+        "lng": 339
+    },
+    {
+        "id": "skill-book-dcjoim-helios-one",
+        "type": "skill_book",
+        "sub_type": "dcjoim",
+        "title": "HELIOS One",
+        "desc": "Upstairs in the main building, lying on a bed in the same room with the east terminal password.",
+        "url": "https://fallout.fandom.com/wiki/D.C._Journal_of_Internal_Medicine_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-dcjoim-helios-one.webp",
+        "lat": 415.75,
+        "lng": 646.75
+    },
+    {
+        "id": "skill-book-dcjoim-hells-motel",
+        "type": "skill_book",
+        "sub_type": "dcjoim",
+        "title": "Hell's Motel",
+        "desc": "The shack inside the <a href=\"https://fallout.fandom.com/wiki/Mesquite_Mountains_crater\">Mesquite Mountains crater</a>, below the globe with a hat, on the table with the radio and repair kit.",
+        "url": "https://fallout.fandom.com/wiki/D.C._Journal_of_Internal_Medicine_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-dcjoim-hells-motel.webp",
+        "lat": 232.25,
+        "lng": 283.75
+    },
+    {
+        "id": "skill-book-dcjoim-novac",
+        "type": "skill_book",
+        "sub_type": "dcjoim",
+        "title": "Novac",
+        "desc": "In the middle of the queen-sized bed, inside <a href=\"https://fallout.fandom.com/wiki/Ranger_Andy%27s_bungalow\">Ranger Andy's bungalow</a>.",
+        "url": "https://fallout.fandom.com/wiki/D.C._Journal_of_Internal_Medicine_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-dcjoim-novac.webp",
+        "lat": 332.25,
+        "lng": 641.5
+    },
+    {
         "id": "unique-weapon-oh-baby",
         "type": "unique_weapon",
         "title": "Oh, Baby!",
