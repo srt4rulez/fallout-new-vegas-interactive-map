@@ -256,6 +256,94 @@
         "lng": 641.5
     },
     {
+        "id": "skill-book-de-nellis-air-force-base",
+        "type": "skill_book",
+        "sub_type": "de",
+        "title": "Nellis Air Force Base",
+        "desc": "Inside <a href=\"https://fallout.fandom.com/wiki/Loyal%27s_house\">Loyal's house</a>, on the long counter next to the ruined terminal.",
+        "url": "https://fallout.fandom.com/wiki/Dean%27s_Electronics_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-de-nellis-air-force-base.webp",
+        "lat": 847.25,
+        "lng": 675.25
+    },
+    {
+        "id": "skill-book-de-sloan",
+        "type": "skill_book",
+        "sub_type": "de",
+        "title": "Sloan",
+        "desc": "In the <a href=\"https://fallout.fandom.com/wiki/Worker_barracks\">worker barracks</a>, on the top shelf to the left of the entrance.",
+        "url": "https://fallout.fandom.com/wiki/Dean%27s_Electronics_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-de-sloan.webp",
+        "lat": 459,
+        "lng": 471
+    },
+    {
+        "id": "skill-book-de-southern-nevada-wind-farm",
+        "type": "skill_book",
+        "sub_type": "de",
+        "title": "Southern Nevada Wind Farm",
+        "desc": "In the shack, on the table with the clipboard and scrap metal.",
+        "url": "https://fallout.fandom.com/wiki/Dean%27s_Electronics_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-de-southern-nevada-wind-farm.webp",
+        "lat": 375.25,
+        "lng": 710.75
+    },
+    {
+        "id": "skill-book-de-abandoned-brotherhood-of-steel-bunker",
+        "type": "skill_book",
+        "sub_type": "de",
+        "title": "Abandoned Brotherhood of Steel Bunker (Dead Money)",
+        "desc": "On the metal sill, opposite the reloading bench, in the area with the office. Though the location exists without the add-on, it is sealed by a keyless lock.",
+        "url": "https://fallout.fandom.com/wiki/Dean%27s_Electronics_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-de-abandoned-brotherhood-of-steel-bunker.webp",
+        "lat": 365,
+        "lng": 794.25
+    },
+    {
+        "id": "skill-book-dac-mojave-outpost",
+        "type": "skill_book",
+        "sub_type": "dac",
+        "title": "Mojave Outpost",
+        "desc": "Inside the <a href=\"https://fallout.fandom.com/wiki/Mojave_Outpost_barracks\">Mojave Outpost barracks</a>, below the bar counter in the middle of the bottom shelf.",
+        "url": "https://fallout.fandom.com/wiki/Duck_and_Cover!_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-dac-mojave-outpost.webp",
+        "lat": 105.5,
+        "lng": 302
+    },
+    {
+        "id": "skill-book-dac-nellis-air-force-base",
+        "type": "skill_book",
+        "sub_type": "dac",
+        "title": "Nellis Air Force Base",
+        "desc": "Among the books on the shelf, above the grenade rifle, inside <a href=\"https://fallout.fandom.com/wiki/Pearl%27s_barracks\">Pearl's barracks</a>.",
+        "url": "https://fallout.fandom.com/wiki/Duck_and_Cover!_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-dac-nellis-air-force-base.webp",
+        "lat": 859,
+        "lng": 686.5
+    },
+    {
+        "id": "skill-book-dac-ranger-station-foxtrot",
+        "type": "skill_book",
+        "sub_type": "dac",
+        "title": "Ranger Station Foxtrot",
+        "desc": "On the table next to Comm Officer <a href=\"https://fallout.fandom.com/wiki/Lenk\">Lenk</a>.",
+        "url": "https://fallout.fandom.com/wiki/Duck_and_Cover!_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-dac-ranger-station-foxtrot.webp",
+        "lat": 732.5,
+        "lng": 346.25
+    },
+    {
+        "id": "skill-book-dac-sloan",
+        "type": "skill_book",
+        "sub_type": "dac",
+        "title": "Sloan",
+        "desc": "It is inside the worker barracks on the back left shelf under a first aid box.",
+        "url": "https://fallout.fandom.com/wiki/Duck_and_Cover!_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-dac-sloan.webp",
+        "lat": 467.5,
+        "lng": 478
+    },
+    {
         "id": "unique-weapon-oh-baby",
         "type": "unique_weapon",
         "title": "Oh, Baby!",
