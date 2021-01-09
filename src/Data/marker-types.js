@@ -22,6 +22,8 @@ const subTypeSkillBookSubMap = {
     WastelandSurvivalGuide: 'wsg',
     BigBookOfScience: 'bbos',
     DCJournalOfInternalMedicine: 'dcjoim',
+    DeansElectronics: 'de',
+    DuckAndCover: 'dac',
 };
 
 const subTypeSkillBookLabelMap = {
@@ -29,6 +31,8 @@ const subTypeSkillBookLabelMap = {
     [subTypeSkillBookSubMap.WastelandSurvivalGuide]: 'Wasteland Survival Guide',
     [subTypeSkillBookSubMap.BigBookOfScience]: 'Big Book of Science',
     [subTypeSkillBookSubMap.DCJournalOfInternalMedicine]: 'D.C. Journal of Internal Medicine',
+    [subTypeSkillBookSubMap.DeansElectronics]: 'Dean\'s Electronics',
+    [subTypeSkillBookSubMap.DuckAndCover]: 'Duck and Cover!',
 };
 
 export {
