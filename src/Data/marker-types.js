@@ -24,15 +24,21 @@ const subTypeSkillBookSubMap = {
     DCJournalOfInternalMedicine: 'dcjoim',
     DeansElectronics: 'de',
     DuckAndCover: 'dac',
+    GrognakTheBarbarian: 'gtb',
+    GunsAndBullets: 'gab',
+    LyingCongressionalStyle: 'lcs',
 };
 
 const subTypeSkillBookLabelMap = {
-    [subTypeSkillBookSubMap.ChineseArmySpecialOpsTrainingManual]: 'Chinese Army: Special Ops Training Manual',
-    [subTypeSkillBookSubMap.WastelandSurvivalGuide]: 'Wasteland Survival Guide',
-    [subTypeSkillBookSubMap.BigBookOfScience]: 'Big Book of Science',
-    [subTypeSkillBookSubMap.DCJournalOfInternalMedicine]: 'D.C. Journal of Internal Medicine',
-    [subTypeSkillBookSubMap.DeansElectronics]: 'Dean\'s Electronics',
-    [subTypeSkillBookSubMap.DuckAndCover]: 'Duck and Cover!',
+    [subTypeSkillBookSubMap.ChineseArmySpecialOpsTrainingManual]: 'Chinese Army: Special Ops Training Manual (Sneak)',
+    [subTypeSkillBookSubMap.WastelandSurvivalGuide]: 'Wasteland Survival Guide (Survival)',
+    [subTypeSkillBookSubMap.BigBookOfScience]: 'Big Book of Science (Science)',
+    [subTypeSkillBookSubMap.DCJournalOfInternalMedicine]: 'D.C. Journal of Internal Medicine (Medicine)',
+    [subTypeSkillBookSubMap.DeansElectronics]: 'Dean\'s Electronics (Repair)',
+    [subTypeSkillBookSubMap.DuckAndCover]: 'Duck and Cover! (Explosives)',
+    [subTypeSkillBookSubMap.GrognakTheBarbarian]: 'Grognak the Barbarian (Melee Weapons)',
+    [subTypeSkillBookSubMap.GunsAndBullets]: 'Guns and Bullets (Guns)',
+    [subTypeSkillBookSubMap.LyingCongressionalStyle]: 'Lying, Congressional Style (Speech)',
 };
 
 export {
