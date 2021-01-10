@@ -24,6 +24,9 @@ const subTypeSkillBookSubMap = {
     DCJournalOfInternalMedicine: 'dcjoim',
     DeansElectronics: 'de',
     DuckAndCover: 'dac',
+    GrognakTheBarbarian: 'gtb',
+    GunsAndBullets: 'gab',
+    LyingCongressionalStyle: 'lcs',
 };
 
 const subTypeSkillBookLabelMap = {
@@ -33,6 +36,9 @@ const subTypeSkillBookLabelMap = {
     [subTypeSkillBookSubMap.DCJournalOfInternalMedicine]: 'D.C. Journal of Internal Medicine (Medicine)',
     [subTypeSkillBookSubMap.DeansElectronics]: 'Dean\'s Electronics (Repair)',
     [subTypeSkillBookSubMap.DuckAndCover]: 'Duck and Cover! (Explosives)',
+    [subTypeSkillBookSubMap.GrognakTheBarbarian]: 'Grognak the Barbarian (Melee Weapons)',
+    [subTypeSkillBookSubMap.GunsAndBullets]: 'Guns and Bullets (Guns)',
+    [subTypeSkillBookSubMap.LyingCongressionalStyle]: 'Lying, Congressional Style (Speech)',
 };
 
 export {
