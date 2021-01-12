@@ -208,8 +208,8 @@
         "desc": "Located on the ground floor through the door next to the radioactive barrel display, located on a shelf past the Hard locked door.",
         "url": "https://fallout.fandom.com/wiki/Big_Book_of_Science_(Fallout:_New_Vegas)",
         "imgSrc": "assets/skill-book-bbos-repconn-headquarters.webp",
-        "lat": 579.875,
-        "lng": 565
+        "lat": 576.625,
+        "lng": 572.0625
     },
     {
         "id": "skill-book-dcjoim-followers-safehouse",
@@ -474,6 +474,94 @@
         "imgSrc": "assets/skill-book-lcs-ncr-correctional-facility.webp",
         "lat": 351,
         "lng": 463
+    },
+    {
+        "id": "skill-book-ntay-hidden-valley",
+        "type": "skill_book",
+        "sub_type": "ntay",
+        "title": "Hidden Valley",
+        "desc": "Located on the first floor of the <a href=\"https://fallout.fandom.com/wiki/Hidden_Valley_bunker\">Hidden Valley bunker</a> building, in the white plastic bin by the desk in Schuler's office, west of the central hub corridor junction.",
+        "url": "https://fallout.fandom.com/wiki/Nikola_Tesla_and_You_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-ntay-hidden-valley.webp",
+        "lat": 425,
+        "lng": 517.5
+    },
+    {
+        "id": "skill-book-ntay-old-nuclear-test-site",
+        "type": "skill_book",
+        "sub_type": "ntay",
+        "title": "Old Nuclear Test Site",
+        "desc": "Inside the <a href=\"https://fallout.fandom.com/wiki/Nuclear_test_shack\">nuclear test shack</a> on the small table opposite to the exit.",
+        "url": "https://fallout.fandom.com/wiki/Nikola_Tesla_and_You_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-ntay-old-nuclear-test-site.webp",
+        "lat": 52.25,
+        "lng": 547.75
+    },
+    {
+        "id": "skill-book-ntay-repconn-headquarters",
+        "type": "skill_book",
+        "sub_type": "ntay",
+        "title": "REPCONN Headquarters",
+        "desc": "On the first floor, past the Very Hard locked door, on top of the safe. The key is on the third floor from a suitcase next to a skeleton. The room can also be accessed through a hole in the floor of a western room on the second floor, past a Hard locked door.",
+        "url": "https://fallout.fandom.com/wiki/Nikola_Tesla_and_You_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-ntay-repconn-headquarters.webp",
+        "lat": 571,
+        "lng": 575.75
+    },
+    {
+        "id": "skill-book-ntay-repconn-headquarters-2",
+        "type": "skill_book",
+        "sub_type": "ntay",
+        "title": "REPCONN Headquarters - #2",
+        "desc": "A second copy can be found on the second floor, through the first door on the left, on the desk with the very easy locked terminal.",
+        "url": "https://fallout.fandom.com/wiki/Nikola_Tesla_and_You_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-ntay-repconn-headquarters-2.webp",
+        "lat": 575.0625,
+        "lng": 579.5
+    },
+    {
+        "id": "skill-book-pi-fishermans-pride-shack",
+        "type": "skill_book",
+        "sub_type": "pi",
+        "title": "Fisherman's Pride Shack",
+        "desc": "On the bedside table, inside the shack.",
+        "url": "https://fallout.fandom.com/wiki/Pugilism_Illustrated_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-pi-fishermans-pride-shack.webp",
+        "lat": 648.25,
+        "lng": 740.75
+    },
+    {
+        "id": "skill-book-pi-nipton-road-reststop",
+        "type": "skill_book",
+        "sub_type": "pi",
+        "title": "Nipton Road Reststop",
+        "desc": "Inside the store, lying on the wooden shelf on the left upon entering, close to the counter.",
+        "url": "https://fallout.fandom.com/wiki/Pugilism_Illustrated_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-pi-nipton-road-reststop.webp",
+        "lat": 155.75,
+        "lng": 342.25
+    },
+    {
+        "id": "skill-book-pi-the-tops",
+        "type": "skill_book",
+        "sub_type": "pi",
+        "title": "The Tops",
+        "desc": "Inside the <a href=\"https://fallout.fandom.com/wiki/The_Tops_presidential_suite\">presidential suite</a>, inside the pool room, on the tiny table in the corner.",
+        "url": "https://fallout.fandom.com/wiki/Pugilism_Illustrated_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-pi-the-tops.webp",
+        "lat": 766,
+        "lng": 507.5
+    },
+    {
+        "id": "skill-book-pi-vault-11",
+        "type": "skill_book",
+        "sub_type": "pi",
+        "title": "Vault 11",
+        "desc": "Inside the living quarters, in the first female dorm, by the fallen dresser near a small sign on the ceiling that says \"ladies\"",
+        "url": "https://fallout.fandom.com/wiki/Pugilism_Illustrated_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-pi-vault-11.webp",
+        "lat": 518.5,
+        "lng": 663.375
     },
     {
         "id": "unique-weapon-oh-baby",
