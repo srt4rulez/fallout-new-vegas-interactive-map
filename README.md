@@ -27,7 +27,7 @@ All the markers are stored in [markers.json](./src/Data/markers.json). Each mark
 title, description, url (optional), image (optional) and latitude and longitude values. 
 
 When setting a marker as "found", we update something called [Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) 
-in the browser. This is data that is saved in the browser and can survival refreshes. It's specific to the domain. 
+in the browser. This is data that is saved in the browser and can survive refreshes. It's specific to the domain. 
 This allows us to save your progress without having to store it in an external database. Your progress is only saved in 
 your current browser though. If you visit the application on another browser, you won't see your previous data.
 
