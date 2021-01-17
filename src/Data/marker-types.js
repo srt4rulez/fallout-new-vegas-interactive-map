@@ -27,6 +27,8 @@ const subTypeSkillBookSubMap = {
     GrognakTheBarbarian: 'gtb',
     GunsAndBullets: 'gab',
     LyingCongressionalStyle: 'lcs',
+    NikolaTeslaAndYou: 'ntay',
+    PugilismIllustrated: 'pi',
 };
 
 const subTypeSkillBookLabelMap = {
@@ -39,6 +41,8 @@ const subTypeSkillBookLabelMap = {
     [subTypeSkillBookSubMap.GrognakTheBarbarian]: 'Grognak the Barbarian (Melee Weapons)',
     [subTypeSkillBookSubMap.GunsAndBullets]: 'Guns and Bullets (Guns)',
     [subTypeSkillBookSubMap.LyingCongressionalStyle]: 'Lying, Congressional Style (Speech)',
+    [subTypeSkillBookSubMap.NikolaTeslaAndYou]: 'Nikola Tesla and You (Energy Weapons)',
+    [subTypeSkillBookSubMap.PugilismIllustrated]: 'Pugilism Illustrated (Unarmed)',
 };
 
 export {
