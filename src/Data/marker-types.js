@@ -30,6 +30,7 @@ const subTypeSkillBookSubMap = {
     NikolaTeslaAndYou: 'ntay',
     PugilismIllustrated: 'pi',
     TalesOfAJunktownJerkyVendor: 'toajjv',
+    TumblersToday: 'tt',
 };
 
 const subTypeSkillBookLabelMap = {
@@ -45,6 +46,7 @@ const subTypeSkillBookLabelMap = {
     [subTypeSkillBookSubMap.NikolaTeslaAndYou]: 'Nikola Tesla and You (Energy Weapons)',
     [subTypeSkillBookSubMap.PugilismIllustrated]: 'Pugilism Illustrated (Unarmed)',
     [subTypeSkillBookSubMap.TalesOfAJunktownJerkyVendor]: 'Tales of a Junktown Jerky Vendor (Barter)',
+    [subTypeSkillBookSubMap.TumblersToday]: 'Tumblers Today (Lockpick)',
 };
 
 export {

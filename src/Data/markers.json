@@ -608,6 +608,50 @@
         "lng": 371.25
     },
     {
+        "id": "skill-book-tt-bitter-springs-recreation-area",
+        "type": "skill_book",
+        "sub_type": "tt",
+        "title": "Vault 22",
+        "desc": "Inside the office shack to the west, on the desk in the smaller of the two rooms.",
+        "url": "https://fallout.fandom.com/wiki/Tumblers_Today_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-tt-bitter-springs-recreation-area.webp",
+        "lat": 683.75,
+        "lng": 800
+    },
+    {
+        "id": "skill-book-tt-prospectors-den",
+        "type": "skill_book",
+        "sub_type": "tt",
+        "title": "Prospector's Den",
+        "desc": "Inside the caves, in the subterranean den structure, in the large barracks room, on the floor in the far right corner.",
+        "url": "https://fallout.fandom.com/wiki/Tumblers_Today_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-tt-prospectors-den.webp",
+        "lat": 233,
+        "lng": 447.5
+    },
+    {
+        "id": "skill-book-tt-silver-peak-mine",
+        "type": "skill_book",
+        "sub_type": "tt",
+        "title": "Silver Peak Mine",
+        "desc": "Inside the shack, behind the two small tables, on the ground in an open locker, to the right of the entrance.",
+        "url": "https://fallout.fandom.com/wiki/Tumblers_Today_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-tt-silver-peak-mine.webp",
+        "lat": 794.5,
+        "lng": 296.75
+    },
+    {
+        "id": "skill-book-tt-wolfhorn-ranch",
+        "type": "skill_book",
+        "sub_type": "tt",
+        "title": "Wolfhorn Ranch",
+        "desc": "Inside the farmhouse, partially under the fridge without a door.",
+        "url": "https://fallout.fandom.com/wiki/Tumblers_Today_(Fallout:_New_Vegas)",
+        "imgSrc": "assets/skill-book-tt-wolfhorn-ranch.webp",
+        "lat": 155.75,
+        "lng": 553.5
+    },
+    {
         "id": "unique-weapon-oh-baby",
         "type": "unique_weapon",
         "title": "Oh, Baby!",
