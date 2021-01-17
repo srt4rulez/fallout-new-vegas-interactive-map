@@ -34,9 +34,8 @@ const subTypeSkillBookSubMap = {
 };
 
 const subTypeSkillBookLabelMap = {
-    [subTypeSkillBookSubMap.ChineseArmySpecialOpsTrainingManual]: 'Chinese Army: Special Ops Training Manual (Sneak)',
-    [subTypeSkillBookSubMap.WastelandSurvivalGuide]: 'Wasteland Survival Guide (Survival)',
     [subTypeSkillBookSubMap.BigBookOfScience]: 'Big Book of Science (Science)',
+    [subTypeSkillBookSubMap.ChineseArmySpecialOpsTrainingManual]: 'Chinese Army: Special Ops Training Manual (Sneak)',
     [subTypeSkillBookSubMap.DCJournalOfInternalMedicine]: 'D.C. Journal of Internal Medicine (Medicine)',
     [subTypeSkillBookSubMap.DeansElectronics]: 'Dean\'s Electronics (Repair)',
     [subTypeSkillBookSubMap.DuckAndCover]: 'Duck and Cover! (Explosives)',
@@ -47,6 +46,7 @@ const subTypeSkillBookLabelMap = {
     [subTypeSkillBookSubMap.PugilismIllustrated]: 'Pugilism Illustrated (Unarmed)',
     [subTypeSkillBookSubMap.TalesOfAJunktownJerkyVendor]: 'Tales of a Junktown Jerky Vendor (Barter)',
     [subTypeSkillBookSubMap.TumblersToday]: 'Tumblers Today (Lockpick)',
+    [subTypeSkillBookSubMap.WastelandSurvivalGuide]: 'Wasteland Survival Guide (Survival)',
 };
 
 export {
