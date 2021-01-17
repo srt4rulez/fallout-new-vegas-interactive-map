@@ -44,7 +44,7 @@ const subTypeSkillBookLabelMap = {
     [subTypeSkillBookSubMap.LyingCongressionalStyle]: 'Lying, Congressional Style (Speech)',
     [subTypeSkillBookSubMap.NikolaTeslaAndYou]: 'Nikola Tesla and You (Energy Weapons)',
     [subTypeSkillBookSubMap.PugilismIllustrated]: 'Pugilism Illustrated (Unarmed)',
-    [subTypeSkillBookSubMap.TalesOfAJunktownJerkyVendor]: 'Tales of a Junktown Jerky Vendor (Bater)',
+    [subTypeSkillBookSubMap.TalesOfAJunktownJerkyVendor]: 'Tales of a Junktown Jerky Vendor (Barter)',
 };
 
 export {
