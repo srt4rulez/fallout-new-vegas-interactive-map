@@ -650,25 +650,5 @@
         "imgSrc": "assets/skill-book-wsg-scavenger-platform.webp",
         "lat": 617.75,
         "lng": 763.5
-    },
-    {
-        "id": "unique-weapon-oh-baby",
-        "type": "unique_weapon",
-        "title": "Oh, Baby!",
-        "desc": "<a href=\"https://fallout.fandom.com/wiki/Charleston_Cave\" rel=\"noreferrer\" target=\"_blank\">Charleston Cave</a> - The weapon is in the far southwest open area of the cave, accessible via tunnels from the north and east. It is lying on the ground near the west wall, directly west of the eastern tunnel entrance. Next to the dead nightkin.",
-        "url": "https://fallout.fandom.com/wiki/Oh,_Baby!",
-        "imgSrc": "assets/unique-weapon-oh-baby.webp",
-        "lat": 796.5,
-        "lng": 203
-    },
-    {
-        "id": "unique-weapon-pushy",
-        "type": "unique_weapon",
-        "title": "Pushy",
-        "desc": "<a href=\"https://fallout.fandom.com/wiki/Ruby_Hill_mine\" rel=\"noreferrer\" target=\"_blank\">Ruby Hill mine</a> - Found on the body of a dead <a href=\"https://fallout.fandom.com/wiki/Jackal_gang_member\" rel=\"noreferrer\" target=\"_blank\">Jackal gang member</a>, lying near the dry tunnel entrance in the underground lake area.",
-        "url": "https://fallout.fandom.com/wiki/Pushy",
-        "imgSrc": "assets/unique-weapon-pushy.webp",
-        "lat": 840.5,
-        "lng": 311.5
     }
 ]
