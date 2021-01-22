@@ -6,7 +6,7 @@ An interactive map of the [Mojave Wasteland](https://fallout.fandom.com/wiki/Moj
 
 ## Features
 
-- Contains all [skill books](https://fallout.fandom.com/wiki/Fallout:_New_Vegas_skill_books), [snow globes](https://fallout.fandom.com/wiki/Snow_globe) and [unique weapons](https://fallout.fandom.com/wiki/Fallout:_New_Vegas_unique_weapons). [*](#limited-items)
+- Contains all [skill books](https://fallout.fandom.com/wiki/Fallout:_New_Vegas_skill_books) and [snow globes](https://fallout.fandom.com/wiki/Snow_globe).
 - Mark items as found to keep track of your progress. Your progress is saved in your browser.  
 - Each item type is color-coded to easily identify them.
 - Toggle the visibility of found items.
@@ -50,7 +50,3 @@ This will start up a docker container that has everything we need to develop, an
 Go to http://localhost:3000/ in your browser on your machine to view the site.
 
 Checkout [https://github.com/facebook/create-react-app](https://github.com/facebook/create-react-app) for more info.
-
-## Limited Items
-
-As of 2021-01-03, there are only a limited number of items on the map. This project was started near the end of Dec 2020. I'll be adding more items starting in Jan 2021. 
