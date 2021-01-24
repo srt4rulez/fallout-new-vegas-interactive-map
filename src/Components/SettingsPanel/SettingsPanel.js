@@ -30,7 +30,6 @@ const SettingsPanel = (props) => {
 
     const skillBookMarkers = props.markers.filter((marker) => marker.type === typeMap.SkillBook);
     const snowGlobeMarkers = props.markers.filter((marker) => marker.type === typeMap.SnowGlobe);
-    const uniqueWeaponMarkers = props.markers.filter((marker) => marker.type === typeMap.UniqueWeapon);
 
     return (
 
@@ -129,15 +128,6 @@ const SettingsPanel = (props) => {
                     markers={snowGlobeMarkers}
                     onMarkButtonClick={props.onMarkButtonClick}
                     onTypeClick={props.onTypeClick(typeMap.SnowGlobe)}
-                    onMarkerTitleClick={props.onMarkerTitleClick}
-                />
-
-                <MarkerTypePanel
-                    className="settings-panel__marker-type-panel"
-                    type={typeMap.UniqueWeapon}
-                    markers={uniqueWeaponMarkers}
-                    onMarkButtonClick={props.onMarkButtonClick}
-                    onTypeClick={props.onTypeClick(typeMap.UniqueWeapon)}
                     onMarkerTitleClick={props.onMarkerTitleClick}
                 />
 
