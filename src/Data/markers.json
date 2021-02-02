@@ -26,8 +26,8 @@
         "desc": "<a href=\"https://fallout.fandom.com/wiki/Nellis_Air_Force_Base\">Nellis Air Force Base</a>, on the corner table, under the mural, inside <a href=\"https://fallout.fandom.com/wiki/Pete_(Fallout:_New_Vegas)\" rel=\"noreferrer\" target=\"_blank\">Pete's</a> <a href=\"https://fallout.fandom.com/wiki/Nellis_Boomer_museum\" rel=\"noreferrer\" target=\"_blank\">\"museum\"</a> curve-roofed shack.",
         "url": "https://fallout.fandom.com/wiki/Snow_globe_-_Nellis_AFB",
         "imgSrc": "assets/snow-globe-nellis-afb.webp",
-        "lat": 913,
-        "lng": 685
+        "lat": 916.625,
+        "lng": 662.75
     },
     {
         "id": "snow-globe-mt-charleston",
@@ -219,8 +219,8 @@
         "desc": "Inside <a href=\"https://fallout.fandom.com/wiki/Loyal%27s_house\">Loyal's house</a>, on the long counter next to the ruined terminal.",
         "url": "https://fallout.fandom.com/wiki/Dean%27s_Electronics_(Fallout:_New_Vegas)",
         "imgSrc": "assets/skill-book-de-nellis-air-force-base.webp",
-        "lat": 847.25,
-        "lng": 675.25
+        "lat": 907,
+        "lng": 658.25
     },
     {
         "id": "skill-book-de-sloan",
@@ -274,8 +274,8 @@
         "desc": "Among the books on the shelf, above the grenade rifle, inside <a href=\"https://fallout.fandom.com/wiki/Pearl%27s_barracks\">Pearl's barracks</a>.",
         "url": "https://fallout.fandom.com/wiki/Duck_and_Cover!_(Fallout:_New_Vegas)",
         "imgSrc": "assets/skill-book-dac-nellis-air-force-base.webp",
-        "lat": 859,
-        "lng": 686.5
+        "lat": 896.8125,
+        "lng": 668.9375
     },
     {
         "id": "skill-book-dac-ranger-station-foxtrot",
