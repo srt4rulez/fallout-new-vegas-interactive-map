@@ -42,7 +42,7 @@ To work on this repository, install [Docker](https://www.docker.com/) and [Docke
 then run the following command in the project root:
 
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 This will start up a docker container that has everything we need to develop, and start the development server using [create-react-app](https://github.com/facebook/create-react-app).
