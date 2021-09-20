@@ -14,6 +14,8 @@ const propTypes = {
     onClickShowFoundMarkers: PropTypes.func,
     appVersion: PropTypes.string,
     onMarkerTitleClick: PropTypes.func,
+    onShowAllClick: PropTypes.func,
+    onTypeClick: PropTypes.func,
 };
 
 const defaultProps = {
@@ -24,6 +26,8 @@ const defaultProps = {
     onClickShowFoundMarkers: () => {},
     appVersion: '',
     onMarkerTitleClick: () => {},
+    onShowAllClick: () => {},
+    onTypeClick: () => {},
 };
 
 const SettingsPanel = (props) => {

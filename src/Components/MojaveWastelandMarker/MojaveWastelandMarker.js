@@ -37,7 +37,7 @@ const defaultProps = {
     title: '',
     desc: '',
     imgSrc: '',
-    onMarkButtonClick: (event) => {},
+    onMarkButtonClick: (event) => {}, // eslint-disable-line no-unused-vars
     type: '',
     subType: '',
     onAdd: () => {},
@@ -138,7 +138,7 @@ const MojaveWastelandMarker = (props) => {
 
                     <p
                         className={classNames('mojave-wasteland-marker__desc', 'content')}
-                        dangerouslySetInnerHTML={{
+                        dangerouslySetInnerHTML={{ // eslint-disable-line react/no-danger
                             __html: DOMPurify.sanitize(props.desc),
                         }}
                     />
@@ -170,6 +170,8 @@ const MojaveWastelandMarker = (props) => {
                         type="checkbox"
                         checked={props.isFound}
                     />
+
+                    {' '}
 
                     Mark As Found
 

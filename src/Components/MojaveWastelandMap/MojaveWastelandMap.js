@@ -22,7 +22,7 @@ const propTypes = {
 const defaultProps = {
     className: '',
     markers: [],
-    onMarkButtonClick: (marker = {}) => (event) => {},
+    onMarkButtonClick: (marker = {}) => (event) => {}, // eslint-disable-line no-unused-vars
     isFoundMarkersShown: true,
     onMapCreation: () => {},
     onMarkerAdd: () => {},
@@ -54,7 +54,7 @@ const MojaveWastelandMap = (props) => {
                 props.className,
             ])}
             {...mapOptions}
-            whenCreated={props.onMapCreation}
+            whenCreated={props.onMapCreation} // eslint-disable-line react/jsx-handler-names
         >
 
             <ImageOverlay

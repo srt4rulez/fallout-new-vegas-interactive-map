@@ -23,9 +23,9 @@ const defaultProps = {
     className: '',
     type: '',
     markers: [],
-    onMarkButtonClick: (marker = {}) => (event) => {},
-    onTypeClick: (event) => {},
-    onMarkerTitleClick: (marker = {}) => (event) => {},
+    onMarkButtonClick: (marker = {}) => (event) => {}, // eslint-disable-line no-unused-vars
+    onTypeClick: (event) => {}, // eslint-disable-line no-unused-vars
+    onMarkerTitleClick: (marker = {}) => (event) => {}, // eslint-disable-line no-unused-vars
 };
 
 const typesThatHaveSubTypes = [
