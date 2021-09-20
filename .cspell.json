@@ -18,6 +18,7 @@
         "*.webp"
     ],
     "words": [
+        "venv",
         "gamemapscout",
         "stefanzweifel",
         "nvuillam",
