@@ -1,23 +1,4 @@
-@import '~bulma/sass/utilities/_all.sass';
-
-%button-reset {
-    // Reset button styles to look more like a link.
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline;
-    margin: 0;
-    padding: 0;
-    color: $link;
-    font-size: 1rem;
-    text-align: left;
-
-    &:hover,
-    &:focus {
-        color: $link-hover;
-    }
-}
+@import './../../Styles/placeholders.scss';
 
 .marker-list-item {
     display: flex;
