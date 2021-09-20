@@ -1,7 +1,8 @@
 module.exports = {
     'env': {
         'browser': true,
-        'es2021': true
+        'es2021': true,
+        'jest/globals': true,
     },
     'settings': {
         'react': {
@@ -15,6 +16,7 @@ module.exports = {
     'extends': [
         'eslint:recommended',
         'plugin:react/recommended',
+        'plugin:jest/recommended',
     ],
     'parser': 'react-scripts/node_modules/babel-eslint',
     'parserOptions': {
@@ -25,7 +27,8 @@ module.exports = {
         'sourceType': 'module'
     },
     'plugins': [
-        'react'
+        'react',
+        'jest',
     ],
     'rules': {
         'indent': [
