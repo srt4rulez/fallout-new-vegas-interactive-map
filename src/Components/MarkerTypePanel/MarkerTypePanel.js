@@ -55,6 +55,28 @@ const MarkerTypePanel = (props) => {
         });
     }
 
+    /**
+     * @param {Object} marker
+     *
+     * @returns {JSX.Element}
+     */
+    const renderMarkerListItem = (marker = {}) => {
+
+        return (
+
+            <MarkerListItem
+                tag="li"
+                key={marker.id}
+                isFound={marker.isFound}
+                onMarkCheckboxChange={props.onMarkButtonClick(marker)}
+                onMarkerTitleClick={props.onMarkerTitleClick(marker)}
+                title={marker.title}
+            />
+
+        );
+
+    };
+
     return (
 
         <section
@@ -113,22 +135,7 @@ const MarkerTypePanel = (props) => {
 
                             <ul>
 
-                                {subType.markers.map((marker) => {
-
-                                    return (
-
-                                        <MarkerListItem
-                                            tag="li"
-                                            key={marker.id}
-                                            isFound={marker.isFound}
-                                            onMarkCheckboxChange={props.onMarkButtonClick(marker)}
-                                            onMarkerTitleClick={props.onMarkerTitleClick(marker)}
-                                            title={marker.title}
-                                        />
-
-                                    );
-
-                                })}
+                                {subType.markers.map((marker) => renderMarkerListItem(marker))}
 
                             </ul>
 
@@ -136,22 +143,7 @@ const MarkerTypePanel = (props) => {
 
                     );
 
-                }) : props.markers.map((marker) => {
-
-                    return (
-
-                        <MarkerListItem
-                            tag="li"
-                            key={marker.id}
-                            isFound={marker.isFound}
-                            onMarkCheckboxChange={props.onMarkButtonClick(marker)}
-                            onMarkerTitleClick={props.onMarkerTitleClick(marker)}
-                            title={marker.title}
-                        />
-
-                    );
-
-                })}
+                }) : props.markers.map((marker) => renderMarkerListItem(marker))}
 
             </ul>
 
