@@ -3,12 +3,20 @@ module.exports = {
         'browser': true,
         'es2021': true
     },
-    "extends": [
-        "react-app",
-        "react-app/jest",
-        "eslint:recommended",
+    'settings': {
+        'react': {
+            'createClass': 'createReactClass', // Regex for Component Factory to use,
+                                               // default to 'createReactClass'
+            'pragma':   'React',  // Pragma to use, default to 'React'
+            'fragment': 'Fragment',  // Fragment to use (may be a property of <pragma>), default to 'Fragment'
+            'version':  'detect', // React version. 'detect' automatically picks the version you have installed.
+        },
+    },
+    'extends': [
+        'eslint:recommended',
         'plugin:react/recommended',
     ],
+    'parser': 'react-scripts/node_modules/babel-eslint',
     'parserOptions': {
         'ecmaFeatures': {
             'jsx': true
@@ -299,8 +307,8 @@ module.exports = {
             'error',
         ],
         // For translations/i18n
-        // "react/jsx-no-literals": [
-        //     "error",
+        // 'react/jsx-no-literals': [
+        //     'error',
         // ],
         'react/jsx-no-target-blank': [
             'error',
