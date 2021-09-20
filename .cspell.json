@@ -1,13 +1,28 @@
 {
-  "version": "0.1",
-  "language": "en",
-  "ignorePaths": [
-    "**/node_modules/**",
-    "**/vscode-extension/**",
-    "**/.git/**",
-    ".vscode",
-    "package-lock.json",
-    "report"
-  ],
-  "words": []
+    "version": "0.1",
+    "language": "en",
+    "ignorePaths": [
+        "**/node_modules/**",
+        "**/vscode-extension/**",
+        "**/.git/**",
+        ".vscode",
+        "package-lock.json",
+        "yarn.lock",
+        "report",
+        "marker-types.js",
+        "markers.json",
+        "*.webp"
+    ],
+    "words": [
+        "defaulticon",
+        "fortawesome",
+        "rulez",
+        "fullwidth",
+        "noreferrer",
+        "preconnect",
+        "latlng",
+        "bulma's",
+        "bulma",
+        "dompurify"
+    ]
 }
