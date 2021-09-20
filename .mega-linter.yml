@@ -20,3 +20,8 @@ ENABLE_LINTERS: # If you use ENABLE_LINTERS variable, all other linters will be 
     # - SPELL # Uncomment to disable checks of spelling mistakes
 SHOW_ELAPSED_TIME: true
 FILEIO_REPORTER: false
+
+PRE_COMMANDS:
+    -
+        command: yarn install
+        cwd: root # Will be run at the root of Mega-Linter docker image
