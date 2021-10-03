@@ -28,8 +28,8 @@
         "web-vitals": "^0.2.4"
     },
     "scripts": {
-        "lint": "eslint --cache \"./src/**/*.{js,jsx,ts,tsx}\"",
-        "lint:fix": "eslint --cache --fix \"./src/**/*.{js,jsx,ts,tsx}\"",
+        "lint": "eslint --cache \"./**/*.{js,jsx,ts,tsx}\"",
+        "lint:fix": "eslint --cache --fix \"./**/*.{js,jsx,ts,tsx}\"",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
