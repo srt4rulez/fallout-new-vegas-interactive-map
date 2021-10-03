@@ -7,5 +7,6 @@ sudo docker run \
     --volume "/$(pwd):/code" \
     --workdir /code \
     --user node \
+    --env NODE_ENV=development \
     node:14 \
     /bin/bash
