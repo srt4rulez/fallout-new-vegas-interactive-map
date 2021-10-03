@@ -17,7 +17,7 @@ module.exports = {
         'plugin:react/recommended',
         'plugin:jest/recommended',
     ],
-    'parser': 'react-scripts/node_modules/babel-eslint',
+    'parser': '@babel/eslint-parser',
     'parserOptions': {
         'ecmaFeatures': {
             'jsx': true
