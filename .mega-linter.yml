@@ -20,9 +20,7 @@ ENABLE_LINTERS: # If you use ENABLE_LINTERS variable, all other linters will be 
     # - SPELL # Uncomment to disable checks of spelling mistakes
 SHOW_ELAPSED_TIME: true
 FILEIO_REPORTER: false
-
 PRE_COMMANDS:
     -
         command: npm install "babel-preset-react-app@^10.0.0" "@babel/eslint-parser@^7.15.7"
         cwd: workspace # Will be run at the root of the workspace (usually your repository root)
-JAVASCRIPT_ES_FILTER_REGEX_INCLUDE: ./src/**/*.{js,jsx,ts,tsx}
