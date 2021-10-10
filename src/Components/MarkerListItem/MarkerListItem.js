@@ -16,8 +16,8 @@ const defaultProps = {
     tag: 'li',
     className: '',
     isFound: false,
-    onMarkCheckboxChange: (event) => {},
-    onMarkerTitleClick: (event) => {},
+    onMarkCheckboxChange: (event) => {}, // eslint-disable-line no-unused-vars
+    onMarkerTitleClick: (event) => {}, // eslint-disable-line no-unused-vars
     title: '',
 };
 
@@ -43,6 +43,7 @@ const MarkerListItem = (props) => {
             />
 
             <button
+                type="button"
                 className={classNames('marker-list-item__button')}
                 onClick={props.onMarkerTitleClick}
             >

@@ -19,7 +19,7 @@ class App extends Component {
     static version = packageJson.version;
 
     componentDidMount() {
-        const localStorageMarkersJson= window.localStorage.getItem('markers') || '[]';
+        const localStorageMarkersJson = window.localStorage.getItem('markers') || '[]';
 
         const localStorageMarkers = JSON.parse(localStorageMarkersJson);
 
@@ -43,13 +43,13 @@ class App extends Component {
 
         const isFoundMarkersShown = localStorageIsFoundMarkersShown === null ? defaultIsFoundMarkersShown : localStorageIsFoundMarkersShown === '1';
 
-        this.setState({
+        this.setState({ // eslint-disable-line react/no-did-mount-set-state
             markers: newMarkers,
             isFoundMarkersShown: isFoundMarkersShown,
         });
     }
 
-    handleMarkButtonClick = (marker = {}) => (event) => {
+    handleMarkButtonClick = (marker = {}) => (event) => { // eslint-disable-line no-unused-vars
 
         this.setState((prevState) => {
             const index = prevState.markers.findIndex((item) => item.id === marker.id);
@@ -84,7 +84,7 @@ class App extends Component {
      * @param {Object} marker
      */
     updateLocalStorageMarker = (marker = {}) => {
-        const localStorageMarkersJson= window.localStorage.getItem('markers') || '[]';
+        const localStorageMarkersJson = window.localStorage.getItem('markers') || '[]';
 
         const localStorageMarkers = [...JSON.parse(localStorageMarkersJson)];
 

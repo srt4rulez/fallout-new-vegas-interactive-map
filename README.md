@@ -38,14 +38,20 @@ press enter to enable debug mode. Clicking on the map will now log the latitude 
 
 ## Development
 
-To work on this repository, install [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/), 
-then run the following command in the project root:
+To work on this repository, install [Docker](https://www.docker.com/), then run the following command in the project root:
 
 ```
-docker-compose up -d
+./run.sh
 ```
 
-This will start up a docker container that has everything we need to develop, and start the development server using [create-react-app](https://github.com/facebook/create-react-app).
+This will start up a docker container that has everything we need to develop.  
+
+Simply install dependencies with yarn, then start the development server with [create-react-app](https://github.com/facebook/create-react-app):
+
+```
+yarn install
+yarn start
+```
 
 Go to http://localhost:3000/ in your browser on your machine to view the site.
 
