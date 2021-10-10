@@ -7,6 +7,9 @@ module.exports = {
         'jest/globals': true,
     },
     'settings': {
+        'jest': {
+            'version': '26.6.3'
+        },
         'react': {
             'createClass': 'createReactClass', // Regex for Component Factory to use, defaults to 'createReactClass'
             'pragma':   'React',  // Pragma to use, default to 'React'
