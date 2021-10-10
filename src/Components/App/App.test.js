@@ -2,8 +2,8 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from 'Components/App/App';
 
-test('renders learn react link', () => {
+test('renders app with "Interactive Map" text', () => {
     render(<App />);
-    const linkElement = screen.getByText(/learn react/i);
+    const linkElement = screen.getByText(/Interactive Map/i);
     expect(linkElement).toBeInTheDocument();
 });
