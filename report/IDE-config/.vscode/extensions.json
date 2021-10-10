@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "mkaufman.HTMLHint",
+        "paulhoughton.vscode-jscpd"
+    ]
+}
