@@ -5,7 +5,7 @@
     "homepage": ".",
     "dependencies": {
         "@babel/core": "^7.15.5",
-        "@babel/eslint-parser": "^7.15.8",
+        "@babel/eslint-parser": "^7.15.7",
         "@fortawesome/fontawesome-free": "^5.15.1",
         "@testing-library/jest-dom": "^5.11.4",
         "@testing-library/react": "^11.1.0",
