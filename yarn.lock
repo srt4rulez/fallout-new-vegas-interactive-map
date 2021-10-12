@@ -2502,6 +2502,11 @@
   dependencies:
     "@babel/runtime" "^7.12.5"
 
+"@tsconfig/create-react-app@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@tsconfig/create-react-app/-/create-react-app-1.0.2.tgz#e05e2d209b98e21665ed4097fe2d37f638447b0e"
+  integrity sha512-Vg+pErSM6hTcSzxPqNwFg0dk+y0R1Obp8uLV1MDdfd7j98FyOFqtqkdxb9wqIx9vtDW5GCH7zg6DyoHJzMT12g==
+
 "@types/anymatch@*":
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/@types/anymatch/-/anymatch-1.3.1.tgz#336badc1beecb9dacc38bea2cf32adf627a8421a"

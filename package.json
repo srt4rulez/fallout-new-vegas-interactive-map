@@ -10,6 +10,7 @@
         "@testing-library/jest-dom": "^5.11.4",
         "@testing-library/react": "^11.1.0",
         "@testing-library/user-event": "^12.1.10",
+        "@tsconfig/create-react-app": "^1.0.2",
         "@types/jest": "^27.0.2",
         "@types/node": "^16.10.3",
         "@types/react": "^17.0.27",
