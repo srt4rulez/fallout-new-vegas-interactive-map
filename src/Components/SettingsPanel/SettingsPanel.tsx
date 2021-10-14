@@ -1,39 +1,41 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
 import classNames from 'classnames';
 import './SettingsPanel.scss';
 import FalloutNVLogoImageSrc from './fallout-nv-logo.png';
 import MarkerTypePanel from 'Components/MarkerTypePanel/MarkerTypePanel';
 import { typeMap } from 'Data/marker-types';
 
-const propTypes = {
-    className: PropTypes.string,
-    markers: PropTypes.array,
-    onMarkButtonClick: PropTypes.func,
-    isFoundMarkersShown: PropTypes.bool,
-    onClickShowFoundMarkers: PropTypes.func,
-    appVersion: PropTypes.string,
-    onMarkerTitleClick: PropTypes.func,
-    onShowAllClick: PropTypes.func,
-    onTypeClick: PropTypes.func,
-};
+interface Marker {
+    type: string,
+}
 
-const defaultProps = {
-    className: '',
-    markers: [],
-    onMarkButtonClick: () => {},
-    isFoundMarkersShown: true,
-    onClickShowFoundMarkers: () => {},
-    appVersion: '',
-    onMarkerTitleClick: () => {},
-    onShowAllClick: () => {},
-    onTypeClick: () => {},
-};
+interface SettingsPanelProps {
+    className?: string;
+    markers: Marker[];
+    onMarkButtonClick?: (marker: object) => (event: React.SyntheticEvent) => void;
+    isFoundMarkersShown?: boolean;
+    onClickShowFoundMarkers?: (event: React.ChangeEvent) => void;
+    appVersion?: string;
+    onMarkerTitleClick?: (marker: object) => (event: React.SyntheticEvent) => void;
+    onShowAllClick?: (event: React.MouseEvent) => void;
+    onTypeClick?: (type: string) => (event: React.MouseEvent) => void;
+}
 
-const SettingsPanel = (props) => {
+const SettingsPanel = ({
+    className = '',
+    markers = [],
+    onMarkButtonClick = undefined,
+    isFoundMarkersShown = false,
+    onClickShowFoundMarkers = undefined,
+    appVersion = '',
+    onMarkerTitleClick = undefined,
+    onShowAllClick = undefined,
+    onTypeClick = () => () => {}, // eslint-disable-line @typescript-eslint/no-empty-function
+    // ...props
+}: SettingsPanelProps): JSX.Element => {
 
-    const skillBookMarkers = props.markers.filter((marker) => marker.type === typeMap.SkillBook);
-    const snowGlobeMarkers = props.markers.filter((marker) => marker.type === typeMap.SnowGlobe);
+    const skillBookMarkers = markers.filter((marker) => marker.type === typeMap.SkillBook);
+    const snowGlobeMarkers = markers.filter((marker) => marker.type === typeMap.SnowGlobe);
 
     return (
 
@@ -41,7 +43,7 @@ const SettingsPanel = (props) => {
             className={classNames([
                 'settings-panel',
                 'box',
-                props.className,
+                className,
             ])}
         >
 
@@ -73,7 +75,7 @@ const SettingsPanel = (props) => {
                     <button
                         className="button"
                         type="button"
-                        onClick={props.onShowAllClick}
+                        onClick={onShowAllClick}
                         title="Show all marker types"
                     >
 
@@ -99,8 +101,8 @@ const SettingsPanel = (props) => {
                         <input
                             className="mr-1"
                             type="checkbox"
-                            checked={props.isFoundMarkersShown}
-                            onChange={props.onClickShowFoundMarkers}
+                            checked={isFoundMarkersShown}
+                            onChange={onClickShowFoundMarkers}
                         />
 
                         {' '}
@@ -121,18 +123,18 @@ const SettingsPanel = (props) => {
                     className="settings-panel__marker-type-panel"
                     type={typeMap.SkillBook}
                     markers={skillBookMarkers}
-                    onMarkButtonClick={props.onMarkButtonClick}
-                    onTypeClick={props.onTypeClick(typeMap.SkillBook)}
-                    onMarkerTitleClick={props.onMarkerTitleClick}
+                    onMarkButtonClick={onMarkButtonClick}
+                    onTypeClick={onTypeClick(typeMap.SkillBook)}
+                    onMarkerTitleClick={onMarkerTitleClick}
                 />
 
                 <MarkerTypePanel
                     className="settings-panel__marker-type-panel"
                     type={typeMap.SnowGlobe}
                     markers={snowGlobeMarkers}
-                    onMarkButtonClick={props.onMarkButtonClick}
-                    onTypeClick={props.onTypeClick(typeMap.SnowGlobe)}
-                    onMarkerTitleClick={props.onMarkerTitleClick}
+                    onMarkButtonClick={onMarkButtonClick}
+                    onTypeClick={onTypeClick(typeMap.SnowGlobe)}
+                    onMarkerTitleClick={onMarkerTitleClick}
                 />
 
             </div>
@@ -155,7 +157,7 @@ const SettingsPanel = (props) => {
 
                 {' | '}
 
-                v{props.appVersion}
+                v{appVersion}
 
                 {' | '}
 
@@ -175,7 +177,7 @@ const SettingsPanel = (props) => {
 
 };
 
-SettingsPanel.propTypes = propTypes;
-SettingsPanel.defaultProps = defaultProps;
+// SettingsPanel.propTypes = propTypes;
+// SettingsPanel.defaultProps = defaultProps;
 
 export default SettingsPanel;
