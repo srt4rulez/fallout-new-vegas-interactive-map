@@ -33,6 +33,25 @@ module.exports = {
     'plugins': [
         'react',
         'jest',
+        '@typescript-eslint',
+    ],
+    'overrides': [
+        {
+            'files': ['**/*.ts', '**/*.tsx'],
+            'parser': '@typescript-eslint/parser',
+            'extends': [
+                'plugin:@typescript-eslint/recommended',
+            ],
+            'rules': {
+                'react/require-default-props': 'off',
+            },
+        },
+        {
+            'files': '**/*.d.ts',
+            'rules': {
+                'spaced-comment': 'off',
+            },
+        },
     ],
     'rules': {
         'indent': [
