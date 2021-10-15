@@ -10,7 +10,10 @@ class App extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {};
+        this.state = {
+            markers: [],
+            isFoundMarkersShown: false,
+        };
 
         // Only used with L.Map API.
         this.markers = {};
