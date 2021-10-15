@@ -3,22 +3,22 @@ import classNames from 'classnames';
 import './SettingsPanel.scss';
 import FalloutNVLogoImageSrc from './fallout-nv-logo.png';
 import MarkerTypePanel from 'Components/MarkerTypePanel/MarkerTypePanel';
-import { typeMap } from 'Data/marker-types';
-
-interface Marker {
-    type: string,
-}
+import {
+    typeMap,
+    Marker,
+    MarkerTypes,
+} from 'Data/marker-types';
 
 interface SettingsPanelProps {
     className?: string;
-    markers: Marker[];
-    onMarkButtonClick?: (marker: object) => (event: React.SyntheticEvent) => void;
+    markers: Array<Marker>;
+    onMarkButtonClick?: (marker: Marker) => (event: React.SyntheticEvent) => void;
     isFoundMarkersShown?: boolean;
     onClickShowFoundMarkers?: (event: React.ChangeEvent) => void;
     appVersion?: string;
-    onMarkerTitleClick?: (marker: object) => (event: React.SyntheticEvent) => void;
+    onMarkerTitleClick?: (marker: Marker) => (event: React.SyntheticEvent) => void;
     onShowAllClick?: (event: React.MouseEvent) => void;
-    onTypeClick?: (type: string) => (event: React.MouseEvent) => void;
+    onTypeClick?: (type: MarkerTypes) => (event: React.MouseEvent) => void;
 }
 
 const SettingsPanel = ({
@@ -124,7 +124,7 @@ const SettingsPanel = ({
                     type={typeMap.SkillBook}
                     markers={skillBookMarkers}
                     onMarkButtonClick={onMarkButtonClick}
-                    onTypeClick={onTypeClick(typeMap.SkillBook)}
+                    onTypeClick={onTypeClick ? onTypeClick(typeMap.SkillBook) : undefined}
                     onMarkerTitleClick={onMarkerTitleClick}
                 />
 
@@ -133,7 +133,7 @@ const SettingsPanel = ({
                     type={typeMap.SnowGlobe}
                     markers={snowGlobeMarkers}
                     onMarkButtonClick={onMarkButtonClick}
-                    onTypeClick={onTypeClick(typeMap.SnowGlobe)}
+                    onTypeClick={onTypeClick ? onTypeClick(typeMap.SnowGlobe) : undefined}
                     onMarkerTitleClick={onMarkerTitleClick}
                 />
 
@@ -176,8 +176,5 @@ const SettingsPanel = ({
     );
 
 };
-
-// SettingsPanel.propTypes = propTypes;
-// SettingsPanel.defaultProps = defaultProps;
 
 export default SettingsPanel;
