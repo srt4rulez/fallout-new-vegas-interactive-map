@@ -1,5 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
 import classNames from 'classnames';
 import './MarkerTypePanel.scss';
 import {
@@ -7,44 +6,50 @@ import {
     typeLabelMap,
     typeColorMap,
     subTypeSkillBookLabelMap,
+    Marker,
+    MarkerTypes,
+    MarkerSubtypes,
 } from 'Data/marker-types';
 import MarkerListItem from 'Components/MarkerListItem/MarkerListItem';
 
-const propTypes = {
-    className: PropTypes.string,
-    type: PropTypes.oneOf(Object.values(typeMap)),
-    markers: PropTypes.array,
-    onMarkButtonClick: PropTypes.func,
-    onTypeClick: PropTypes.func,
-    onMarkerTitleClick: PropTypes.func,
-};
-
-const defaultProps = {
-    className: '',
-    type: '',
-    markers: [],
-    onMarkButtonClick: (marker = {}) => (event) => {}, // eslint-disable-line no-unused-vars
-    onTypeClick: (event) => {}, // eslint-disable-line no-unused-vars
-    onMarkerTitleClick: (marker = {}) => (event) => {}, // eslint-disable-line no-unused-vars
-};
-
-const typesThatHaveSubTypes = [
+const typesThatHaveSubTypes: Array<string> = [
     typeMap.SkillBook,
 ];
 
-const MarkerTypePanel = (props) => {
+interface MarkerTypePanelProps {
+    className?: string;
+    type?: MarkerTypes;
+    markers: Array<Marker>;
+    onMarkButtonClick?: (marker: Marker) => (event: React.SyntheticEvent) => void;
+    onTypeClick?: (event: React.MouseEvent) => void;
+    onMarkerTitleClick?: (marker: Marker) => (event: React.SyntheticEvent) => void;
+}
 
-    const markers = props.markers;
+const MarkerTypePanel = ({
+    className = '',
+    type = undefined,
+    markers = [],
+    onMarkButtonClick = undefined,
+    onTypeClick = undefined,
+    onMarkerTitleClick = undefined,
+}: MarkerTypePanelProps) => {
 
-    const hasSubTypes = typesThatHaveSubTypes.includes(props.type);
+    const hasSubTypes = type ? typesThatHaveSubTypes.includes(type) : false;
 
-    const subTypes = {};
+    const subTypes: {
+        [index: string]: {
+            id: MarkerSubtypes;
+            markers: Array<Marker>;
+        };
+    } = {};
 
     if (hasSubTypes) {
         markers.forEach((marker) => {
-            if (subTypes[marker.sub_type]) {
+            const subType = subTypes[marker.sub_type];
+
+            if (subType) {
                 // Already a object, just add the new marker to markers.
-                subTypes[marker.sub_type].markers.push(marker);
+                subType.markers.push(marker);
             } else {
                 // Create object for sub type
                 subTypes[marker.sub_type] = {
@@ -55,12 +60,7 @@ const MarkerTypePanel = (props) => {
         });
     }
 
-    /**
-     * @param {Object} marker
-     *
-     * @returns {JSX.Element}
-     */
-    const renderMarkerListItem = (marker = {}) => {
+    const renderMarkerListItem = (marker: Marker): JSX.Element => {
 
         return (
 
@@ -68,8 +68,8 @@ const MarkerTypePanel = (props) => {
                 tag="li"
                 key={marker.id}
                 isFound={marker.isFound}
-                onMarkCheckboxChange={props.onMarkButtonClick(marker)}
-                onMarkerTitleClick={props.onMarkerTitleClick(marker)}
+                onMarkCheckboxChange={onMarkButtonClick ? onMarkButtonClick(marker) : undefined}
+                onMarkerTitleClick={onMarkerTitleClick ? onMarkerTitleClick(marker) : undefined}
                 title={marker.title}
             />
 
@@ -82,7 +82,7 @@ const MarkerTypePanel = (props) => {
         <section
             className={classNames([
                 'marker-type-panel',
-                props.className,
+                className,
             ])}
         >
 
@@ -95,7 +95,7 @@ const MarkerTypePanel = (props) => {
                         'marker-type-panel__icon',
                         'fas',
                         'fa-map-marker-alt',
-                        `has-text-${typeColorMap[props.type]}`,
+                        type ? `has-text-${typeColorMap[type]}` : '',
                     ])}
                 />
 
@@ -103,10 +103,10 @@ const MarkerTypePanel = (props) => {
                     type="button"
                     className={classNames('marker-type-panel__header-btn')}
                     title="Only show this marker type"
-                    onClick={props.onTypeClick}
+                    onClick={onTypeClick}
                 >
 
-                    {typeLabelMap[props.type] || 'Misc'}
+                    {type ? typeLabelMap[type] : 'Misc'}
 
                 </button>
 
@@ -129,6 +129,7 @@ const MarkerTypePanel = (props) => {
                                 className={classNames('marker-type-panel__sub-type-label')}
                             >
 
+                                {/* TODO: Handle other sub types */}
                                 {subTypeSkillBookLabelMap[subType.id]}
 
                             </span>
@@ -143,7 +144,7 @@ const MarkerTypePanel = (props) => {
 
                     );
 
-                }) : props.markers.map((marker) => renderMarkerListItem(marker))}
+                }) : markers.map((marker) => renderMarkerListItem(marker))}
 
             </ul>
 
@@ -152,8 +153,5 @@ const MarkerTypePanel = (props) => {
     );
 
 };
-
-MarkerTypePanel.propTypes = propTypes;
-MarkerTypePanel.defaultProps = defaultProps;
 
 export default MarkerTypePanel;
