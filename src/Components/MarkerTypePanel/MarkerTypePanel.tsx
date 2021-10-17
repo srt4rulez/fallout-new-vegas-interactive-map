@@ -8,7 +8,7 @@ import {
     subTypeSkillBookLabelMap,
     MarkerInterface,
     MarkerType,
-    MarkerSubtypes,
+    MarkerSubtype,
 } from 'types';
 import MarkerListItem from 'Components/MarkerListItem/MarkerListItem';
 
@@ -38,7 +38,7 @@ const MarkerTypePanel = ({
 
     const subTypes: {
         [index: string]: {
-            id: MarkerSubtypes;
+            id: MarkerSubtype;
             markers: Array<MarkerInterface>;
         };
     } = {};

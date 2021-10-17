@@ -67,7 +67,7 @@ export type SkillBookSubTypes =
     | TumblersToday
 ;
 
-export type MarkerSubtypes = SkillBookSubTypes;
+export type MarkerSubtype = SkillBookSubTypes;
 
 const subTypeSkillBookLabelMap = {
     [subTypeSkillBookSubMap.BigBookOfScience]:                    'Big Book of Science (Science)',
@@ -88,7 +88,7 @@ const subTypeSkillBookLabelMap = {
 export interface MarkerInterface {
     id?: string;
     type?: MarkerType;
-    subType: MarkerSubtypes;
+    subType: MarkerSubtype;
     title?: string;
     desc?: string;
     url?: string;
