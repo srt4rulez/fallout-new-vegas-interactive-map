@@ -15,7 +15,7 @@ import {
     MarkerInterface,
 } from 'types';
 
-interface MojaveWastelandMarkerProps extends MarkerInterface {
+export interface MojaveWastelandMarkerProps extends MarkerInterface {
     // className?: string;
     onMarkButtonClick?: React.ChangeEventHandler;
     onAdd?: L.LeafletEventHandlerFn;

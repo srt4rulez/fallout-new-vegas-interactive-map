@@ -2,7 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import './MarkerListItem.scss';
 
-interface MarkerListItemProps {
+export interface MarkerListItemProps {
     tag?: React.ComponentType | keyof JSX.IntrinsicElements;
     className?: string;
     isFound?: boolean;

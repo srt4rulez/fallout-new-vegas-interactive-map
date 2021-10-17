@@ -9,7 +9,7 @@ import {
     MarkerType,
 } from 'types';
 
-interface SettingsPanelProps {
+export interface SettingsPanelProps {
     className?: string;
     markers: Array<MarkerInterface>;
     onMarkButtonClick?: (marker: MarkerInterface) => React.ChangeEventHandler;

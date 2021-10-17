@@ -12,7 +12,7 @@ import {
 } from 'types';
 import MarkerListItem from 'Components/MarkerListItem/MarkerListItem';
 
-interface MarkerTypePanelProps {
+export interface MarkerTypePanelProps {
     className?: string;
     type?: MarkerType;
     markers: Array<MarkerInterface>;
