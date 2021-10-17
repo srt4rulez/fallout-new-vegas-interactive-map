@@ -10,6 +10,10 @@ export type MarkerType = SnowGlobe | SkillBook;
 
 export type TypesThatHaveSubTypes = SkillBook;
 
+const typesThatHaveSubTypes: Array<string> = [
+    typeMap.SkillBook,
+];
+
 const typeLabelMap = {
     [typeMap.SnowGlobe]: 'Snow Globe',
     [typeMap.SkillBook]: 'Skill Book',
@@ -103,6 +107,7 @@ export {
     typeMap,
     typeLabelMap,
     typeColorMap,
+    typesThatHaveSubTypes,
     subTypeSkillBookSubMap,
     subTypeSkillBookLabelMap,
 };

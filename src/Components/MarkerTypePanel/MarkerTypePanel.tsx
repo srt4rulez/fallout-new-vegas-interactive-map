@@ -2,7 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import './MarkerTypePanel.scss';
 import {
-    typeMap,
+    typesThatHaveSubTypes,
     typeLabelMap,
     typeColorMap,
     subTypeSkillBookLabelMap,
@@ -11,10 +11,6 @@ import {
     MarkerSubtype,
 } from 'types';
 import MarkerListItem from 'Components/MarkerListItem/MarkerListItem';
-
-const typesThatHaveSubTypes: Array<string> = [
-    typeMap.SkillBook,
-];
 
 interface MarkerTypePanelProps {
     className?: string;
