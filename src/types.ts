@@ -96,6 +96,7 @@ export interface MarkerInterface {
     lat?: number;
     lng?: number;
     isFound?: boolean;
+    isHidden?: boolean;
 }
 
 export {
