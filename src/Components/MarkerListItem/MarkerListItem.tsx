@@ -6,8 +6,8 @@ interface MarkerListItemProps {
     tag?: React.ComponentType | keyof JSX.IntrinsicElements;
     className?: string;
     isFound?: boolean;
-    onMarkCheckboxChange?: (event: React.ChangeEvent) => void;
-    onMarkerTitleClick?: (event: React.MouseEvent) => void;
+    onMarkCheckboxChange?: React.ChangeEventHandler;
+    onMarkerTitleClick?: React.MouseEventHandler;
     title?: string;
 }
 

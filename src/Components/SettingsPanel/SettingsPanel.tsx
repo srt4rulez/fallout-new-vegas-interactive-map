@@ -12,13 +12,13 @@ import {
 interface SettingsPanelProps {
     className?: string;
     markers: Array<MarkerInterface>;
-    onMarkButtonClick?: (marker: MarkerInterface) => (event: React.SyntheticEvent) => void;
+    onMarkButtonClick?: (marker: MarkerInterface) => React.ChangeEventHandler;
     isFoundMarkersShown?: boolean;
     onClickShowFoundMarkers?: (event: React.ChangeEvent) => void;
     appVersion?: string;
-    onMarkerTitleClick?: (marker: MarkerInterface) => (event: React.SyntheticEvent) => void;
+    onMarkerTitleClick?: (marker: MarkerInterface) => React.MouseEventHandler;
     onShowAllClick?: (event: React.MouseEvent) => void;
-    onTypeClick?: (type: MarkerType) => (event: React.MouseEvent) => void;
+    onTypeClick?: (type: MarkerType) => React.MouseEventHandler;
 }
 
 const SettingsPanel = ({

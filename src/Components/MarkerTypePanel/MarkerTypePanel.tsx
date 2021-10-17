@@ -20,9 +20,9 @@ interface MarkerTypePanelProps {
     className?: string;
     type?: MarkerType;
     markers: Array<MarkerInterface>;
-    onMarkButtonClick?: (marker: MarkerInterface) => (event: React.SyntheticEvent) => void;
-    onTypeClick?: (event: React.MouseEvent) => void;
-    onMarkerTitleClick?: (marker: MarkerInterface) => (event: React.SyntheticEvent) => void;
+    onMarkButtonClick?: (marker: MarkerInterface) => React.ChangeEventHandler;
+    onTypeClick?: React.MouseEventHandler;
+    onMarkerTitleClick?: (marker: MarkerInterface) => React.MouseEventHandler;
 }
 
 const MarkerTypePanel = ({
