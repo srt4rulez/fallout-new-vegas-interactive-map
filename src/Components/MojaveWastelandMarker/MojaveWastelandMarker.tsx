@@ -1,5 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
 import classNames from 'classnames';
 import './MojaveWastelandMarker.scss';
 import {
@@ -13,37 +12,29 @@ import {
     typeLabelMap,
     typeColorMap,
     subTypeSkillBookLabelMap,
-} from 'Data/marker-types';
+    MarkerInterface,
+} from 'types';
 
-const propTypes = {
-    className: PropTypes.string,
-    lat: PropTypes.number.isRequired,
-    lng: PropTypes.number.isRequired,
-    isFound: PropTypes.bool,
-    url: PropTypes.string,
-    title: PropTypes.string,
-    desc: PropTypes.string,
-    imgSrc: PropTypes.string,
-    onMarkButtonClick: PropTypes.func,
-    type: PropTypes.oneOf(Object.values(typeMap)),
-    subType: PropTypes.string,
-    onAdd: PropTypes.func,
-};
+interface MojaveWastelandMarkerProps extends MarkerInterface {
+    // className?: string;
+    onMarkButtonClick?: React.ChangeEventHandler;
+    onAdd?: L.LeafletEventHandlerFn;
+}
 
-const defaultProps = {
-    className: '',
-    isFound: false,
-    url: '',
-    title: '',
-    desc: '',
-    imgSrc: '',
-    onMarkButtonClick: (event) => {}, // eslint-disable-line no-unused-vars
-    type: '',
-    subType: '',
-    onAdd: () => {},
-};
-
-const MojaveWastelandMarker = (props) => {
+const MojaveWastelandMarker = ({
+    // className = '',
+    isFound = false,
+    url = '',
+    title = '',
+    desc = '',
+    imgSrc = '',
+    lat = 0,
+    lng = 0,
+    onMarkButtonClick = undefined,
+    type,
+    subType,
+    onAdd = undefined,
+}: MojaveWastelandMarkerProps): JSX.Element => {
 
     const iconSizeX = 25.5;
     const iconSizeY = 34; // update this value first, then check width for setting X.
@@ -52,7 +43,7 @@ const MojaveWastelandMarker = (props) => {
         className: 'mojave-wasteland-marker__icon-wrapper',
         html: `
             <i
-                class="mojave-wasteland-marker__icon fas fa-map-marker-alt has-text-${typeColorMap[props.type]}"
+                class="mojave-wasteland-marker__icon fas fa-map-marker-alt ${type ? `has-text-${typeColorMap[type]}` : ''}"
                 style="font-size: ${iconSizeY}px;"
             />
         `,
@@ -73,15 +64,15 @@ const MojaveWastelandMarker = (props) => {
     return (
 
         <Marker
-            className={classNames([
-                'mojave-wasteland-marker',
-                props.className,
-            ])}
-            position={[props.lat, props.lng]}
-            opacity={props.isFound ? 0.5 : 1}
+            // className={classNames([
+            //     'mojave-wasteland-marker',
+            //     className,
+            // ])}
+            position={[lat, lng]}
+            opacity={isFound ? 0.5 : 1}
             icon={icon}
             eventHandlers={{
-                add: props.onAdd,
+                add: onAdd,
             }}
         >
 
@@ -94,20 +85,20 @@ const MojaveWastelandMarker = (props) => {
                 >
 
                     <a
-                        href={props.url}
+                        href={url}
                         rel="noreferrer"
                         target="_blank"
                     >
 
-                        {props.type === typeMap.SkillBook && subTypeSkillBookLabelMap[props.subType] && `${subTypeSkillBookLabelMap[props.subType]} - `}
+                        {type === typeMap.SkillBook && subTypeSkillBookLabelMap[subType] && `${subTypeSkillBookLabelMap[subType]} - `}
 
-                        {props.title}
+                        {title}
 
                     </a>
 
                 </h2>
 
-                {typeLabelMap[props.type] && (
+                {type && typeLabelMap[type] && (
 
                     <div
                         className="tags has-addons is-justify-content-center"
@@ -124,36 +115,36 @@ const MojaveWastelandMarker = (props) => {
                                 'tag',
                                 'mb-0',
                                 'is-lowercase',
-                                `is-${typeColorMap[props.type]}`,
+                                `is-${typeColorMap[type]}`,
                             ])}
                         >
-                            {typeLabelMap[props.type]}
+                            {typeLabelMap[type]}
                         </span>
 
                     </div>
 
                 )}
 
-                {props.desc && (
+                {desc && (
 
                     <p
                         className={classNames('mojave-wasteland-marker__desc', 'content')}
                         dangerouslySetInnerHTML={{ // eslint-disable-line react/no-danger
-                            __html: DOMPurify.sanitize(props.desc),
+                            __html: DOMPurify.sanitize(desc),
                         }}
                     />
 
                 )}
 
-                {props.imgSrc && (
+                {imgSrc && (
 
                     <figure
                         className="image block"
                     >
 
                         <img
-                            src={props.imgSrc}
-                            alt={props.title}
+                            src={imgSrc}
+                            alt={title}
                         />
 
                     </figure>
@@ -166,9 +157,9 @@ const MojaveWastelandMarker = (props) => {
 
                     <input
                         className="mr-1"
-                        onChange={props.onMarkButtonClick}
+                        onChange={onMarkButtonClick}
                         type="checkbox"
-                        checked={props.isFound}
+                        checked={isFound}
                     />
 
                     {' '}
@@ -184,8 +175,5 @@ const MojaveWastelandMarker = (props) => {
     );
 
 };
-
-MojaveWastelandMarker.propTypes = propTypes;
-MojaveWastelandMarker.defaultProps = defaultProps;
 
 export default MojaveWastelandMarker;
