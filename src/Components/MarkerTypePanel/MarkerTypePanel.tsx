@@ -6,10 +6,10 @@ import {
     typeLabelMap,
     typeColorMap,
     subTypeSkillBookLabelMap,
-    Marker,
-    MarkerTypes,
+    MarkerInterface,
+    MarkerType,
     MarkerSubtypes,
-} from 'Data/marker-types';
+} from 'types';
 import MarkerListItem from 'Components/MarkerListItem/MarkerListItem';
 
 const typesThatHaveSubTypes: Array<string> = [
@@ -18,11 +18,11 @@ const typesThatHaveSubTypes: Array<string> = [
 
 interface MarkerTypePanelProps {
     className?: string;
-    type?: MarkerTypes;
-    markers: Array<Marker>;
-    onMarkButtonClick?: (marker: Marker) => (event: React.SyntheticEvent) => void;
+    type?: MarkerType;
+    markers: Array<MarkerInterface>;
+    onMarkButtonClick?: (marker: MarkerInterface) => (event: React.SyntheticEvent) => void;
     onTypeClick?: (event: React.MouseEvent) => void;
-    onMarkerTitleClick?: (marker: Marker) => (event: React.SyntheticEvent) => void;
+    onMarkerTitleClick?: (marker: MarkerInterface) => (event: React.SyntheticEvent) => void;
 }
 
 const MarkerTypePanel = ({
@@ -39,7 +39,7 @@ const MarkerTypePanel = ({
     const subTypes: {
         [index: string]: {
             id: MarkerSubtypes;
-            markers: Array<Marker>;
+            markers: Array<MarkerInterface>;
         };
     } = {};
 
@@ -60,7 +60,7 @@ const MarkerTypePanel = ({
         });
     }
 
-    const renderMarkerListItem = (marker: Marker): JSX.Element => {
+    const renderMarkerListItem = (marker: MarkerInterface): JSX.Element => {
 
         return (
 
