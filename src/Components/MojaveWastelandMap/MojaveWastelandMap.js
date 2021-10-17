@@ -90,7 +90,7 @@ const MojaveWastelandMap = (props) => {
                         imgSrc={marker.imgSrc}
                         onMarkButtonClick={props.onMarkButtonClick(marker)}
                         type={marker.type}
-                        subType={marker.sub_type}
+                        subType={marker.subType}
                         onAdd={props.onMarkerAdd}
                     />
 

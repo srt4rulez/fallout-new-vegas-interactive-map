@@ -86,16 +86,16 @@ const subTypeSkillBookLabelMap = {
 } as const;
 
 export interface MarkerInterface {
-    id: string;
-    type: MarkerType;
-    sub_type: MarkerSubtypes;
-    title: string;
-    desc: string;
-    url: string;
-    imgSrc: string;
-    lat: number;
-    lng: number;
-    isFound: boolean;
+    id?: string;
+    type?: MarkerType;
+    subType: MarkerSubtypes;
+    title?: string;
+    desc?: string;
+    url?: string;
+    imgSrc?: string;
+    lat?: number;
+    lng?: number;
+    isFound?: boolean;
 }
 
 export {

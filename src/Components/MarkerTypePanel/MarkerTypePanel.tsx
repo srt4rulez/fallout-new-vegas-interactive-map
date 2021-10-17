@@ -45,15 +45,15 @@ const MarkerTypePanel = ({
 
     if (hasSubTypes) {
         markers.forEach((marker) => {
-            const subType = subTypes[marker.sub_type];
+            const subType = subTypes[marker.subType];
 
             if (subType) {
                 // Already a object, just add the new marker to markers.
                 subType.markers.push(marker);
             } else {
                 // Create object for sub type
-                subTypes[marker.sub_type] = {
-                    id: marker.sub_type,
+                subTypes[marker.subType] = {
+                    id: marker.subType,
                     markers: [marker],
                 };
             }
