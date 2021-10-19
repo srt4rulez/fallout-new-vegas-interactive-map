@@ -90,7 +90,7 @@ const MojaveWastelandMarker = ({
                         target="_blank"
                     >
 
-                        {type === typeMap.SkillBook && subTypeSkillBookLabelMap[subType] && `${subTypeSkillBookLabelMap[subType]} - `}
+                        {type === typeMap.SkillBook && subType && subTypeSkillBookLabelMap[subType] && `${subTypeSkillBookLabelMap[subType]} - `}
 
                         {title}
 

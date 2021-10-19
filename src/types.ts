@@ -92,7 +92,7 @@ const subTypeSkillBookLabelMap = {
 export interface MarkerInterface {
     id?: string;
     type?: MarkerType;
-    subType: MarkerSubtype;
+    subType?: MarkerSubtype;
     title?: string;
     desc?: string;
     url?: string;

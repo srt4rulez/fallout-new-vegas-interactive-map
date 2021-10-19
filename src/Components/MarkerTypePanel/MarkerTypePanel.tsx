@@ -41,6 +41,9 @@ const MarkerTypePanel = ({
 
     if (hasSubTypes) {
         markers.forEach((marker) => {
+            if (!marker.subType) {
+                return;
+            }
             const subType = subTypes[marker.subType];
 
             if (subType) {

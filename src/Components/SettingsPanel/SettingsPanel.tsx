@@ -14,7 +14,7 @@ export interface SettingsPanelProps {
     markers: Array<MarkerInterface>;
     onMarkButtonClick?: (marker: MarkerInterface) => React.ChangeEventHandler;
     isFoundMarkersShown?: boolean;
-    onClickShowFoundMarkers?: (event: React.ChangeEvent) => void;
+    onClickShowFoundMarkers?: React.ChangeEventHandler;
     appVersion?: string;
     onMarkerTitleClick?: (marker: MarkerInterface) => React.MouseEventHandler;
     onShowAllClick?: (event: React.MouseEvent) => void;
