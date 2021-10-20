@@ -2,7 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import './SettingsPanel.scss';
 import FalloutNVLogoImageSrc from './fallout-nv-logo.png';
-import MarkerTypePanel from 'Components/MarkerTypePanel/MarkerTypePanel';
+import MarkerTypePanel, { MarkerTypePanelProps } from 'Components/MarkerTypePanel/MarkerTypePanel';
 import {
     typeMap,
     MarkerInterface,
@@ -12,13 +12,13 @@ import {
 export interface SettingsPanelProps {
     className?: string;
     markers: Array<MarkerInterface>;
-    onMarkButtonClick?: (marker: MarkerInterface) => React.ChangeEventHandler;
+    onMarkButtonClick?: MarkerTypePanelProps['onMarkButtonClick'];
     isFoundMarkersShown?: boolean;
-    onClickShowFoundMarkers?: React.ChangeEventHandler;
+    onClickShowFoundMarkers?: React.InputHTMLAttributes<Element>['onChange'];
     appVersion?: string;
-    onMarkerTitleClick?: (marker: MarkerInterface) => React.MouseEventHandler;
-    onShowAllClick?: (event: React.MouseEvent) => void;
-    onTypeClick?: (type: MarkerType) => React.MouseEventHandler;
+    onMarkerTitleClick?: MarkerTypePanelProps['onMarkerTitleClick'];
+    onShowAllClick?: React.DOMAttributes<Element>['onClick'];
+    onTypeClick?: (type: MarkerType) => MarkerTypePanelProps['onTypeClick'];
 }
 
 const SettingsPanel = ({

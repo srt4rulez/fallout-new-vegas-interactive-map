@@ -10,15 +10,15 @@ import {
     MarkerType,
     MarkerSubtype,
 } from 'types';
-import MarkerListItem from 'Components/MarkerListItem/MarkerListItem';
+import MarkerListItem, { MarkerListItemProps } from 'Components/MarkerListItem/MarkerListItem';
 
 export interface MarkerTypePanelProps {
     className?: string;
     type?: MarkerType;
     markers: Array<MarkerInterface>;
-    onMarkButtonClick?: (marker: MarkerInterface) => React.ChangeEventHandler;
-    onTypeClick?: React.MouseEventHandler;
-    onMarkerTitleClick?: (marker: MarkerInterface) => React.MouseEventHandler;
+    onMarkButtonClick?: (marker: MarkerInterface) => MarkerListItemProps['onMarkCheckboxChange'];
+    onTypeClick?: React.DOMAttributes<Element>['onClick'];
+    onMarkerTitleClick?: (marker: MarkerInterface) => MarkerListItemProps['onMarkerTitleClick'];
 }
 
 const MarkerTypePanel = ({

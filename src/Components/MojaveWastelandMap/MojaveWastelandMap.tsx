@@ -25,7 +25,7 @@ const bounds = new L.LatLngBounds({
 export interface MojaveWastelandMapProps {
     className?: string;
     markers?: Array<MarkerInterface>;
-    onMarkButtonClick?: (marker: MarkerInterface) => React.ChangeEventHandler;
+    onMarkButtonClick?: (marker: MarkerInterface) => MojaveWastelandMarkerProps['onMarkButtonClick'];
     isFoundMarkersShown?: boolean;
     onMapCreation?: MapContainerProps['whenCreated'];
     onMarkerAdd?: MojaveWastelandMarkerProps['onAdd'];

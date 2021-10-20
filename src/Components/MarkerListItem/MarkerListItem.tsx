@@ -6,8 +6,8 @@ export interface MarkerListItemProps {
     tag?: React.ComponentType | keyof JSX.IntrinsicElements;
     className?: string;
     isFound?: boolean;
-    onMarkCheckboxChange?: React.ChangeEventHandler;
-    onMarkerTitleClick?: React.MouseEventHandler;
+    onMarkCheckboxChange?: React.InputHTMLAttributes<Element>['onChange'];
+    onMarkerTitleClick?: React.DOMAttributes<Element>['onClick'];
     title?: string;
 }
 
