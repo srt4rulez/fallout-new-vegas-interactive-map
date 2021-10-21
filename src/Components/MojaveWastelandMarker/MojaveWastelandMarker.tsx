@@ -12,6 +12,8 @@ import {
     typeLabelMap,
     typeColorMap,
     subTypeSkillBookLabelMap,
+} from 'types';
+import type {
     MarkerInterface,
 } from 'types';
 

@@ -18,7 +18,7 @@ const MarkerListItem = ({
     onMarkCheckboxChange = undefined,
     onMarkerTitleClick = undefined,
     title = '',
-}: MarkerListItemProps = {}) => {
+}: MarkerListItemProps = {}): JSX.Element => {
 
     const Tag = tag;
 

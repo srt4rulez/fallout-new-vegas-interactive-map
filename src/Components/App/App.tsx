@@ -4,11 +4,11 @@ import MojaveWastelandMap from 'Components/MojaveWastelandMap/MojaveWastelandMap
 import markersFromJson from 'Data/markers.json';
 import SettingsPanel from 'Components/SettingsPanel/SettingsPanel';
 import packageJson from './../../../package.json';
-import {
+import type {
     MarkerInterface,
     MarkerType,
 } from 'types';
-import * as L from 'leaflet';
+import type * as L from 'leaflet';
 
 export interface AppPropsInterface { // eslint-disable-line @typescript-eslint/no-empty-interface
 }
@@ -35,7 +35,7 @@ class App extends React.Component<AppPropsInterface, AppStateInterface> {
     componentDidMount(): void {
         const localStorageMarkersJson = window.localStorage.getItem('markers') || '[]';
 
-        const localStorageMarkers: Array<MarkerInterface> = JSON.parse(localStorageMarkersJson);
+        const localStorageMarkers = JSON.parse(localStorageMarkersJson) as Array<MarkerInterface>;
 
         const newMarkers = (markersFromJson as Array<MarkerInterface>).map((marker) => {
             const localStorageMarker = localStorageMarkers.find((item) => item.id === marker.id);
@@ -98,7 +98,7 @@ class App extends React.Component<AppPropsInterface, AppStateInterface> {
     updateLocalStorageMarker = (marker: MarkerInterface = {}): void => {
         const localStorageMarkersJson = window.localStorage.getItem('markers') || '[]';
 
-        const localStorageMarkers: Array<MarkerInterface> = [...JSON.parse(localStorageMarkersJson)];
+        const localStorageMarkers = [...JSON.parse(localStorageMarkersJson) as Array<MarkerInterface>];
 
         const index = localStorageMarkers.findIndex((item) => item.id === marker.id);
 
@@ -177,7 +177,7 @@ class App extends React.Component<AppPropsInterface, AppStateInterface> {
 
         map.on('click', (event: L.LeafletMouseEvent) => {
             // Allow figuring out what lat + lng we are clicking.
-            if ((window as any).debug === true) { // eslint-disable-line @typescript-eslint/no-explicit-any
+            if ((window as any).debug === true) { // eslint-disable-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
                 console.log(event.latlng);
             }
         });
@@ -201,7 +201,7 @@ class App extends React.Component<AppPropsInterface, AppStateInterface> {
      */
     handleMarkerAdd = (event: L.LeafletEvent): void => {
 
-        const marker: L.Marker = event.target;
+        const marker = event.target as L.Marker;
 
         const markerLatLng = marker.getLatLng();
 
@@ -216,7 +216,7 @@ class App extends React.Component<AppPropsInterface, AppStateInterface> {
 
     };
 
-    render() {
+    render(): JSX.Element | null {
 
         return (
 

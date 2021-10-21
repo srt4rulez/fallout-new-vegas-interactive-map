@@ -4,12 +4,15 @@ import './MojaveWastelandMap.scss';
 import {
     MapContainer,
     ImageOverlay,
+} from 'react-leaflet';
+import type {
     MapContainerProps,
 } from 'react-leaflet';
 import * as L from 'leaflet';
 import mojaveWastelandMapImageSrc from './mojave-wasteland-map.jpg';
-import MojaveWastelandMarker, { MojaveWastelandMarkerProps } from 'Components/MojaveWastelandMarker/MojaveWastelandMarker';
-import {
+import MojaveWastelandMarker from 'Components/MojaveWastelandMarker/MojaveWastelandMarker';
+import type { MojaveWastelandMarkerProps } from 'Components/MojaveWastelandMarker/MojaveWastelandMarker';
+import type {
     MarkerInterface,
 } from 'types';
 

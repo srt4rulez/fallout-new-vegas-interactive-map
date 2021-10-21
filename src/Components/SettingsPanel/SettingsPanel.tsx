@@ -2,9 +2,12 @@ import * as React from 'react';
 import classNames from 'classnames';
 import './SettingsPanel.scss';
 import FalloutNVLogoImageSrc from './fallout-nv-logo.png';
-import MarkerTypePanel, { MarkerTypePanelProps } from 'Components/MarkerTypePanel/MarkerTypePanel';
+import MarkerTypePanel from 'Components/MarkerTypePanel/MarkerTypePanel';
+import type { MarkerTypePanelProps } from 'Components/MarkerTypePanel/MarkerTypePanel';
 import {
     typeMap,
+} from 'types';
+import type {
     MarkerInterface,
     MarkerType,
 } from 'types';
@@ -30,7 +33,7 @@ const SettingsPanel = ({
     appVersion = '',
     onMarkerTitleClick = undefined,
     onShowAllClick = undefined,
-    onTypeClick = () => () => {}, // eslint-disable-line @typescript-eslint/no-empty-function
+    onTypeClick = undefined,
     // ...props
 }: SettingsPanelProps): JSX.Element => {
 

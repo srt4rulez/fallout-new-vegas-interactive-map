@@ -39,11 +39,51 @@ module.exports = {
         {
             'files': ['**/*.ts', '**/*.tsx'],
             'parser': '@typescript-eslint/parser',
+            'parserOptions': {
+                'tsconfigRootDir': __dirname,
+                'project': ['./tsconfig.json'],
+            },
             'extends': [
                 'plugin:@typescript-eslint/recommended',
+                'plugin:@typescript-eslint/recommended-requiring-type-checking',
             ],
             'rules': {
                 'react/require-default-props': 'off',
+                '@typescript-eslint/array-type': [
+                    'error',
+                    {
+                        'default': 'generic',
+                    },
+                ],
+                '@typescript-eslint/consistent-type-definitions': [
+                    'error',
+                    'interface',
+                ],
+                '@typescript-eslint/consistent-type-assertions': [
+                    'error',
+                    {
+                        'assertionStyle': 'as',
+                    },
+                ],
+                '@typescript-eslint/consistent-type-imports': [
+                    'error',
+                ],
+                '@typescript-eslint/explicit-function-return-type': [
+                    'error',
+                ],
+                '@typescript-eslint/explicit-module-boundary-types': [
+                    'error',
+                ],
+                '@typescript-eslint/member-delimiter-style': [
+                    'error',
+                ],
+                '@typescript-eslint/type-annotation-spacing': [
+                    'error',
+                ],
+                '@typescript-eslint/consistent-indexed-object-style': [
+                    'error',
+                    'index-signature',
+                ],
             },
         },
         {

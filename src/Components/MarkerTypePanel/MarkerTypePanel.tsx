@@ -6,11 +6,14 @@ import {
     typeLabelMap,
     typeColorMap,
     subTypeSkillBookLabelMap,
+} from 'types';
+import type {
     MarkerInterface,
     MarkerType,
     MarkerSubtype,
 } from 'types';
-import MarkerListItem, { MarkerListItemProps } from 'Components/MarkerListItem/MarkerListItem';
+import MarkerListItem from 'Components/MarkerListItem/MarkerListItem';
+import type { MarkerListItemProps } from 'Components/MarkerListItem/MarkerListItem';
 
 export interface MarkerTypePanelProps {
     className?: string;
@@ -28,7 +31,7 @@ const MarkerTypePanel = ({
     onMarkButtonClick = undefined,
     onTypeClick = undefined,
     onMarkerTitleClick = undefined,
-}: MarkerTypePanelProps) => {
+}: MarkerTypePanelProps): JSX.Element => {
 
     const hasSubTypes = type ? typesThatHaveSubTypes.includes(type) : false;
 
