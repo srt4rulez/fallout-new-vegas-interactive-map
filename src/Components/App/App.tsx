@@ -1,29 +1,43 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import './App.scss';
 import MojaveWastelandMap from 'Components/MojaveWastelandMap/MojaveWastelandMap';
-import markers from 'Data/markers.json';
+import markersFromJson from 'Data/markers.json';
 import SettingsPanel from 'Components/SettingsPanel/SettingsPanel';
 import packageJson from './../../../package.json';
+import type {
+    MarkerInterface,
+    MarkerType,
+} from 'types';
+import type * as L from 'leaflet';
 
-class App extends Component {
+export interface AppPropsInterface { // eslint-disable-line @typescript-eslint/no-empty-interface
+}
 
-    constructor(props) {
-        super(props);
+interface AppStateInterface {
+    markers: Array<MarkerInterface>;
+    isFoundMarkersShown?: boolean;
+}
 
-        this.state = {};
+class App extends React.Component<AppPropsInterface, AppStateInterface> {
 
-        // Only used with L.Map API.
-        this.markers = {};
-    }
+    state: AppStateInterface = {
+        markers: [],
+        isFoundMarkersShown: false,
+    };
 
-    static version = packageJson.version;
+    // Only used with L.Map API.
+    markers: {
+        [index: string]: L.Marker;
+    } = {};
 
-    componentDidMount() {
+    static version: string = packageJson.version;
+
+    componentDidMount(): void {
         const localStorageMarkersJson = window.localStorage.getItem('markers') || '[]';
 
-        const localStorageMarkers = JSON.parse(localStorageMarkersJson);
+        const localStorageMarkers = JSON.parse(localStorageMarkersJson) as Array<MarkerInterface>;
 
-        const newMarkers = markers.map((marker) => {
+        const newMarkers = (markersFromJson as Array<MarkerInterface>).map((marker) => {
             const localStorageMarker = localStorageMarkers.find((item) => item.id === marker.id);
 
             const newMarker = {
@@ -49,16 +63,16 @@ class App extends Component {
         });
     }
 
-    handleMarkButtonClick = (marker = {}) => (event) => { // eslint-disable-line no-unused-vars
+    handleMarkButtonClick = (marker: MarkerInterface = {}) => (event: React.ChangeEvent): void => { // eslint-disable-line @typescript-eslint/no-unused-vars
 
-        this.setState((prevState) => {
+        this.setState((prevState: AppStateInterface) => {
             const index = prevState.markers.findIndex((item) => item.id === marker.id);
 
             if (index === -1) {
-                return {};
+                return null;
             }
 
-            const oldMarker = prevState.markers[index] || {};
+            const oldMarker = prevState.markers[index];
 
             const newMarkers = [...prevState.markers];
 
@@ -80,13 +94,11 @@ class App extends Component {
 
     /**
      * Set the marker in local storage as found or not.
-     *
-     * @param {Object} marker
      */
-    updateLocalStorageMarker = (marker = {}) => {
+    updateLocalStorageMarker = (marker: MarkerInterface = {}): void => {
         const localStorageMarkersJson = window.localStorage.getItem('markers') || '[]';
 
-        const localStorageMarkers = [...JSON.parse(localStorageMarkersJson)];
+        const localStorageMarkers = [...JSON.parse(localStorageMarkersJson) as Array<MarkerInterface>];
 
         const index = localStorageMarkers.findIndex((item) => item.id === marker.id);
 
@@ -105,9 +117,9 @@ class App extends Component {
         window.localStorage.setItem('markers', JSON.stringify(localStorageMarkers));
     };
 
-    handleShowFoundMarkersClick = () => {
+    handleShowFoundMarkersClick = (): void => {
 
-        this.setState((prevState) => {
+        this.setState((prevState: AppStateInterface) => {
 
             const newState = !prevState.isFoundMarkersShown;
 
@@ -122,17 +134,15 @@ class App extends Component {
 
     /**
      * Only show the currently clicked marker type.
-     *
-     * @param {String} type
      */
-    handleTypeClick = (type) => () => {
+    handleTypeClick = (type: MarkerType) => (): void => {
 
-        this.setState((prevState) => {
+        this.setState((prevState: AppStateInterface) => {
 
             const newMarkers = [...prevState.markers].map((marker) => {
                 return {
                     ...marker,
-                    isHidden: marker.type !== type,
+                    isHidden: marker.type !== type, // hide if the clicked type is not the type this marker is.
                 };
             });
 
@@ -146,10 +156,9 @@ class App extends Component {
     /**
      * Un-hide all marker types.
      */
-    handleShowAllClick = () => {
+    handleShowAllClick = (): void => {
 
-        this.setState((prevState) => {
-
+        this.setState((prevState: AppStateInterface) => {
             const newMarkers = [...prevState.markers].map((marker) => {
                 return {
                     ...marker,
@@ -164,28 +173,22 @@ class App extends Component {
 
     };
 
-    /**
-     * @param {L.Map} map
-     */
-    handleMapCreation = (map) => {
+    handleMapCreation = (map: L.Map): void => {
 
-        map.on('click', (event) => {
+        map.on('click', (event: L.LeafletMouseEvent) => {
             // Allow figuring out what lat + lng we are clicking.
-            if (window.debug === true) {
+            if ((window as any).debug === true) { // eslint-disable-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
                 console.log(event.latlng);
             }
         });
 
     };
 
-    handleMarkerTitleClick = (markerData = {}) => () => {
+    handleMarkerTitleClick = (markerData: MarkerInterface = {}) => (): void => {
 
-        /**
-         * @var {L.Marker|null}
-         */
-        const marker = this.markers[markerData.id] || null;
+        const marker = markerData.id && this.markers[markerData.id] || null;
 
-        if (marker) {
+        if (marker && markerData.lat && markerData.lng) {
             // Open the popup of the marker.
             marker.openPopup([markerData.lat, markerData.lng]);
         }
@@ -195,33 +198,25 @@ class App extends Component {
     /**
      * When a marker is added to the map, add it to our markers property for use
      * with handleMarkerTitleClick.
-     *
-     * @param {Event} event
      */
-    handleMarkerAdd = (event) => {
+    handleMarkerAdd = (event: L.LeafletEvent): void => {
 
-        /**
-         * @var {L.Marker}
-         */
-        const marker = event.target;
+        const marker = event.target as L.Marker;
 
         const markerLatLng = marker.getLatLng();
 
         const lat = markerLatLng.lat;
         const lng = markerLatLng.lng;
 
-        /**
-         * @var {Object}
-         */
-        const markerData = this.state.markers.find((item) => item.lat === lat && item.lng === lng);
+        const markerData: MarkerInterface | undefined = this.state.markers && this.state.markers.find((item) => item.lat === lat && item.lng === lng);
 
-        if (markerData) {
+        if (markerData && markerData.id) {
             this.markers[markerData.id] = marker;
         }
 
     };
 
-    render() {
+    render(): JSX.Element | null {
 
         return (
 

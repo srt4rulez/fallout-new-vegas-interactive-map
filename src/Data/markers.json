@@ -72,7 +72,7 @@
     {
         "id": "skill-book-bbos-brewers-beer-bootlegging",
         "type": "skill_book",
-        "sub_type": "bbos",
+        "subType": "bbos",
         "title": "Brewer's Beer Bootlegging",
         "desc": "In the cellar, in the back room on a table to the left of the chemistry set.",
         "url": "https://fallout.fandom.com/wiki/Big_Book_of_Science_(Fallout:_New_Vegas)",
@@ -83,7 +83,7 @@
     {
         "id": "skill-book-bbos-camp-forlorn-hope",
         "type": "skill_book",
-        "sub_type": "bbos",
+        "subType": "bbos",
         "title": "Camp Forlorn Hope",
         "desc": "In the <a href=\"https://fallout.fandom.com/wiki/Camp_Forlorn_Hope_command_center\">command center</a>, in the southeast corner, on the desk.",
         "url": "https://fallout.fandom.com/wiki/Big_Book_of_Science_(Fallout:_New_Vegas)",
@@ -94,7 +94,7 @@
     {
         "id": "skill-book-bbos-helios-one",
         "type": "skill_book",
-        "sub_type": "bbos",
+        "subType": "bbos",
         "title": "HELIOS One",
         "desc": "Reward for distributing power through the network during <a href=\"https://fallout.fandom.com/wiki/That_Lucky_Old_Sun\">That Lucky Old Sun</a>.",
         "url": "https://fallout.fandom.com/wiki/Big_Book_of_Science_(Fallout:_New_Vegas)",
@@ -104,7 +104,7 @@
     {
         "id": "skill-book-bbos-nipton",
         "type": "skill_book",
-        "sub_type": "bbos",
+        "subType": "bbos",
         "title": "Nipton",
         "desc": "On the desk in Mayor <a href=\"https://fallout.fandom.com/wiki/Joseph_B._Steyn\">Joseph B. Steyn</a>'s office on the top floor of the <a href=\"https://fallout.fandom.com/wiki/Nipton_Town_Hall\">Nipton Town Hall</a> building.",
         "url": "https://fallout.fandom.com/wiki/Big_Book_of_Science_(Fallout:_New_Vegas)",
@@ -115,7 +115,7 @@
     {
         "id": "skill-book-bbos-repconn-headquarters",
         "type": "skill_book",
-        "sub_type": "bbos",
+        "subType": "bbos",
         "title": "REPCONN Headquarters",
         "desc": "Located on the ground floor through the door next to the radioactive barrel display, located on a shelf past the Hard locked door.",
         "url": "https://fallout.fandom.com/wiki/Big_Book_of_Science_(Fallout:_New_Vegas)",
@@ -126,7 +126,7 @@
     {
         "id": "skill-book-casotm-camp-searchlight",
         "type": "skill_book",
-        "sub_type": "casotm",
+        "subType": "casotm",
         "title": "Camp Searchlight",
         "desc": "In the <a href=\"https://fallout.fandom.com/wiki/Searchlight_east_church\">east church</a>'s <a href=\"https://fallout.fandom.com/wiki/Searchlight_church_basement\">basement</a>, by the eastern wall, at the foot of the metal shelves, on the floor.",
         "url": "https://fallout.fandom.com/wiki/Chinese_Army:_Special_Ops_Training_Manual_(Fallout:_New_Vegas)",
@@ -137,7 +137,7 @@
     {
         "id": "skill-book-casotm-goodsprings",
         "type": "skill_book",
-        "sub_type": "casotm",
+        "subType": "casotm",
         "title": "Goodsprings",
         "desc": "In the <a href=\"https://fallout.fandom.com/wiki/Goodsprings_home\">Goodsprings</a> home inhabited by Trudy and Sunny Smiles, east from the <a href=\"https://fallout.fandom.com/wiki/Goodsprings_schoolhouse\">schoolhouse</a>, on a bookshelf.",
         "url": "https://fallout.fandom.com/wiki/Chinese_Army:_Special_Ops_Training_Manual_(Fallout:_New_Vegas)",
@@ -148,7 +148,7 @@
     {
         "id": "skill-book-casotm-ncr-sharecropper-farms",
         "type": "skill_book",
-        "sub_type": "casotm",
+        "subType": "casotm",
         "title": "NCR Sharecropper Farms",
         "desc": "On some papers, by the corner desk inside the <a href=\"https://fallout.fandom.com/wiki/Sharecropper_barracks\">sharecropper barracks</a> near the four water towers in the northeast corner of the fenced-in area.",
         "url": "https://fallout.fandom.com/wiki/Chinese_Army:_Special_Ops_Training_Manual_(Fallout:_New_Vegas)",
@@ -159,7 +159,7 @@
     {
         "id": "skill-book-casotm-vault-3",
         "type": "skill_book",
-        "sub_type": "casotm",
+        "subType": "casotm",
         "title": "Vault 3",
         "desc": "In the living quarters on a shelf, down the stairs from the recreation area through an Average locked door.",
         "url": "https://fallout.fandom.com/wiki/Chinese_Army:_Special_Ops_Training_Manual_(Fallout:_New_Vegas)",
@@ -170,7 +170,7 @@
     {
         "id": "skill-book-dcjoim-followers-safehouse",
         "type": "skill_book",
-        "sub_type": "dcjoim",
+        "subType": "dcjoim",
         "title": "Followers Safehouse",
         "desc": "On the bedside table shelf, by the bed on the right, in the second room. Entry requires a key.",
         "url": "https://fallout.fandom.com/wiki/D.C._Journal_of_Internal_Medicine_(Fallout:_New_Vegas)",
@@ -181,7 +181,7 @@
     {
         "id": "skill-book-dcjoim-helios-one",
         "type": "skill_book",
-        "sub_type": "dcjoim",
+        "subType": "dcjoim",
         "title": "HELIOS One",
         "desc": "Upstairs in the main building, lying on a bed in the same room with the east terminal password.",
         "url": "https://fallout.fandom.com/wiki/D.C._Journal_of_Internal_Medicine_(Fallout:_New_Vegas)",
@@ -192,7 +192,7 @@
     {
         "id": "skill-book-dcjoim-hells-motel",
         "type": "skill_book",
-        "sub_type": "dcjoim",
+        "subType": "dcjoim",
         "title": "Hell's Motel",
         "desc": "The shack inside the <a href=\"https://fallout.fandom.com/wiki/Mesquite_Mountains_crater\">Mesquite Mountains crater</a>, below the globe with a hat, on the table with the radio and repair kit.",
         "url": "https://fallout.fandom.com/wiki/D.C._Journal_of_Internal_Medicine_(Fallout:_New_Vegas)",
@@ -203,7 +203,7 @@
     {
         "id": "skill-book-dcjoim-novac",
         "type": "skill_book",
-        "sub_type": "dcjoim",
+        "subType": "dcjoim",
         "title": "Novac",
         "desc": "In the middle of the queen-sized bed, inside <a href=\"https://fallout.fandom.com/wiki/Ranger_Andy%27s_bungalow\">Ranger Andy's bungalow</a>.",
         "url": "https://fallout.fandom.com/wiki/D.C._Journal_of_Internal_Medicine_(Fallout:_New_Vegas)",
@@ -214,7 +214,7 @@
     {
         "id": "skill-book-de-nellis-air-force-base",
         "type": "skill_book",
-        "sub_type": "de",
+        "subType": "de",
         "title": "Nellis Air Force Base",
         "desc": "Inside <a href=\"https://fallout.fandom.com/wiki/Loyal%27s_house\">Loyal's house</a>, on the long counter next to the ruined terminal.",
         "url": "https://fallout.fandom.com/wiki/Dean%27s_Electronics_(Fallout:_New_Vegas)",
@@ -225,7 +225,7 @@
     {
         "id": "skill-book-de-sloan",
         "type": "skill_book",
-        "sub_type": "de",
+        "subType": "de",
         "title": "Sloan",
         "desc": "In the <a href=\"https://fallout.fandom.com/wiki/Worker_barracks\">worker barracks</a>, on the top shelf to the left of the entrance.",
         "url": "https://fallout.fandom.com/wiki/Dean%27s_Electronics_(Fallout:_New_Vegas)",
@@ -236,7 +236,7 @@
     {
         "id": "skill-book-de-southern-nevada-wind-farm",
         "type": "skill_book",
-        "sub_type": "de",
+        "subType": "de",
         "title": "Southern Nevada Wind Farm",
         "desc": "In the shack, on the table with the clipboard and scrap metal.",
         "url": "https://fallout.fandom.com/wiki/Dean%27s_Electronics_(Fallout:_New_Vegas)",
@@ -247,7 +247,7 @@
     {
         "id": "skill-book-de-abandoned-brotherhood-of-steel-bunker",
         "type": "skill_book",
-        "sub_type": "de",
+        "subType": "de",
         "title": "Abandoned Brotherhood of Steel Bunker (Dead Money)",
         "desc": "On the metal sill, opposite the reloading bench, in the area with the office. Though the location exists without the add-on, it is sealed by a keyless lock.",
         "url": "https://fallout.fandom.com/wiki/Dean%27s_Electronics_(Fallout:_New_Vegas)",
@@ -258,7 +258,7 @@
     {
         "id": "skill-book-dac-mojave-outpost",
         "type": "skill_book",
-        "sub_type": "dac",
+        "subType": "dac",
         "title": "Mojave Outpost",
         "desc": "Inside the <a href=\"https://fallout.fandom.com/wiki/Mojave_Outpost_barracks\">Mojave Outpost barracks</a>, below the bar counter in the middle of the bottom shelf.",
         "url": "https://fallout.fandom.com/wiki/Duck_and_Cover!_(Fallout:_New_Vegas)",
@@ -269,7 +269,7 @@
     {
         "id": "skill-book-dac-nellis-air-force-base",
         "type": "skill_book",
-        "sub_type": "dac",
+        "subType": "dac",
         "title": "Nellis Air Force Base",
         "desc": "Among the books on the shelf, above the grenade rifle, inside <a href=\"https://fallout.fandom.com/wiki/Pearl%27s_barracks\">Pearl's barracks</a>.",
         "url": "https://fallout.fandom.com/wiki/Duck_and_Cover!_(Fallout:_New_Vegas)",
@@ -280,7 +280,7 @@
     {
         "id": "skill-book-dac-ranger-station-foxtrot",
         "type": "skill_book",
-        "sub_type": "dac",
+        "subType": "dac",
         "title": "Ranger Station Foxtrot",
         "desc": "On the table next to Comm Officer <a href=\"https://fallout.fandom.com/wiki/Lenk\">Lenk</a>.",
         "url": "https://fallout.fandom.com/wiki/Duck_and_Cover!_(Fallout:_New_Vegas)",
@@ -291,7 +291,7 @@
     {
         "id": "skill-book-dac-sloan",
         "type": "skill_book",
-        "sub_type": "dac",
+        "subType": "dac",
         "title": "Sloan",
         "desc": "It is inside the worker barracks on the back left shelf under a first aid box.",
         "url": "https://fallout.fandom.com/wiki/Duck_and_Cover!_(Fallout:_New_Vegas)",
@@ -302,7 +302,7 @@
     {
         "id": "skill-book-gtb-cannibal-johnsons-cave",
         "type": "skill_book",
-        "sub_type": "gtb",
+        "subType": "gtb",
         "title": "Cannibal Johnson's Cave",
         "desc": "On the mattress near the radio, close to the campfire.",
         "url": "https://fallout.fandom.com/wiki/Grognak_the_Barbarian_(Fallout:_New_Vegas)",
@@ -313,7 +313,7 @@
     {
         "id": "skill-book-gtb-cottonwood-cove",
         "type": "skill_book",
-        "sub_type": "gtb",
+        "subType": "gtb",
         "title": "Cottonwood Cove",
         "desc": "Inside <a href=\"https://fallout.fandom.com/wiki/Aurelius_of_Phoenix\">Aurelius of Phoenix</a>'s office on the upper floor of the <a href=\"https://fallout.fandom.com/wiki/Cottonwood_Cove_HQ\">HQ</a>, inside the nightstand next to the bed.",
         "url": "https://fallout.fandom.com/wiki/Grognak_the_Barbarian_(Fallout:_New_Vegas)",
@@ -324,7 +324,7 @@
     {
         "id": "skill-book-gtb-hidden-supply-cave",
         "type": "skill_book",
-        "sub_type": "gtb",
+        "subType": "gtb",
         "title": "Hidden Supply Cave",
         "desc": "Resting on one of the large metal crates in the cave, sometimes behind the metal crates. Cave is behind an Average locked door.",
         "url": "https://fallout.fandom.com/wiki/Grognak_the_Barbarian_(Fallout:_New_Vegas)",
@@ -335,7 +335,7 @@
     {
         "id": "skill-book-gtb-jacobstown",
         "type": "skill_book",
-        "sub_type": "gtb",
+        "subType": "gtb",
         "title": "Jacobstown",
         "desc": "Lying in front of the oven, in the first bungalow to the north towards the lodge.",
         "url": "https://fallout.fandom.com/wiki/Grognak_the_Barbarian_(Fallout:_New_Vegas)",
@@ -346,7 +346,7 @@
     {
         "id": "skill-book-gab-gomorrah",
         "type": "skill_book",
-        "sub_type": "gab",
+        "subType": "gab",
         "title": "Gomorrah",
         "desc": "In <a href=\"https://fallout.fandom.com/wiki/Big_Sal%27s_office\">Big Sal's office</a> past a Hard locked door, upstairs from the main level of <a href=\"https://fallout.fandom.com/wiki/Brimstone\">Brimstone</a>, on the first low bookshelf on the left.",
         "url": "https://fallout.fandom.com/wiki/Guns_and_Bullets_(Fallout:_New_Vegas)",
@@ -357,7 +357,7 @@
     {
         "id": "skill-book-gab-nevada-highway-patrol-station",
         "type": "skill_book",
-        "sub_type": "gab",
+        "subType": "gab",
         "title": "Nevada Highway Patrol Station",
         "desc": "On the desk without the computer in the entrance office room, nearest the door leading to the cells.",
         "url": "https://fallout.fandom.com/wiki/Guns_and_Bullets_(Fallout:_New_Vegas)",
@@ -368,7 +368,7 @@
     {
         "id": "skill-book-gab-rauls-shack",
         "type": "skill_book",
-        "sub_type": "gab",
+        "subType": "gab",
         "title": "Raul's Shack",
         "desc": "Inside the shack, in the wooden crate next to the door.",
         "url": "https://fallout.fandom.com/wiki/Guns_and_Bullets_(Fallout:_New_Vegas)",
@@ -379,7 +379,7 @@
     {
         "id": "skill-book-gab-vault-34",
         "type": "skill_book",
-        "sub_type": "gab",
+        "subType": "gab",
         "title": "Vault 34",
         "desc": "On the small metal table between the sofas by the pool table, in the armory common room.",
         "url": "https://fallout.fandom.com/wiki/Guns_and_Bullets_(Fallout:_New_Vegas)",
@@ -390,7 +390,7 @@
     {
         "id": "skill-book-lcs-brooks-tumbleweed-ranch",
         "type": "skill_book",
-        "sub_type": "lcs",
+        "subType": "lcs",
         "title": "Brooks Tumbleweed Ranch",
         "desc": "On an open locker shelf, in the upstairs room with the chessboard.",
         "url": "https://fallout.fandom.com/wiki/Lying,_Congressional_Style_(Fallout:_New_Vegas)",
@@ -401,7 +401,7 @@
     {
         "id": "skill-book-lcs-cerulean-robotics",
         "type": "skill_book",
-        "sub_type": "lcs",
+        "subType": "lcs",
         "title": "Cerulean Robotics",
         "desc": "On the floor among the office desks.",
         "url": "https://fallout.fandom.com/wiki/Lying,_Congressional_Style_(Fallout:_New_Vegas)",
@@ -412,7 +412,7 @@
     {
         "id": "skill-book-lcs-lucky-jim-mine",
         "type": "skill_book",
-        "sub_type": "lcs",
+        "subType": "lcs",
         "title": "Lucky Jim Mine",
         "desc": "Inside the Lucky Jim Mine house, on the bottom shelf below a <a href=\"https://fallout.fandom.com/wiki/Varmint_rifle\">varmint rifle</a>",
         "url": "https://fallout.fandom.com/wiki/Lying,_Congressional_Style_(Fallout:_New_Vegas)",
@@ -423,7 +423,7 @@
     {
         "id": "skill-book-lcs-ncr-correctional-facility",
         "type": "skill_book",
-        "sub_type": "lcs",
+        "subType": "lcs",
         "title": "NCR Correctional Facility",
         "desc": "Second floor of the <a href=\"https://fallout.fandom.com/wiki/NCR_CF_administration\">NCR CF administration</a>, on a desk.",
         "url": "https://fallout.fandom.com/wiki/Lying,_Congressional_Style_(Fallout:_New_Vegas)",
@@ -434,7 +434,7 @@
     {
         "id": "skill-book-ntay-hidden-valley",
         "type": "skill_book",
-        "sub_type": "ntay",
+        "subType": "ntay",
         "title": "Hidden Valley",
         "desc": "Located on the first floor of the <a href=\"https://fallout.fandom.com/wiki/Hidden_Valley_bunker\">Hidden Valley bunker</a> building, in the white plastic bin by the desk in Schuler's office, west of the central hub corridor junction.",
         "url": "https://fallout.fandom.com/wiki/Nikola_Tesla_and_You_(Fallout:_New_Vegas)",
@@ -445,7 +445,7 @@
     {
         "id": "skill-book-ntay-old-nuclear-test-site",
         "type": "skill_book",
-        "sub_type": "ntay",
+        "subType": "ntay",
         "title": "Old Nuclear Test Site",
         "desc": "Inside the <a href=\"https://fallout.fandom.com/wiki/Nuclear_test_shack\">nuclear test shack</a> on the small table opposite to the exit.",
         "url": "https://fallout.fandom.com/wiki/Nikola_Tesla_and_You_(Fallout:_New_Vegas)",
@@ -456,7 +456,7 @@
     {
         "id": "skill-book-ntay-repconn-headquarters",
         "type": "skill_book",
-        "sub_type": "ntay",
+        "subType": "ntay",
         "title": "REPCONN Headquarters",
         "desc": "On the first floor, past the Very Hard locked door, on top of the safe. The key is on the third floor from a suitcase next to a skeleton. The room can also be accessed through a hole in the floor of a western room on the second floor, past a Hard locked door.",
         "url": "https://fallout.fandom.com/wiki/Nikola_Tesla_and_You_(Fallout:_New_Vegas)",
@@ -467,7 +467,7 @@
     {
         "id": "skill-book-ntay-repconn-headquarters-2",
         "type": "skill_book",
-        "sub_type": "ntay",
+        "subType": "ntay",
         "title": "REPCONN Headquarters - #2",
         "desc": "A second copy can be found on the second floor, through the first door on the left, on the desk with the very easy locked terminal.",
         "url": "https://fallout.fandom.com/wiki/Nikola_Tesla_and_You_(Fallout:_New_Vegas)",
@@ -478,7 +478,7 @@
     {
         "id": "skill-book-pi-fishermans-pride-shack",
         "type": "skill_book",
-        "sub_type": "pi",
+        "subType": "pi",
         "title": "Fisherman's Pride Shack",
         "desc": "On the bedside table, inside the shack.",
         "url": "https://fallout.fandom.com/wiki/Pugilism_Illustrated_(Fallout:_New_Vegas)",
@@ -489,7 +489,7 @@
     {
         "id": "skill-book-pi-nipton-road-reststop",
         "type": "skill_book",
-        "sub_type": "pi",
+        "subType": "pi",
         "title": "Nipton Road Reststop",
         "desc": "Inside the store, lying on the wooden shelf on the left upon entering, close to the counter.",
         "url": "https://fallout.fandom.com/wiki/Pugilism_Illustrated_(Fallout:_New_Vegas)",
@@ -500,7 +500,7 @@
     {
         "id": "skill-book-pi-the-tops",
         "type": "skill_book",
-        "sub_type": "pi",
+        "subType": "pi",
         "title": "The Tops",
         "desc": "Inside the <a href=\"https://fallout.fandom.com/wiki/The_Tops_presidential_suite\">presidential suite</a>, inside the pool room, on the tiny table in the corner.",
         "url": "https://fallout.fandom.com/wiki/Pugilism_Illustrated_(Fallout:_New_Vegas)",
@@ -511,7 +511,7 @@
     {
         "id": "skill-book-pi-vault-11",
         "type": "skill_book",
-        "sub_type": "pi",
+        "subType": "pi",
         "title": "Vault 11",
         "desc": "Inside the living quarters, in the first female dorm, by the fallen dresser near a small sign on the ceiling that says \"ladies\"",
         "url": "https://fallout.fandom.com/wiki/Pugilism_Illustrated_(Fallout:_New_Vegas)",
@@ -522,7 +522,7 @@
     {
         "id": "skill-book-toajjv-allied-technologies-offices",
         "type": "skill_book",
-        "sub_type": "toajjv",
+        "subType": "toajjv",
         "title": "Allied Technologies Offices",
         "desc": "In the largest room on the west side of the building, on the floor in front of the Nuka-Cola machine.",
         "url": "https://fallout.fandom.com/wiki/Tales_of_a_Junktown_Jerky_Vendor_(Fallout:_New_Vegas)",
@@ -533,7 +533,7 @@
     {
         "id": "skill-book-toajjv-cap-counterfeiting-shack",
         "type": "skill_book",
-        "sub_type": "toajjv",
+        "subType": "toajjv",
         "title": "Cap Counterfeiting Shack",
         "desc": "On the suitcase by the bed, in the small back cellar room.",
         "url": "https://fallout.fandom.com/wiki/Tales_of_a_Junktown_Jerky_Vendor_(Fallout:_New_Vegas)",
@@ -544,7 +544,7 @@
     {
         "id": "skill-book-toajjv-primm",
         "type": "skill_book",
-        "sub_type": "toajjv",
+        "subType": "toajjv",
         "title": "Primm",
         "desc": "Inside the <a href=\"https://fallout.fandom.com/wiki/Bison_Steve_Hotel\">Bison Steve Hotel</a>, on the floor of the gift shop, behind the counter.",
         "url": "https://fallout.fandom.com/wiki/Tales_of_a_Junktown_Jerky_Vendor_(Fallout:_New_Vegas)",
@@ -555,7 +555,7 @@
     {
         "id": "skill-book-toajjv-vault-22",
         "type": "skill_book",
-        "sub_type": "toajjv",
+        "subType": "toajjv",
         "title": "Vault 22",
         "desc": "In the lab room up the stairs from the elevator in pest control, on the table with the bubbling vials.",
         "url": "https://fallout.fandom.com/wiki/Tales_of_a_Junktown_Jerky_Vendor_(Fallout:_New_Vegas)",
@@ -566,7 +566,7 @@
     {
         "id": "skill-book-tt-bitter-springs-recreation-area",
         "type": "skill_book",
-        "sub_type": "tt",
+        "subType": "tt",
         "title": "Bitter Springs Recreation Area",
         "desc": "Inside the office shack to the west, on the desk in the smaller of the two rooms.",
         "url": "https://fallout.fandom.com/wiki/Tumblers_Today_(Fallout:_New_Vegas)",
@@ -577,7 +577,7 @@
     {
         "id": "skill-book-tt-prospectors-den",
         "type": "skill_book",
-        "sub_type": "tt",
+        "subType": "tt",
         "title": "Prospector's Den",
         "desc": "Inside the caves, in the subterranean den structure, in the large barracks room, on the floor in the far right corner.",
         "url": "https://fallout.fandom.com/wiki/Tumblers_Today_(Fallout:_New_Vegas)",
@@ -588,7 +588,7 @@
     {
         "id": "skill-book-tt-silver-peak-mine",
         "type": "skill_book",
-        "sub_type": "tt",
+        "subType": "tt",
         "title": "Silver Peak Mine",
         "desc": "Inside the shack, behind the two small tables, on the ground in an open locker, to the right of the entrance.",
         "url": "https://fallout.fandom.com/wiki/Tumblers_Today_(Fallout:_New_Vegas)",
@@ -599,7 +599,7 @@
     {
         "id": "skill-book-tt-wolfhorn-ranch",
         "type": "skill_book",
-        "sub_type": "tt",
+        "subType": "tt",
         "title": "Wolfhorn Ranch",
         "desc": "Inside the farmhouse, partially under the fridge without a door.",
         "url": "https://fallout.fandom.com/wiki/Tumblers_Today_(Fallout:_New_Vegas)",
@@ -610,7 +610,7 @@
     {
         "id": "skill-book-wsg-lone-wolf-radio",
         "type": "skill_book",
-        "sub_type": "wsg",
+        "subType": "wsg",
         "title": "Lone Wolf Radio",
         "desc": "Inside the radio trailer, near the mattress.",
         "url": "https://fallout.fandom.com/wiki/Wasteland_Survival_Guide_(Fallout:_New_Vegas)",
@@ -621,7 +621,7 @@
     {
         "id": "skill-book-wsg-matthews-animal-husbandry-farm",
         "type": "skill_book",
-        "sub_type": "wsg",
+        "subType": "wsg",
         "title": "Matthews Animal Husbandry Farm",
         "desc": "Top balcony of the northern barn, near the barrel crate.",
         "url": "https://fallout.fandom.com/wiki/Wasteland_Survival_Guide_(Fallout:_New_Vegas)",
@@ -632,7 +632,7 @@
     {
         "id": "skill-book-wsg-mesquite-mountains-camp-site",
         "type": "skill_book",
-        "sub_type": "wsg",
+        "subType": "wsg",
         "title": "Mesquite Mountains Camp Site",
         "desc": "Inside the western tent, behind the bedding and toolbox, may glitch into the ground.",
         "url": "https://fallout.fandom.com/wiki/Wasteland_Survival_Guide_(Fallout:_New_Vegas)",
@@ -643,7 +643,7 @@
     {
         "id": "skill-book-wsg-scavenger-platform",
         "type": "skill_book",
-        "sub_type": "wsg",
+        "subType": "wsg",
         "title": "Scavenger Platform",
         "desc": "Among the books under the fallen metal bookshelf, on the northern platform section",
         "url": "https://fallout.fandom.com/wiki/Wasteland_Survival_Guide_(Fallout:_New_Vegas)",
