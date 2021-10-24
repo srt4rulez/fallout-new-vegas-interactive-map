@@ -40,6 +40,7 @@ const MarkerListItem = ({
                 className={classNames('marker-list-item__found-checkbox')}
                 isChecked={isFound}
                 onChange={onMarkCheckboxChange}
+                colorScheme="blue"
                 size="lg"
             />
 

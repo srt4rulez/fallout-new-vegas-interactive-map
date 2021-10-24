@@ -167,6 +167,7 @@ const SettingsPanel = ({
                 <Link
                     href="https://github.com/srt4rulez"
                     isExternal={true}
+                    color="blue.500"
                 >
                     srt4rulez
                 </Link>
@@ -180,6 +181,7 @@ const SettingsPanel = ({
                 <Link
                     href="https://github.com/srt4rulez/fallout-new-vegas-interactive-map"
                     isExternal={true}
+                    color="blue.500"
                 >
                     View on Github
                 </Link>
