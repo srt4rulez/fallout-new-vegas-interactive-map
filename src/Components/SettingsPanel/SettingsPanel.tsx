@@ -11,6 +11,18 @@ import type {
     MarkerInterface,
     MarkerType,
 } from 'types';
+import {
+    Button,
+    Checkbox,
+    Stack,
+    Tooltip,
+    Box,
+    Image,
+    Heading,
+    Link,
+} from '@chakra-ui/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye } from '@fortawesome/free-regular-svg-icons';
 
 export interface SettingsPanelProps {
     className?: string;
@@ -42,10 +54,10 @@ const SettingsPanel = ({
 
     return (
 
-        <section
+        <Box
+            as="section"
             className={classNames([
                 'settings-panel',
-                'box',
                 className,
             ])}
         >
@@ -55,66 +67,67 @@ const SettingsPanel = ({
             >
 
                 <figure
-                    className={classNames('settings-panel__logo', 'image')}
+                    className={classNames('settings-panel__logo')}
                 >
 
-                    <img
+                    <Image
                         src={FalloutNVLogoImageSrc}
                         alt="Fallout: New Vegas Logo"
                     />
 
                 </figure>
 
-                <h2
-                    className="title is-2"
+                <Heading
+                    marginY="4"
                 >
                     Interactive Map
-                </h2>
+                </Heading>
 
-                <div
-                    className="buttons is-centered"
+                <Stack
+                    direction="row"
+                    align="center"
+                    justify="center"
                 >
 
-                    <button
-                        className="button"
-                        type="button"
-                        onClick={onShowAllClick}
-                        title="Show all marker types"
+                    <Tooltip
+                        label="Show all marker types"
+                        placement="top"
+                        hasArrow={true}
                     >
 
-                        <span
-                            className="icon"
+                        <Button
+                            onClick={onShowAllClick}
+                            leftIcon={(
+                                <FontAwesomeIcon
+                                    icon={faEye}
+                                />
+                            )}
+                            variant="outline"
+                        >
+                            Show All Types
+                        </Button>
+
+                    </Tooltip>
+
+                    <Checkbox
+                        isChecked={isFoundMarkersShown}
+                        onChange={onClickShowFoundMarkers}
+                        size="lg"
+                    >
+
+                        <Tooltip
+                            label="If checked, markers 'marked as found' will still appear on the map."
+                            placement="top"
+                            hasArrow={true}
                         >
 
-                            <i
-                                className="far fa-eye"
-                            />
+                            Show Found Markers
 
-                        </span>
+                        </Tooltip>
 
-                        <span>Show All Types</span>
+                    </Checkbox>
 
-                    </button>
-
-                    <label
-                        className="settings-panel__show-found-markers-btn checkbox button"
-                        title="If checked, markers 'marked as found' will still appear on the map."
-                    >
-
-                        <input
-                            className="mr-1"
-                            type="checkbox"
-                            checked={isFoundMarkersShown}
-                            onChange={onClickShowFoundMarkers}
-                        />
-
-                        {' '}
-
-                        Show Found Markers
-
-                    </label>
-
-                </div>
+                </Stack>
 
             </header>
 
@@ -122,6 +135,7 @@ const SettingsPanel = ({
                 className={classNames('settings-panel__content')}
             >
 
+                {/* TODO: iterate over typeMap values*/}
                 <MarkerTypePanel
                     className="settings-panel__marker-type-panel"
                     type={typeMap.SkillBook}
@@ -150,13 +164,12 @@ const SettingsPanel = ({
 
                 {' '}
 
-                <a
+                <Link
                     href="https://github.com/srt4rulez"
-                    rel="noreferrer"
-                    target="_blank"
+                    isExternal={true}
                 >
                     srt4rulez
-                </a>
+                </Link>
 
                 {' | '}
 
@@ -164,17 +177,16 @@ const SettingsPanel = ({
 
                 {' | '}
 
-                <a
+                <Link
                     href="https://github.com/srt4rulez/fallout-new-vegas-interactive-map"
-                    rel="noreferrer"
-                    target="_blank"
+                    isExternal={true}
                 >
                     View on Github
-                </a>
+                </Link>
 
             </footer>
 
-        </section>
+        </Box>
 
     );
 

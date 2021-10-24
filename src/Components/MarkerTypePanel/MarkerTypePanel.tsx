@@ -4,7 +4,7 @@ import './MarkerTypePanel.scss';
 import {
     typesThatHaveSubTypes,
     typeLabelMap,
-    typeColorMap,
+    typeColorMapChakra,
     subTypeSkillBookLabelMap,
 } from 'types';
 import type {
@@ -14,6 +14,15 @@ import type {
 } from 'types';
 import MarkerListItem from 'Components/MarkerListItem/MarkerListItem';
 import type { MarkerListItemProps } from 'Components/MarkerListItem/MarkerListItem';
+import {
+    Box,
+    Button,
+    List,
+    ListItem,
+    Tooltip,
+} from '@chakra-ui/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 export interface MarkerTypePanelProps {
     className?: string;
@@ -67,7 +76,7 @@ const MarkerTypePanel = ({
         return (
 
             <MarkerListItem
-                tag="li"
+                tag={ListItem}
                 key={marker.id}
                 isFound={marker.isFound}
                 onMarkCheckboxChange={onMarkButtonClick ? onMarkButtonClick(marker) : undefined}
@@ -92,29 +101,43 @@ const MarkerTypePanel = ({
                 className={classNames('marker-type-panel__header')}
             >
 
-                <i
+                <Box
+                    // color will be inherited from FontAwesomeIcon
+                    color={type ? typeColorMapChakra[type] : undefined}
                     className={classNames([
                         'marker-type-panel__icon',
-                        'fas',
-                        'fa-map-marker-alt',
-                        type ? `has-text-${typeColorMap[type]}` : '',
                     ])}
-                />
-
-                <button
-                    type="button"
-                    className={classNames('marker-type-panel__header-btn')}
-                    title="Only show this marker type"
-                    onClick={onTypeClick}
                 >
 
-                    {type ? typeLabelMap[type] : 'Misc'}
+                    <FontAwesomeIcon
+                        icon={faMapMarkerAlt}
+                    />
 
-                </button>
+                </Box>
+
+                <Tooltip
+                    label="Only show this marker type"
+                    placement="top"
+                    hasArrow={true}
+                    openDelay={500}
+                >
+
+                    <Button
+                        variant="link"
+                        colorScheme="blue"
+                        className={classNames('marker-type-panel__header-btn')}
+                        onClick={onTypeClick}
+                    >
+
+                        {type ? typeLabelMap[type] : 'Misc'}
+
+                    </Button>
+
+                </Tooltip>
 
             </header>
 
-            <ul
+            <List
                 className={classNames('marker-type-panel__list')}
             >
 
@@ -122,7 +145,7 @@ const MarkerTypePanel = ({
 
                     return (
 
-                        <li
+                        <ListItem
                             className={classNames('marker-type-panel__sub-type-list-item')}
                             key={subType.id}
                         >
@@ -136,19 +159,19 @@ const MarkerTypePanel = ({
 
                             </span>
 
-                            <ul>
+                            <List>
 
                                 {subType.markers.map((marker) => renderMarkerListItem(marker))}
 
-                            </ul>
+                            </List>
 
-                        </li>
+                        </ListItem>
 
                     );
 
                 }) : markers.map((marker) => renderMarkerListItem(marker))}
 
-            </ul>
+            </List>
 
         </section>
 

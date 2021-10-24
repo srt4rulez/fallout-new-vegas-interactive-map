@@ -1,6 +1,11 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import './MarkerListItem.scss';
+import {
+    Button,
+    Checkbox,
+    Tooltip,
+} from '@chakra-ui/react';
 
 export interface MarkerListItemProps {
     tag?: React.ComponentType | keyof JSX.IntrinsicElements;
@@ -31,23 +36,33 @@ const MarkerListItem = ({
             ])}
         >
 
-            <input
+            <Checkbox
                 className={classNames('marker-list-item__found-checkbox')}
-                type="checkbox"
-                checked={isFound}
+                isChecked={isFound}
                 onChange={onMarkCheckboxChange}
-                title="Mark As Found"
+                size="lg"
             />
 
-            <button
-                type="button"
-                className={classNames('marker-list-item__button')}
-                onClick={onMarkerTitleClick}
+            <Tooltip
+                label="Jump to Marker"
+                placement="top"
+                hasArrow={true}
+                openDelay={500}
             >
 
-                {title}
+                <Button
+                    onClick={onMarkerTitleClick}
+                    size="md"
+                    variant="link"
+                    colorScheme="blue"
+                    fontWeight="normal"
+                >
 
-            </button>
+                    {title}
+
+                </Button>
+
+            </Tooltip>
 
         </Tag>
 

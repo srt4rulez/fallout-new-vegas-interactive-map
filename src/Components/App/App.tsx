@@ -63,7 +63,7 @@ class App extends React.Component<AppPropsInterface, AppStateInterface> {
         });
     }
 
-    handleMarkButtonClick = (marker: MarkerInterface = {}) => (event: React.ChangeEvent): void => { // eslint-disable-line @typescript-eslint/no-unused-vars
+    handleMarkButtonClick = (marker: MarkerInterface = {}) => (event: React.MouseEvent | React.ChangeEvent): void => { // eslint-disable-line @typescript-eslint/no-unused-vars
 
         this.setState((prevState: AppStateInterface) => {
             const index = prevState.markers.findIndex((item) => item.id === marker.id);
