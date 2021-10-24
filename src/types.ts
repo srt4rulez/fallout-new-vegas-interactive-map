@@ -25,6 +25,12 @@ const typeColorMap = {
     [typeMap.SkillBook]: 'warning',
 } as const;
 
+// Charka theme colors.
+const typeColorMapChakra = {
+    [typeMap.SnowGlobe]: 'blue.500',
+    [typeMap.SkillBook]: 'yellow.300',
+} as const;
+
 const subTypeSkillBookSubMap = {
     ChineseArmySpecialOpsTrainingManual: 'casotm',
     WastelandSurvivalGuide:              'wsg',
@@ -107,6 +113,7 @@ export {
     typeMap,
     typeLabelMap,
     typeColorMap,
+    typeColorMapChakra,
     typesThatHaveSubTypes,
     subTypeSkillBookSubMap,
     subTypeSkillBookLabelMap,
