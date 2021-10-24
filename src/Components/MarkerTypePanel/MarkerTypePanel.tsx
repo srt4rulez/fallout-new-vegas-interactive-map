@@ -4,7 +4,7 @@ import './MarkerTypePanel.scss';
 import {
     typesThatHaveSubTypes,
     typeLabelMap,
-    typeColorMapChakra,
+    typeColorMap,
     subTypeSkillBookLabelMap,
 } from 'types';
 import type {
@@ -103,7 +103,7 @@ const MarkerTypePanel = ({
 
                 <Box
                     // color will be inherited from FontAwesomeIcon
-                    color={type ? typeColorMapChakra[type] : undefined}
+                    color={type ? typeColorMap[type] : undefined}
                     className={classNames([
                         'marker-type-panel__icon',
                     ])}
