@@ -1,4 +1,5 @@
 import * as React from 'react';
+import ReactDomServer from 'react-dom/server';
 import classNames from 'classnames';
 import './MojaveWastelandMarker.scss';
 import {
@@ -11,15 +12,28 @@ import {
     typeMap,
     typeLabelMap,
     typeColorMap,
+    typeColorScheme,
     subTypeSkillBookLabelMap,
 } from 'types';
 import type {
     MarkerInterface,
 } from 'types';
+import {
+    Button,
+    Checkbox,
+    Link,
+    Heading,
+    Text,
+    Badge,
+    Image,
+    Box,
+} from '@chakra-ui/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 export interface MojaveWastelandMarkerProps extends MarkerInterface {
     // className?: string;
-    onMarkButtonClick?: React.InputHTMLAttributes<Element>['onChange'];
+    onMarkButtonClick?: React.DOMAttributes<Element>['onClick'];
     onAdd?: L.LeafletEventHandlerFn;
 }
 
@@ -41,14 +55,29 @@ const MojaveWastelandMarker = ({
     const iconSizeX = 25.5;
     const iconSizeY = 34; // update this value first, then check width for setting X.
 
+    const MarkerIcon = (
+        <Box
+            // color will be inherited from FontAwesomeIcon
+            sx={{
+                // use css variable directly
+                color: type ? `var(--chakra-colors-${typeColorMap[type].replace('.', '-')})` : '',
+            }}
+            fontSize={iconSizeY}
+            className={classNames([
+                'mojave-wasteland-marker__icon',
+            ])}
+        >
+
+            <FontAwesomeIcon
+                icon={faMapMarkerAlt}
+            />
+
+        </Box>
+    );
+
     const icon = L.divIcon({
         className: 'mojave-wasteland-marker__icon-wrapper',
-        html: `
-            <i
-                class="mojave-wasteland-marker__icon fas fa-map-marker-alt ${type ? `has-text-${typeColorMap[type]}` : ''}"
-                style="font-size: ${iconSizeY}px;"
-            />
-        `,
+        html: ReactDomServer.renderToStaticMarkup(MarkerIcon),
         iconSize: [
             iconSizeX,
             iconSizeY,
@@ -59,7 +88,7 @@ const MojaveWastelandMarker = ({
         ],
         popupAnchor: [
             0,
-            (-(iconSizeY) - 3), // 3 = spacing between icon and popup arrow.
+            -(iconSizeY),
         ],
     });
 
@@ -82,93 +111,76 @@ const MojaveWastelandMarker = ({
                 maxWidth={350}
             >
 
-                <h2
-                    className="title is-4"
+                <Box
+                    // override leaflets font declaration
+                    fontFamily="body"
                 >
 
-                    <a
-                        href={url}
-                        rel="noreferrer"
-                        target="_blank"
+                    <Heading
+                        as="h3"
+                        size="lg"
+                        marginBottom="4"
                     >
 
-                        {type === typeMap.SkillBook && subType && subTypeSkillBookLabelMap[subType] && `${subTypeSkillBookLabelMap[subType]} - `}
-
-                        {title}
-
-                    </a>
-
-                </h2>
-
-                {type && typeLabelMap[type] && (
-
-                    <div
-                        className="tags has-addons is-justify-content-center"
-                    >
-
-                        <span
-                            className="tag is-dark mb-0"
+                        <Link
+                            href={url}
+                            isExternal={true}
                         >
-                            type
-                        </span>
 
-                        <span
-                            className={classNames([
-                                'tag',
-                                'mb-0',
-                                'is-lowercase',
-                                `is-${typeColorMap[type]}`,
-                            ])}
-                        >
-                            {typeLabelMap[type]}
-                        </span>
+                            {type === typeMap.SkillBook && subType && subTypeSkillBookLabelMap[subType] && `${subTypeSkillBookLabelMap[subType]} - `}
 
-                    </div>
+                            {title}
 
-                )}
+                        </Link>
 
-                {desc && (
+                    </Heading>
 
-                    <p
-                        className={classNames('mojave-wasteland-marker__desc', 'content')}
-                        dangerouslySetInnerHTML={{ // eslint-disable-line react/no-danger
-                            __html: DOMPurify.sanitize(desc),
-                        }}
-                    />
-
-                )}
-
-                {imgSrc && (
-
-                    <figure
-                        className="image block"
+                    <Badge
+                        variant="solid"
+                        marginLeft="2"
+                        colorScheme={type ? typeColorScheme[type] : undefined}
                     >
+                        {type && typeLabelMap[type]}
+                    </Badge>
 
-                        <img
-                            src={imgSrc}
-                            alt={title}
+                    {desc && (
+
+                        <Text
+                            className={classNames('mojave-wasteland-marker__desc')}
+                            dangerouslySetInnerHTML={{ // eslint-disable-line react/no-danger
+                                __html: DOMPurify.sanitize(desc),
+                            }}
                         />
 
-                    </figure>
+                    )}
 
-                )}
+                    {imgSrc && (
 
-                <label
-                    className="checkbox button is-fullwidth"
-                >
+                        <Image
+                            src={imgSrc}
+                            alt={title}
+                            marginBottom="4"
+                        />
 
-                    <input
-                        className="mr-1"
-                        onChange={onMarkButtonClick}
-                        type="checkbox"
-                        checked={isFound}
-                    />
+                    )}
 
-                    {' '}
+                    <Button
+                        onClick={onMarkButtonClick}
+                        width="100%"
+                        variant="outline"
+                        leftIcon={(
+                            <Checkbox
+                                isChecked={isFound}
+                            />
+                        )}
+                        colorScheme="blue"
+                    >
 
-                    Mark As Found
+                        Mark As Found
 
-                </label>
+                    </Button>
+
+                </Box>
 
             </Popup>
 

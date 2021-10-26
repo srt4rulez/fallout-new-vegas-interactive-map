@@ -19,10 +19,15 @@ const typeLabelMap = {
     [typeMap.SkillBook]: 'Skill Book',
 } as const;
 
-// Bulma CSS colors.
+// Charka theme colors.
 const typeColorMap = {
-    [typeMap.SnowGlobe]: 'link',
-    [typeMap.SkillBook]: 'warning',
+    [typeMap.SnowGlobe]: 'green.500',
+    [typeMap.SkillBook]: 'yellow.300',
+} as const;
+
+const typeColorScheme = {
+    [typeMap.SnowGlobe]: 'green',
+    [typeMap.SkillBook]: 'yellow',
 } as const;
 
 const subTypeSkillBookSubMap = {
@@ -107,6 +112,7 @@ export {
     typeMap,
     typeLabelMap,
     typeColorMap,
+    typeColorScheme,
     typesThatHaveSubTypes,
     subTypeSkillBookSubMap,
     subTypeSkillBookLabelMap,
