@@ -57,6 +57,9 @@ const MarkerListItem = ({
                     variant="link"
                     colorScheme="blue"
                     fontWeight="normal"
+                    wordBreak="break-all"
+                    whiteSpace="unset"
+                    textAlign="left"
                 >
 
                     {title}

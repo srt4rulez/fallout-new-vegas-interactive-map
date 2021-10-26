@@ -107,9 +107,7 @@ const MojaveWastelandMarker = ({
             }}
         >
 
-            <Popup
-                maxWidth={350}
-            >
+            <Popup>
 
                 <Box
                     // override leaflets font declaration

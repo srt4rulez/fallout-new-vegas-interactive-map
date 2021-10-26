@@ -9,6 +9,14 @@ import type {
     MarkerType,
 } from 'types';
 import type * as L from 'leaflet';
+import {
+    Drawer,
+    DrawerBody,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
+    Button,
+} from '@chakra-ui/react';
 
 export interface AppPropsInterface { // eslint-disable-line @typescript-eslint/no-empty-interface
 }
@@ -16,6 +24,8 @@ export interface AppPropsInterface { // eslint-disable-line @typescript-eslint/n
 interface AppStateInterface {
     markers: Array<MarkerInterface>;
     isFoundMarkersShown?: boolean;
+    isLargeScreen?: boolean;
+    isSettingsDrawerOpen: boolean;
 }
 
 class App extends React.Component<AppPropsInterface, AppStateInterface> {
@@ -23,6 +33,8 @@ class App extends React.Component<AppPropsInterface, AppStateInterface> {
     state: AppStateInterface = {
         markers: [],
         isFoundMarkersShown: false,
+        isLargeScreen: true,
+        isSettingsDrawerOpen: false,
     };
 
     // Only used with L.Map API.
@@ -30,9 +42,14 @@ class App extends React.Component<AppPropsInterface, AppStateInterface> {
         [index: string]: L.Marker;
     } = {};
 
-    static version: string = packageJson.version;
+    private static version: string = packageJson.version;
+
+    private isLargeScreenMqList?: MediaQueryList;
 
     componentDidMount(): void {
+        this.isLargeScreenMqList = window.matchMedia('(min-width: 1024px)');
+        this.isLargeScreenMqList.addEventListener('change', this.handleLargeScreenMqListChange);
+
         const localStorageMarkersJson = window.localStorage.getItem('markers') || '[]';
 
         const localStorageMarkers = JSON.parse(localStorageMarkersJson) as Array<MarkerInterface>;
@@ -60,7 +77,22 @@ class App extends React.Component<AppPropsInterface, AppStateInterface> {
         this.setState({ // eslint-disable-line react/no-did-mount-set-state
             markers: newMarkers,
             isFoundMarkersShown: isFoundMarkersShown,
+            isLargeScreen: this.isLargeScreenMqList.matches,
         });
+    }
+
+    handleLargeScreenMqListChange = (event: MediaQueryListEvent): void => {
+
+        this.setState({
+            isLargeScreen: event.matches,
+        });
+
+    }
+
+    componentWillUnmount(): void {
+        if (this.isLargeScreenMqList) {
+            this.isLargeScreenMqList.removeEventListener('change', this.handleLargeScreenMqListChange);
+        }
     }
 
     handleMarkButtonClick = (marker: MarkerInterface = {}) => (event: React.MouseEvent | React.ChangeEvent): void => { // eslint-disable-line @typescript-eslint/no-unused-vars
@@ -151,6 +183,8 @@ class App extends React.Component<AppPropsInterface, AppStateInterface> {
             };
         });
 
+        this.handleSettingsDrawerClose();
+
     };
 
     /**
@@ -170,6 +204,8 @@ class App extends React.Component<AppPropsInterface, AppStateInterface> {
                 markers: newMarkers,
             };
         });
+
+        this.handleSettingsDrawerClose();
 
     };
 
@@ -192,6 +228,8 @@ class App extends React.Component<AppPropsInterface, AppStateInterface> {
             // Open the popup of the marker.
             marker.openPopup([markerData.lat, markerData.lng]);
         }
+
+        this.handleSettingsDrawerClose();
 
     };
 
@@ -216,7 +254,44 @@ class App extends React.Component<AppPropsInterface, AppStateInterface> {
 
     };
 
+    handleOpenSettingsClick = (): void => {
+
+        this.setState({
+            isSettingsDrawerOpen: true,
+        });
+
+    };
+
+    handleSettingsDrawerClose = (): void => {
+
+        this.setState({
+            isSettingsDrawerOpen: false,
+        });
+
+    };
+
+    renderSettingsPanel = (): JSX.Element => {
+
+        return (
+            <SettingsPanel
+                appVersion={App.version}
+                className="app__settings-panel"
+                markers={this.state.markers}
+                onMarkButtonClick={this.handleMarkButtonClick}
+                isFoundMarkersShown={this.state.isFoundMarkersShown}
+                onClickShowFoundMarkers={this.handleShowFoundMarkersClick}
+                onTypeClick={this.handleTypeClick}
+                onShowAllClick={this.handleShowAllClick}
+                onMarkerTitleClick={this.handleMarkerTitleClick}
+                isLargeScreen={this.state.isLargeScreen}
+            />
+        );
+
+    };
+
     render(): JSX.Element | null {
+
+        const AppSettingsPanel = this.renderSettingsPanel;
 
         return (
 
@@ -224,17 +299,55 @@ class App extends React.Component<AppPropsInterface, AppStateInterface> {
                 className="app"
             >
 
-                <SettingsPanel
-                    appVersion={App.version}
-                    className="app__settings-panel"
-                    markers={this.state.markers}
-                    onMarkButtonClick={this.handleMarkButtonClick}
-                    isFoundMarkersShown={this.state.isFoundMarkersShown}
-                    onClickShowFoundMarkers={this.handleShowFoundMarkersClick}
-                    onTypeClick={this.handleTypeClick}
-                    onShowAllClick={this.handleShowAllClick}
-                    onMarkerTitleClick={this.handleMarkerTitleClick}
-                />
+                {this.state.isLargeScreen ? (
+
+                    <AppSettingsPanel />
+
+                ) : (
+
+                    <div
+                        className="app__small-screen-settings-button-container"
+                    >
+
+                        <Button
+                            className="app__small-screen-settings-button"
+                            onClick={this.handleOpenSettingsClick}
+                            colorScheme="teal"
+                        >
+                            Open Settings
+                        </Button>
+
+                    </div>
+
+                )}
+
+                {/* Drawer for small screens */}
+                <Drawer
+                    isOpen={this.state.isSettingsDrawerOpen}
+                    placement="bottom"
+                    onClose={this.handleSettingsDrawerClose}
+                    size="full"
+                >
+
+                    <DrawerOverlay />
+
+                    <DrawerContent>
+
+                        <DrawerCloseButton
+                            zIndex="1"
+                        />
+
+                        <DrawerBody
+                            paddingX="2"
+                        >
+
+                            <AppSettingsPanel />
+
+                        </DrawerBody>
+
+                    </DrawerContent>
+
+                </Drawer>
 
                 <MojaveWastelandMap
                     className="app__mojave-wasteland-map"
