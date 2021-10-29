@@ -47,8 +47,11 @@ class App extends React.Component<AppPropsInterface, AppStateInterface> {
     private isLargeScreenMqList?: MediaQueryList;
 
     componentDidMount(): void {
-        this.isLargeScreenMqList = window.matchMedia('(min-width: 1024px)');
-        this.isLargeScreenMqList.addEventListener('change', this.handleLargeScreenMqListChange);
+        this.isLargeScreenMqList = window && (typeof window.matchMedia === 'function') ? window.matchMedia('(min-width: 1024px)') : undefined;
+
+        if (this.isLargeScreenMqList) {
+            this.isLargeScreenMqList.addEventListener('change', this.handleLargeScreenMqListChange);
+        }
 
         const localStorageMarkersJson = window.localStorage.getItem('markers') || '[]';
 
@@ -77,7 +80,7 @@ class App extends React.Component<AppPropsInterface, AppStateInterface> {
         this.setState({ // eslint-disable-line react/no-did-mount-set-state
             markers: newMarkers,
             isFoundMarkersShown: isFoundMarkersShown,
-            isLargeScreen: this.isLargeScreenMqList.matches,
+            isLargeScreen: this.isLargeScreenMqList !== undefined ? this.isLargeScreenMqList.matches : true,
         });
     }
 
