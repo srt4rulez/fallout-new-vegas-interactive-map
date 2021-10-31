@@ -34,6 +34,7 @@ export interface SettingsPanelProps {
     onMarkerTitleClick?: MarkerTypePanelProps['onMarkerTitleClick'];
     onShowAllClick?: React.DOMAttributes<Element>['onClick'];
     onTypeClick?: (type: MarkerType) => MarkerTypePanelProps['onTypeClick'];
+    isLargeScreen?: boolean;
 }
 
 const SettingsPanel = ({
@@ -46,6 +47,7 @@ const SettingsPanel = ({
     onMarkerTitleClick = undefined,
     onShowAllClick = undefined,
     onTypeClick = undefined,
+    isLargeScreen = true,
     // ...props
 }: SettingsPanelProps): JSX.Element => {
 
@@ -84,9 +86,10 @@ const SettingsPanel = ({
                 </Heading>
 
                 <Stack
-                    direction="row"
+                    direction={isLargeScreen ? 'row' : 'column'}
                     align="center"
                     justify="center"
+                    spacing="4"
                 >
 
                     <Tooltip
