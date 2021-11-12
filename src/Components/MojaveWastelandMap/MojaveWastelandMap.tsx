@@ -15,6 +15,15 @@ import type { MojaveWastelandMarkerProps } from 'Components/MojaveWastelandMarke
 import type {
     MarkerInterface,
 } from 'types';
+import {
+    selectIsFoundMarkersShown,
+    selectMarkers,
+    toggleMarkerAsFound,
+} from 'Slices/appSlice';
+import {
+    useAppDispatch,
+    useAppSelector,
+} from 'hooks';
 
 const bounds = new L.LatLngBounds({
     lat: 0,
@@ -27,21 +36,25 @@ const bounds = new L.LatLngBounds({
 
 export interface MojaveWastelandMapProps {
     className?: string;
-    markers?: Array<MarkerInterface>;
-    onMarkButtonClick?: (marker: MarkerInterface) => MojaveWastelandMarkerProps['onMarkButtonClick'];
-    isFoundMarkersShown?: boolean;
     onMapCreation?: MapContainerProps['whenCreated'];
     onMarkerAdd?: MojaveWastelandMarkerProps['onAdd'];
 }
 
 const MojaveWastelandMap = ({
     className = '',
-    markers = [],
-    onMarkButtonClick = undefined,
-    isFoundMarkersShown = true,
     onMapCreation = undefined,
     onMarkerAdd = undefined,
 }: MojaveWastelandMapProps): JSX.Element => {
+
+    const isFoundMarkersShown = useAppSelector(selectIsFoundMarkersShown);
+
+    const markers = useAppSelector(selectMarkers);
+
+    const dispatch = useAppDispatch();
+
+    const handleMarkButtonClick = (marker: MarkerInterface) => (): void => {
+        dispatch(toggleMarkerAsFound(marker));
+    };
 
     return (
 
@@ -87,7 +100,7 @@ const MojaveWastelandMap = ({
                         title={marker.title}
                         desc={marker.desc}
                         imgSrc={marker.imgSrc}
-                        onMarkButtonClick={onMarkButtonClick ? onMarkButtonClick(marker) : undefined}
+                        onMarkButtonClick={handleMarkButtonClick(marker)}
                         type={marker.type}
                         subType={marker.subType}
                         onAdd={onMarkerAdd}

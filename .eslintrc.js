@@ -84,6 +84,7 @@ module.exports = {
                     'error',
                     'index-signature',
                 ],
+                'react/jsx-no-bind': 'off',
             },
         },
         {
