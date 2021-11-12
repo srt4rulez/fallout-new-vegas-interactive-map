@@ -33,6 +33,7 @@
         "eslint": "^7.32.0",
         "eslint-plugin-jest": "^24.4.2",
         "eslint-plugin-react": "^7.25.3",
+        "eslint-plugin-react-redux": "^3.3.2",
         "framer-motion": "^4",
         "leaflet": "^1.7.1",
         "leaflet-defaulticon-compatibility": "^0.1.1",
@@ -48,8 +49,8 @@
         "web-vitals": "^0.2.4"
     },
     "scripts": {
-        "lint": "eslint --cache \"./**/*.{js,jsx,ts,tsx}\"",
-        "lint:fix": "eslint --cache --fix \"./**/*.{js,jsx,ts,tsx}\"",
+        "lint": "eslint --cache \"./**/*.{ts,tsx}\"",
+        "lint:fix": "eslint --cache --fix \"./**/*.{ts,tsx}\"",
         "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
