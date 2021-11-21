@@ -1,5 +1,5 @@
 import type { PayloadAction } from '@reduxjs/toolkit';
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createSelector } from '@reduxjs/toolkit';
 import type { RootState } from 'store';
 import type {
     MarkerInterface,
@@ -19,6 +19,9 @@ if (window.localStorage.getItem('isFoundMarkersShown')) {
 
     // Now that we migrated it, remove it so this code doesn't run again.
     window.localStorage.removeItem('isFoundMarkersShown');
+
+    // Set a flag to let our react component know we migrated.
+    window.localStorage.setItem('hasMigratedOldData', '1');
 }
 
 const markers = (markersFromJson as Array<MarkerInterface>);
@@ -40,6 +43,9 @@ if (window.localStorage.getItem('markers')) {
 
     // Now that we migrated it, remove it so this code doesn't run again.
     window.localStorage.removeItem('markers');
+
+    // Set a flag to let our react component know we migrated.
+    window.localStorage.setItem('hasMigratedOldData', '1');
 }
 
 interface AppStateInterface {

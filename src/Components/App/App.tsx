@@ -15,8 +15,12 @@ import {
     DrawerContent,
     DrawerCloseButton,
     Button,
+    useToast,
 } from '@chakra-ui/react';
-import { useMedia } from 'react-use';
+import {
+    useMedia,
+    useEffectOnce,
+} from 'react-use';
 import {
     selectMarkers,
 } from 'Slices/appSlice';
@@ -35,6 +39,24 @@ const App = (): JSX.Element => {
     }>({});
 
     const isLargeScreen = useMedia('(min-width: 1024px)');
+
+    const toast = useToast();
+
+    useEffectOnce(() => {
+        // If the user had the old local storage method, show them a notif about it being migrated.
+        if (Boolean(window.localStorage.getItem('hasMigratedOldData'))) {
+            // We're assuming the migration was successful.
+            toast({
+                title: 'Data Migration Complete',
+                description: 'We detected your saved data from v1 and migrated to v2! 🥳',
+                status: 'success',
+                isClosable: true,
+                duration: null,
+            });
+
+            window.localStorage.removeItem('hasMigratedOldData');
+        }
+    });
 
     const handleTypeClick = (type: MarkerType) => (): void => { // eslint-disable-line @typescript-eslint/no-unused-vars
 
