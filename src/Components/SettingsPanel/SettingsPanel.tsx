@@ -81,9 +81,9 @@ const SettingsPanel = ({
         }
     };
 
-    const handleMarkButtonClick = (marker: MarkerInterface) => (): void => {
+    const handleMarkButtonClick = (marker: MarkerInterface): () => void => React.useCallback((): void => {
         dispatch(toggleMarkerAsFound(marker));
-    };
+    }, []);
 
     return (
 

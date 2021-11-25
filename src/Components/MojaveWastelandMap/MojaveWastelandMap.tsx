@@ -37,7 +37,7 @@ const bounds = new L.LatLngBounds({
 export interface MojaveWastelandMapProps {
     className?: string;
     onMapCreation?: MapContainerProps['whenCreated'];
-    onMarkerAdd?: MojaveWastelandMarkerProps['onAdd'];
+    onMarkerAdd?: (marker: MarkerInterface) => MojaveWastelandMarkerProps['onAdd'];
 }
 
 const MojaveWastelandMap = ({
@@ -52,9 +52,9 @@ const MojaveWastelandMap = ({
 
     const dispatch = useAppDispatch();
 
-    const handleMarkButtonClick = (marker: MarkerInterface) => (): void => {
+    const handleMarkButtonClick = (marker: MarkerInterface): () => void => React.useCallback((): void => {
         dispatch(toggleMarkerAsFound(marker));
-    };
+    }, []);
 
     return (
 
@@ -75,6 +75,10 @@ const MojaveWastelandMap = ({
             />
 
             {markers && markers.map((marker) => {
+
+                // Must move these before the null returns to avoid difference in hooks calls.
+                const onAdd = onMarkerAdd ? onMarkerAdd(marker) : undefined;
+                const onMarkButtonClick = handleMarkButtonClick(marker);
 
                 if (!marker.lat || !marker.lng) {
                     return null;
@@ -100,10 +104,10 @@ const MojaveWastelandMap = ({
                         title={marker.title}
                         desc={marker.desc}
                         imgSrc={marker.imgSrc}
-                        onMarkButtonClick={handleMarkButtonClick(marker)}
+                        onMarkButtonClick={onMarkButtonClick}
                         type={marker.type}
                         subType={marker.subType}
-                        onAdd={onMarkerAdd}
+                        onAdd={onAdd}
                     />
 
                 );

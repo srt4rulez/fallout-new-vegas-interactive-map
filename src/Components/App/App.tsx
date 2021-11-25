@@ -21,18 +21,10 @@ import {
     useMedia,
     useEffectOnce,
 } from 'react-use';
-import {
-    selectMarkers,
-} from 'Slices/appSlice';
-import {
-    useAppSelector,
-} from 'hooks';
 
 const App = (): JSX.Element => {
 
     const [isSettingsDrawerOpen, setIsSettingsDrawerOpen] = React.useState(false);
-
-    const markers = useAppSelector(selectMarkers);
 
     const markersRef = React.useRef<{
         [index: string]: L.Marker;
@@ -44,7 +36,7 @@ const App = (): JSX.Element => {
 
     useEffectOnce(() => {
         // If the user had the old local storage method, show them a notif about it being migrated.
-        if (Boolean(window.localStorage.getItem('hasMigratedOldData'))) {
+        if (window.localStorage.getItem('hasMigratedOldData')) {
             // We're assuming the migration was successful.
             toast({
                 title: 'Data Migration Complete',
@@ -81,7 +73,7 @@ const App = (): JSX.Element => {
 
     };
 
-    const handleMarkerTitleClick = (markerData: MarkerInterface = {}) => (): void => {
+    const handleMarkerTitleClick = (markerData: MarkerInterface = {}): () => void => React.useCallback((): void => {
 
         const marker = markerData.id && markersRef.current[markerData.id] || null;
 
@@ -92,28 +84,21 @@ const App = (): JSX.Element => {
 
         handleSettingsDrawerClose();
 
-    };
+    }, []);
 
     /**
      * When a marker is added to the map, add it to our markers property for use
      * with handleMarkerTitleClick.
      */
-    const handleMarkerAdd = (event: L.LeafletEvent): void => {
+    const handleMarkerAdd = (marker: MarkerInterface): (event: L.LeafletEvent) => void => React.useCallback((event: L.LeafletEvent): void => {
 
-        const marker = event.target as L.Marker;
+        const leafLetMarker = event.target as L.Marker;
 
-        const markerLatLng = marker.getLatLng();
-
-        const lat = markerLatLng.lat;
-        const lng = markerLatLng.lng;
-
-        const markerData: MarkerInterface | undefined = markers && markers.find((item) => item.lat === lat && item.lng === lng);
-
-        if (markerData && markerData.id) {
-            markersRef.current[markerData.id] = marker;
+        if (marker && marker.id) {
+            markersRef.current[marker.id] = leafLetMarker;
         }
 
-    };
+    }, []);
 
     const handleOpenSettingsClick = (): void => {
 
