@@ -1,6 +1,5 @@
 import type { PayloadAction } from '@reduxjs/toolkit';
 import { createSlice } from '@reduxjs/toolkit';
-import type { RootState } from 'store';
 import type {
     MarkerInterface,
     MarkerType,
@@ -8,45 +7,6 @@ import type {
 import {
     typeMap,
 } from 'types';
-import markersFromJson from 'Data/markers.json';
-
-let isFoundMarkersShown = false;
-
-// Check if the user is using v1 with the previous local storage method.
-
-if (window.localStorage.getItem('isFoundMarkersShown')) {
-    isFoundMarkersShown = Boolean(window.localStorage.getItem('isFoundMarkersShown'));
-
-    // Now that we migrated it, remove it so this code doesn't run again.
-    window.localStorage.removeItem('isFoundMarkersShown');
-
-    // Set a flag to let our react component know we migrated.
-    window.localStorage.setItem('hasMigratedOldData', '1');
-}
-
-const markers = (markersFromJson as Array<MarkerInterface>);
-
-if (window.localStorage.getItem('markers')) {
-    const oldMarkersAsString = window.localStorage.getItem('markers');
-    const oldMarkers = (oldMarkersAsString ? (JSON.parse(oldMarkersAsString) as Array<MarkerInterface>) : []);
-
-    oldMarkers.forEach((oldMarker: MarkerInterface) => {
-        const newMarkerIndex = markers.findIndex((marker) => marker.id === oldMarker.id);
-
-        if (newMarkerIndex !== -1) {
-            markers[newMarkerIndex] = {
-                ...markers[newMarkerIndex],
-                isFound: oldMarker.isFound,
-            };
-        }
-    });
-
-    // Now that we migrated it, remove it so this code doesn't run again.
-    window.localStorage.removeItem('markers');
-
-    // Set a flag to let our react component know we migrated.
-    window.localStorage.setItem('hasMigratedOldData', '1');
-}
 
 interface AppStateInterface {
     markers: Array<MarkerInterface>;
@@ -54,8 +14,8 @@ interface AppStateInterface {
 }
 
 const initialState: AppStateInterface = {
-    markers: markers,
-    isFoundMarkersShown: isFoundMarkersShown,
+    markers: [],
+    isFoundMarkersShown: false,
 };
 
 export const appSlice = createSlice({
@@ -96,10 +56,14 @@ export const {
     showAllMarkers,
 } = appSlice.actions;
 
-export const selectMarkers          = (state: RootState): AppStateInterface['markers'] => state.app.markers;
-export const selectSkillBookMarkers = (state: RootState): AppStateInterface['markers'] => state.app.markers.filter((marker: MarkerInterface) => marker.type === typeMap.SkillBook);
-export const selectSnowGlobeMarkers = (state: RootState): AppStateInterface['markers'] => state.app.markers.filter((marker: MarkerInterface) => marker.type === typeMap.SnowGlobe);
+interface StateSelector {
+    app: AppStateInterface;
+}
 
-export const selectIsFoundMarkersShown = (state: RootState): AppStateInterface['isFoundMarkersShown'] => state.app.isFoundMarkersShown;
+export const selectMarkers          = (state: StateSelector): AppStateInterface['markers'] => state.app.markers;
+export const selectSkillBookMarkers = (state: StateSelector): AppStateInterface['markers'] => state.app.markers.filter((marker: MarkerInterface) => marker.type === typeMap.SkillBook);
+export const selectSnowGlobeMarkers = (state: StateSelector): AppStateInterface['markers'] => state.app.markers.filter((marker: MarkerInterface) => marker.type === typeMap.SnowGlobe);
+
+export const selectIsFoundMarkersShown = (state: StateSelector): AppStateInterface['isFoundMarkersShown'] => state.app.isFoundMarkersShown;
 
 export default appSlice.reducer;
