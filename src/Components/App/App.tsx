@@ -50,7 +50,7 @@ const App = (): JSX.Element => {
         }
     });
 
-    const handleTypeClick = (type: MarkerType) => (): void => { // eslint-disable-line @typescript-eslint/no-unused-vars
+    const handleTypeClick = (type: MarkerType): void => { // eslint-disable-line @typescript-eslint/no-unused-vars
 
         handleSettingsDrawerClose();
 
