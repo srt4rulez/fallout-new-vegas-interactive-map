@@ -11,5 +11,7 @@ jobs:
                   cache: 'yarn'
             - run: yarn install
             - run: yarn lint
+              env:
+                  NODE_ENV: development
             - run: yarn ts
 
