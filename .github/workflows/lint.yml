@@ -1,27 +1,17 @@
-name: Lint
-on: [push, pull_request]
+name: Yarn Linting & Typescript Checking
+on: [pull_request]
 jobs:
-    lint:
+    linting:
         runs-on: ubuntu-latest
-        container:
-            image: node:14
-            env:
-                NODE_ENV: development
         steps:
-            -
-                name: Checkout 🛎️
-                uses: actions/checkout@v2.3.1
-                with:
-                    persist-credentials: false
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: '14'
+                  cache: 'yarn'
+            - run: yarn install
+            - run: yarn lint
+              env:
+                  NODE_ENV: development
+            - run: yarn ts
 
-            -
-                name: Install
-                run: yarn install
-
-            -
-                name: Lint
-                run: yarn lint
-
-            -
-                name: Test
-                run: yarn test

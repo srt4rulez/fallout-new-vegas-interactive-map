@@ -41,7 +41,7 @@ press enter to enable debug mode. Clicking on the map will now log the latitude 
 To work on this repository, install [Docker](https://www.docker.com/), then run the following command in the project root:
 
 ```
-./run.sh
+./run-docker-development.sh
 ```
 
 This will start up a docker container that has everything we need to develop.  

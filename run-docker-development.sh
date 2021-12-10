@@ -1,11 +1,11 @@
 sudo docker run \
     --interactive \
     --tty \
-    --name fonv_im \
+    --name fallout-new-vegas-interactive-map \
     --rm \
     --publish 3000:3000 \
-    --volume "/$(pwd):/code" \
-    --workdir /code \
+    --volume "/$(pwd):/fallout-new-vegas-interactive-map" \
+    --workdir /fallout-new-vegas-interactive-map \
     --user node \
     --env NODE_ENV=development \
     node:14 \
