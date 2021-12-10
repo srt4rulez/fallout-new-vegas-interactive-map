@@ -45,6 +45,7 @@
         "web-vitals": "^0.2.4"
     },
     "scripts": {
+        "ts": "tsc",
         "lint": "eslint --cache \"./**/*.{js,jsx,ts,tsx}\"",
         "lint:fix": "eslint --cache --fix \"./**/*.{js,jsx,ts,tsx}\"",
         "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
