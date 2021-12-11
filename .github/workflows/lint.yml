@@ -14,4 +14,3 @@ jobs:
               env:
                   NODE_ENV: development
             - run: yarn ts
-

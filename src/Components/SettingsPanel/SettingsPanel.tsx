@@ -23,26 +23,31 @@ import {
 } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-regular-svg-icons';
+import {
+    selectIsFoundMarkersShown,
+    selectSkillBookMarkers,
+    selectSnowGlobeMarkers,
+    toggleShowFoundMarkers,
+    filterMarkerType,
+    showAllMarkers,
+    toggleMarkerAsFound,
+} from 'Slices/appSlice';
+import {
+    useAppDispatch,
+    useAppSelector,
+} from 'hooks';
 
 export interface SettingsPanelProps {
     className?: string;
-    markers: Array<MarkerInterface>;
-    onMarkButtonClick?: MarkerTypePanelProps['onMarkButtonClick'];
-    isFoundMarkersShown?: boolean;
-    onClickShowFoundMarkers?: React.InputHTMLAttributes<Element>['onChange'];
     appVersion?: string;
     onMarkerTitleClick?: MarkerTypePanelProps['onMarkerTitleClick'];
     onShowAllClick?: React.DOMAttributes<Element>['onClick'];
-    onTypeClick?: (type: MarkerType) => MarkerTypePanelProps['onTypeClick'];
+    onTypeClick?: (type: MarkerType) => void;
     isLargeScreen?: boolean;
 }
 
 const SettingsPanel = ({
     className = '',
-    markers = [],
-    onMarkButtonClick = undefined,
-    isFoundMarkersShown = false,
-    onClickShowFoundMarkers = undefined,
     appVersion = '',
     onMarkerTitleClick = undefined,
     onShowAllClick = undefined,
@@ -51,8 +56,34 @@ const SettingsPanel = ({
     // ...props
 }: SettingsPanelProps): JSX.Element => {
 
-    const skillBookMarkers = markers.filter((marker) => marker.type === typeMap.SkillBook);
-    const snowGlobeMarkers = markers.filter((marker) => marker.type === typeMap.SnowGlobe);
+    const isFoundMarkersShown = useAppSelector(selectIsFoundMarkersShown);
+
+    const skillBookMarkers = useAppSelector(selectSkillBookMarkers);
+    const snowGlobeMarkers = useAppSelector(selectSnowGlobeMarkers);
+
+    const dispatch = useAppDispatch();
+
+    const handleShowAllClick = (event: React.MouseEvent): void => {
+        dispatch(showAllMarkers());
+        if (onShowAllClick) {
+            onShowAllClick(event);
+        }
+    };
+
+    const handleClickShowFoundMarkers = (): void => {
+        dispatch(toggleShowFoundMarkers());
+    };
+
+    const handleTypeClick = (type: MarkerType) => (): void => {
+        dispatch(filterMarkerType(type));
+        if (onTypeClick) {
+            onTypeClick(type);
+        }
+    };
+
+    const handleMarkButtonClick = (marker: MarkerInterface): () => void => React.useCallback((): void => {
+        dispatch(toggleMarkerAsFound(marker));
+    }, []);
 
     return (
 
@@ -99,7 +130,7 @@ const SettingsPanel = ({
                     >
 
                         <Button
-                            onClick={onShowAllClick}
+                            onClick={handleShowAllClick}
                             leftIcon={(
                                 <FontAwesomeIcon
                                     icon={faEye}
@@ -114,7 +145,7 @@ const SettingsPanel = ({
 
                     <Checkbox
                         isChecked={isFoundMarkersShown}
-                        onChange={onClickShowFoundMarkers}
+                        onChange={handleClickShowFoundMarkers}
                         size="lg"
                     >
 
@@ -143,8 +174,8 @@ const SettingsPanel = ({
                     className="settings-panel__marker-type-panel"
                     type={typeMap.SkillBook}
                     markers={skillBookMarkers}
-                    onMarkButtonClick={onMarkButtonClick}
-                    onTypeClick={onTypeClick ? onTypeClick(typeMap.SkillBook) : undefined}
+                    onMarkButtonClick={handleMarkButtonClick}
+                    onTypeClick={handleTypeClick(typeMap.SkillBook)}
                     onMarkerTitleClick={onMarkerTitleClick}
                 />
 
@@ -152,8 +183,8 @@ const SettingsPanel = ({
                     className="settings-panel__marker-type-panel"
                     type={typeMap.SnowGlobe}
                     markers={snowGlobeMarkers}
-                    onMarkButtonClick={onMarkButtonClick}
-                    onTypeClick={onTypeClick ? onTypeClick(typeMap.SnowGlobe) : undefined}
+                    onMarkButtonClick={handleMarkButtonClick}
+                    onTypeClick={handleTypeClick(typeMap.SnowGlobe)}
                     onMarkerTitleClick={onMarkerTitleClick}
                 />
 
