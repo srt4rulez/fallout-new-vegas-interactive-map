@@ -21,71 +21,22 @@ module.exports = {
         'eslint:recommended',
         'plugin:react/recommended',
         'plugin:jest/recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        'plugin:react-redux/recommended',
     ],
-    'parser': '@babel/eslint-parser',
+    'parser': '@typescript-eslint/parser',
     'parserOptions': {
-        'ecmaFeatures': {
-            'jsx': true
-        },
-        'ecmaVersion': 12,
-        'sourceType': 'module'
+        'tsconfigRootDir': __dirname,
+        'project': ['./tsconfig.json'],
     },
     'plugins': [
         'react',
         'jest',
         '@typescript-eslint',
+        'react-redux',
     ],
     'overrides': [
-        {
-            'files': ['**/*.ts', '**/*.tsx'],
-            'parser': '@typescript-eslint/parser',
-            'parserOptions': {
-                'tsconfigRootDir': __dirname,
-                'project': ['./tsconfig.json'],
-            },
-            'extends': [
-                'plugin:@typescript-eslint/recommended',
-                'plugin:@typescript-eslint/recommended-requiring-type-checking',
-            ],
-            'rules': {
-                'react/require-default-props': 'off',
-                '@typescript-eslint/array-type': [
-                    'error',
-                    {
-                        'default': 'generic',
-                    },
-                ],
-                '@typescript-eslint/consistent-type-definitions': [
-                    'error',
-                    'interface',
-                ],
-                '@typescript-eslint/consistent-type-assertions': [
-                    'error',
-                    {
-                        'assertionStyle': 'as',
-                    },
-                ],
-                '@typescript-eslint/consistent-type-imports': [
-                    'error',
-                ],
-                '@typescript-eslint/explicit-function-return-type': [
-                    'error',
-                ],
-                '@typescript-eslint/explicit-module-boundary-types': [
-                    'error',
-                ],
-                '@typescript-eslint/member-delimiter-style': [
-                    'error',
-                ],
-                '@typescript-eslint/type-annotation-spacing': [
-                    'error',
-                ],
-                '@typescript-eslint/consistent-indexed-object-style': [
-                    'error',
-                    'index-signature',
-                ],
-            },
-        },
         {
             'files': '**/*.d.ts',
             'rules': {
@@ -302,9 +253,6 @@ module.exports = {
         'react/react-in-jsx-scope': [
             'error',
         ],
-        'react/require-default-props': [
-            'error',
-        ],
         'react/require-render-return': [
             'error',
         ],
@@ -363,9 +311,6 @@ module.exports = {
                 'when': 'multiline',
             },
         ],
-        'react/jsx-no-bind': [
-            'error',
-        ],
         'react/jsx-no-comment-textnodes': [
             'error',
         ],
@@ -418,6 +363,41 @@ module.exports = {
                 'logical': 'parens-new-line',
                 'prop': 'parens-new-line',
             },
+        ],
+        '@typescript-eslint/array-type': [
+            'error',
+            {
+                'default': 'generic',
+            },
+        ],
+        '@typescript-eslint/consistent-type-definitions': [
+            'error',
+            'interface',
+        ],
+        '@typescript-eslint/consistent-type-assertions': [
+            'error',
+            {
+                'assertionStyle': 'as',
+            },
+        ],
+        '@typescript-eslint/consistent-type-imports': [
+            'error',
+        ],
+        '@typescript-eslint/explicit-function-return-type': [
+            'error',
+        ],
+        '@typescript-eslint/explicit-module-boundary-types': [
+            'error',
+        ],
+        '@typescript-eslint/member-delimiter-style': [
+            'error',
+        ],
+        '@typescript-eslint/type-annotation-spacing': [
+            'error',
+        ],
+        '@typescript-eslint/consistent-indexed-object-style': [
+            'error',
+            'index-signature',
         ],
     }
 };

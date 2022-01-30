@@ -188,4 +188,4 @@ const MojaveWastelandMarker = ({
 
 };
 
-export default MojaveWastelandMarker;
+export default React.memo(MojaveWastelandMarker);

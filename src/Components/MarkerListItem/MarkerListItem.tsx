@@ -74,4 +74,4 @@ const MarkerListItem = ({
 
 };
 
-export default MarkerListItem;
+export default React.memo(MarkerListItem);
