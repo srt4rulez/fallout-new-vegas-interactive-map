@@ -1,0 +1,12 @@
+{
+    "extends": [
+        "config:base",
+        ":enableVulnerabilityAlerts",
+        ":assignAndReview(srt4rulez)",
+        ":enableVulnerabilityAlertsWithLabel(security)",
+        ":label(dependencies)",
+        ":semanticCommits",
+        ":semanticCommitTypeAll(chore)"
+    ],
+    "rangeStrategy": "update-lockfile"
+}
