@@ -22,7 +22,7 @@ export const appSlice = createSlice({
     name: 'app',
     initialState: initialState,
     reducers: {
-        toggleMarkerAsFound: (state: AppStateInterface, action: PayloadAction<MarkerInterface>) => {
+        toggleMarkerAsFound: (state: AppStateInterface, action: PayloadAction<MarkerInterface>): void => {
             const marker = action.payload;
 
             const index = state.markers.findIndex((item) => item.id === marker.id);
@@ -31,17 +31,17 @@ export const appSlice = createSlice({
                 state.markers[index].isFound = !(state.markers[index].isFound);
             }
         },
-        toggleShowFoundMarkers: (state: AppStateInterface) => {
+        toggleShowFoundMarkers: (state: AppStateInterface): void => {
             state.isFoundMarkersShown = !state.isFoundMarkersShown;
         },
-        filterMarkerType: (state: AppStateInterface, action: PayloadAction<MarkerType>) => {
+        filterMarkerType: (state: AppStateInterface, action: PayloadAction<MarkerType>): void => {
             const type = action.payload;
 
             state.markers.forEach((marker) => {
                 marker.isHidden = marker.type !== type; // hide if the clicked type is not the type this marker is.
             });
         },
-        showAllMarkers: (state: AppStateInterface) => {
+        showAllMarkers: (state: AppStateInterface): void => {
             state.markers.forEach((marker) => {
                 marker.isHidden = false;
             });
