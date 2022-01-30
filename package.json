@@ -6,7 +6,7 @@
     "dependencies": {
         "@babel/core": "^7.16.7",
         "@babel/eslint-parser": "^7.16.5",
-        "@chakra-ui/react": "^1.6.10",
+        "@chakra-ui/react": "^1.8.1",
         "@emotion/react": "^11",
         "@emotion/styled": "^11",
         "@fontsource/roboto": "^4.5.1",
