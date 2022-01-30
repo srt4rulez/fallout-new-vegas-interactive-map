@@ -88,6 +88,9 @@ let isFoundMarkersShown = false;
 if (window.localStorage.getItem('isFoundMarkersShown')) {
     isFoundMarkersShown = Boolean(window.localStorage.getItem('isFoundMarkersShown'));
 
+    // Set the old data as v1_isFoundMarkersShown in case we need it again.
+    window.localStorage.setItem('v1_isFoundMarkersShown', window.localStorage.getItem('isFoundMarkersShown') || '');
+
     // Now that we migrated it, remove it so this code doesn't run again.
     window.localStorage.removeItem('isFoundMarkersShown');
 
@@ -109,6 +112,9 @@ if (window.localStorage.getItem('markers')) {
             };
         }
     });
+
+    // Set the old data as v1_markers in case we need it again.
+    window.localStorage.setItem('v1_markers', window.localStorage.getItem('markers') || '');
 
     // Now that we migrated it, remove it so this code doesn't run again.
     window.localStorage.removeItem('markers');
