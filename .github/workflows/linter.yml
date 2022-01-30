@@ -1,0 +1,56 @@
+name: Lint Code Base
+
+on: [pull_request]
+
+jobs:
+
+    yarn-lint-ts-build:
+        name: Eslint + Typescript + Build with Yarn
+        runs-on: ubuntu-latest
+
+        steps:
+            -
+                uses: actions/checkout@v2
+            -
+                uses: actions/setup-node@v2
+                with:
+                    node-version: '16'
+                    cache: 'yarn'
+            -
+                run: yarn install
+            -
+                run: yarn lint
+                env:
+                    NODE_ENV: development
+            -
+                run: yarn ts
+            -
+                run: yarn build
+                env:
+                    NODE_ENV: production
+
+    super-linter:
+        name: Lint with Super-Linter
+        runs-on: ubuntu-latest
+
+        steps:
+            -
+                name: Checkout Code
+                uses: actions/checkout@v2
+                with:
+                    # Full git history is needed to get a proper list of changed files within `super-linter`
+                    fetch-depth: 0
+            -
+                name: Lint Code Base
+                uses: github/super-linter/slim@v4
+                env:
+                    VALIDATE_BASH: true
+                    VALIDATE_BASH_EXEC: true
+                    VALIDATE_EDITORCONFIG: true
+                    VALIDATE_GITHUB_ACTIONS: true
+                    VALIDATE_GITLEAKS: true
+                    VALIDATE_HTML: true
+                    VALIDATE_JSCPD: true
+                    VALIDATE_YAML: true
+                    DEFAULT_BRANCH: main
+                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
