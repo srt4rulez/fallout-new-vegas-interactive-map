@@ -68,6 +68,6 @@
         ]
     },
     "resolutions": {
-        "react-scripts/eslint-webpack-plugin": "2.3.0"
+        "react-scripts/eslint-webpack-plugin": "3.1.1"
     }
 }
