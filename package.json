@@ -37,7 +37,7 @@
         "framer-motion": "^4",
         "leaflet": "^1.7.1",
         "leaflet-defaulticon-compatibility": "^0.1.1",
-        "node-sass": "^4.0.0",
+        "node-sass": "^7.0.0",
         "prop-types": "^15.8.1",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
