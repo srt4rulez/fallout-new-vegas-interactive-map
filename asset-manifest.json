@@ -1,27 +1,31 @@
 {
   "files": {
-    "main.css": "./static/css/main.9bc1d301.chunk.css",
-    "main.js": "./static/js/main.9be237bd.chunk.js",
-    "main.js.map": "./static/js/main.9be237bd.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.2ecde919.js",
-    "runtime-main.js.map": "./static/js/runtime-main.2ecde919.js.map",
-    "static/css/2.f3871b97.chunk.css": "./static/css/2.f3871b97.chunk.css",
-    "static/js/2.3382f270.chunk.js": "./static/js/2.3382f270.chunk.js",
-    "static/js/2.3382f270.chunk.js.map": "./static/js/2.3382f270.chunk.js.map",
+    "main.css": "./static/css/main.e94e7afb.css",
+    "main.js": "./static/js/main.2e3bb3fe.js",
+    "static/media/mojave-wasteland-map.jpg": "./static/media/mojave-wasteland-map.a46f7234df7c3b3ba2bc.jpg",
+    "static/media/fallout-nv-logo.png": "./static/media/fallout-nv-logo.35f1fe39fa8f2cab8f26.png",
+    "static/media/roboto-all-700-normal.woff": "./static/media/roboto-all-700-normal.ef6d1d09b20b877fee4e.woff",
+    "static/media/roboto-all-400-normal.woff": "./static/media/roboto-all-400-normal.376ea5d93f71583052f6.woff",
+    "static/media/roboto-latin-700-normal.woff2": "./static/media/roboto-latin-700-normal.0682ca7f74351d42bf73.woff2",
+    "static/media/roboto-latin-400-normal.woff2": "./static/media/roboto-latin-400-normal.4673b4537a84c7f7a130.woff2",
+    "static/media/roboto-cyrillic-ext-400-normal.woff2": "./static/media/roboto-cyrillic-ext-400-normal.493afe7ae8ecfe268800.woff2",
+    "static/media/roboto-cyrillic-ext-700-normal.woff2": "./static/media/roboto-cyrillic-ext-700-normal.b816cda3107bb21c87e1.woff2",
+    "static/media/roboto-latin-ext-400-normal.woff2": "./static/media/roboto-latin-ext-400-normal.c3dcdbd5bb4d4af80817.woff2",
+    "static/media/roboto-latin-ext-700-normal.woff2": "./static/media/roboto-latin-ext-700-normal.bcf37d666ce10b3556cd.woff2",
+    "static/media/roboto-cyrillic-400-normal.woff2": "./static/media/roboto-cyrillic-400-normal.5e493812deabd1d01e60.woff2",
+    "static/media/roboto-cyrillic-700-normal.woff2": "./static/media/roboto-cyrillic-700-normal.0334efc0de1012200889.woff2",
+    "static/media/roboto-greek-400-normal.woff2": "./static/media/roboto-greek-400-normal.1cbfc636c911faa4d0ca.woff2",
+    "static/media/roboto-greek-700-normal.woff2": "./static/media/roboto-greek-700-normal.3292e831b18d0c23d609.woff2",
+    "static/media/roboto-vietnamese-400-normal.woff2": "./static/media/roboto-vietnamese-400-normal.c0bec65d01f776c00c91.woff2",
+    "static/media/roboto-vietnamese-700-normal.woff2": "./static/media/roboto-vietnamese-700-normal.3096f18acebc3f07020d.woff2",
+    "static/media/roboto-greek-ext-400-normal.woff2": "./static/media/roboto-greek-ext-400-normal.bb723e8458c9c653e505.woff2",
+    "static/media/roboto-greek-ext-700-normal.woff2": "./static/media/roboto-greek-ext-700-normal.9674bc0ae12c2551d9d1.woff2",
     "index.html": "./index.html",
-    "static/css/2.f3871b97.chunk.css.map": "./static/css/2.f3871b97.chunk.css.map",
-    "static/css/main.9bc1d301.chunk.css.map": "./static/css/main.9bc1d301.chunk.css.map",
-    "static/js/2.3382f270.chunk.js.LICENSE.txt": "./static/js/2.3382f270.chunk.js.LICENSE.txt",
-    "static/media/fallout-nv-logo.35f1fe39.png": "./static/media/fallout-nv-logo.35f1fe39.png",
-    "static/media/mojave-wasteland-map.a46f7234.jpg": "./static/media/mojave-wasteland-map.a46f7234.jpg",
-    "static/media/index.css": "./static/media/roboto-vietnamese-400-normal.c0bec65d.woff2",
-    "static/media/700.css": "./static/media/roboto-vietnamese-700-normal.3096f18a.woff2"
+    "main.e94e7afb.css.map": "./static/css/main.e94e7afb.css.map",
+    "main.2e3bb3fe.js.map": "./static/js/main.2e3bb3fe.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.2ecde919.js",
-    "static/css/2.f3871b97.chunk.css",
-    "static/js/2.3382f270.chunk.js",
-    "static/css/main.9bc1d301.chunk.css",
-    "static/js/main.9be237bd.chunk.js"
+    "static/css/main.e94e7afb.css",
+    "static/js/main.2e3bb3fe.js"
   ]
 }
