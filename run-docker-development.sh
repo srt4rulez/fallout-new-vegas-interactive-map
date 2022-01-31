@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker_image="node:14"
+docker_image="node:16"
 repo_name="fallout-new-vegas-interactive-map"
 
 # https://docs.docker.com/engine/reference/commandline/run/
