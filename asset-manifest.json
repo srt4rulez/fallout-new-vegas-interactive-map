@@ -6,12 +6,12 @@
     "runtime-main.js": "./static/js/runtime-main.2ecde919.js",
     "runtime-main.js.map": "./static/js/runtime-main.2ecde919.js.map",
     "static/css/2.f3871b97.chunk.css": "./static/css/2.f3871b97.chunk.css",
-    "static/js/2.d3951988.chunk.js": "./static/js/2.d3951988.chunk.js",
-    "static/js/2.d3951988.chunk.js.map": "./static/js/2.d3951988.chunk.js.map",
+    "static/js/2.3382f270.chunk.js": "./static/js/2.3382f270.chunk.js",
+    "static/js/2.3382f270.chunk.js.map": "./static/js/2.3382f270.chunk.js.map",
     "index.html": "./index.html",
     "static/css/2.f3871b97.chunk.css.map": "./static/css/2.f3871b97.chunk.css.map",
     "static/css/main.9bc1d301.chunk.css.map": "./static/css/main.9bc1d301.chunk.css.map",
-    "static/js/2.d3951988.chunk.js.LICENSE.txt": "./static/js/2.d3951988.chunk.js.LICENSE.txt",
+    "static/js/2.3382f270.chunk.js.LICENSE.txt": "./static/js/2.3382f270.chunk.js.LICENSE.txt",
     "static/media/fallout-nv-logo.35f1fe39.png": "./static/media/fallout-nv-logo.35f1fe39.png",
     "static/media/mojave-wasteland-map.a46f7234.jpg": "./static/media/mojave-wasteland-map.a46f7234.jpg",
     "static/media/index.css": "./static/media/roboto-vietnamese-400-normal.c0bec65d.woff2",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.2ecde919.js",
     "static/css/2.f3871b97.chunk.css",
-    "static/js/2.d3951988.chunk.js",
+    "static/js/2.3382f270.chunk.js",
     "static/css/main.9bc1d301.chunk.css",
     "static/js/main.9be237bd.chunk.js"
   ]
