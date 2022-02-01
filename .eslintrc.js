@@ -4,12 +4,12 @@ module.exports = {
     'env': {
         'browser': true,
         'es2021': true,
-        'jest/globals': true,
+        // 'jest/globals': true,
     },
     'settings': {
-        'jest': {
-            'version': '26.6.3'
-        },
+        // 'jest': {
+        //     'version': '26.6.3'
+        // },
         'react': {
             'createClass': 'createReactClass', // Regex for Component Factory to use, defaults to 'createReactClass'
             'pragma':   'React',  // Pragma to use, default to 'React'
@@ -20,7 +20,7 @@ module.exports = {
     'extends': [
         'eslint:recommended',
         'plugin:react/recommended',
-        'plugin:jest/recommended',
+        // 'plugin:jest/recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:react-redux/recommended',
@@ -32,7 +32,7 @@ module.exports = {
     },
     'plugins': [
         'react',
-        'jest',
+        // 'jest',
         '@typescript-eslint',
         'react-redux',
     ],
