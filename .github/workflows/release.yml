@@ -1,0 +1,35 @@
+name: Release
+on:
+    push:
+        branches:
+            - main
+jobs:
+    release:
+        name: Release
+        runs-on: ubuntu-latest
+        steps:
+            -
+                uses: actions/checkout@v2
+                with:
+                    fetch-depth: 0
+            -
+                uses: actions/setup-node@v2
+                with:
+                    node-version: '16'
+                    cache: 'yarn'
+            -
+                run: yarn install
+            -
+                run: yarn lint
+                env:
+                    NODE_ENV: development
+            -
+                run: yarn ts
+            -
+                run: yarn build
+                env:
+                    NODE_ENV: production
+            -
+                run: npx semantic-release
+                env:
+                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
