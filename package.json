@@ -44,7 +44,7 @@
         "ts": "tsc",
         "lint": "eslint --cache \"./**/*.{ts,tsx}\"",
         "lint:fix": "eslint --cache --fix \"./**/*.{ts,tsx}\"",
-        "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
+        "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
@@ -60,8 +60,5 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
-    },
-    "resolutions": {
-        "react-scripts/eslint-webpack-plugin": "2.3.0"
     }
 }
