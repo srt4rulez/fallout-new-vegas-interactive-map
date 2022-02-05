@@ -1,5 +1,8 @@
 # Fallout: New Vegas - Interactive Map
 
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 [https://srt4rulez.github.io/fallout-new-vegas-interactive-map](https://srt4rulez.github.io/fallout-new-vegas-interactive-map)
 
 An interactive map of the [Mojave Wasteland](https://fallout.fandom.com/wiki/Mojave_Wasteland) in Fallout: New Vegas. 
