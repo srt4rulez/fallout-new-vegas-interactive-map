@@ -31,7 +31,7 @@
         "eslint": "^8.0.0",
         "eslint-plugin-react": "^7.28.0",
         "eslint-plugin-react-redux": "^4.0.0",
-        "framer-motion": "^4",
+        "framer-motion": "^6.0.0",
         "leaflet": "^1.7.1",
         "leaflet-defaulticon-compatibility": "^0.1.1",
         "node-sass": "^7.0.1",
