@@ -2,11 +2,15 @@
     "extends": [
         "config:base",
         ":enableVulnerabilityAlerts",
-        ":assignAndReview(srt4rulez)",
+        ":reviewer(srt4rulez)",
         ":enableVulnerabilityAlertsWithLabel(security)",
         ":label(dependencies)",
         ":semanticCommits",
-        ":semanticCommitTypeAll(chore)"
+        ":semanticCommitTypeAll(chore)",
+        ":automergePr",
+        ":automergeLinters",
+        ":automergeTesters",
+        ":automergeTypes"
     ],
     "rangeStrategy": "update-lockfile"
 }
