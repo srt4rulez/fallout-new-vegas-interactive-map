@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import 'leaflet-defaulticon-compatibility';
 import './index.scss';
 import App from 'Components/App/App';
@@ -11,7 +11,11 @@ import { Provider } from 'react-redux';
 import store, { persistor } from './store';
 import { PersistGate } from 'redux-persist/integration/react';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(
+    document.getElementById('root') as HTMLElement
+);
+
+root.render(
     <React.StrictMode>
         <Provider
             store={store}
@@ -26,6 +30,5 @@ ReactDOM.render(
                 </ChakraProvider>
             </PersistGate>
         </Provider>
-    </React.StrictMode>,
-    document.getElementById('root')
+    </React.StrictMode>
 );
