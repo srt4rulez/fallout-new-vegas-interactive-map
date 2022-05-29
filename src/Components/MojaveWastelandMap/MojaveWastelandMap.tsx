@@ -5,9 +5,6 @@ import {
     MapContainer,
     ImageOverlay,
 } from 'react-leaflet';
-import type {
-    MapContainerProps,
-} from 'react-leaflet';
 import * as L from 'leaflet';
 import mojaveWastelandMapImageSrc from './mojave-wasteland-map.jpg';
 import MojaveWastelandMarker from 'Components/MojaveWastelandMarker/MojaveWastelandMarker';
@@ -36,13 +33,11 @@ const bounds = new L.LatLngBounds({
 
 export interface MojaveWastelandMapProps {
     className?: string;
-    onMapCreation?: MapContainerProps['whenCreated'];
     onMarkerAdd?: (marker: MarkerInterface) => MojaveWastelandMarkerProps['onAdd'];
 }
 
 const MojaveWastelandMap = ({
     className = '',
-    onMapCreation = undefined,
     onMarkerAdd = undefined,
 }: MojaveWastelandMapProps): JSX.Element => {
 
@@ -66,7 +61,6 @@ const MojaveWastelandMap = ({
             maxZoom={4}
             crs={L.CRS.Simple}
             bounds={bounds}
-            whenCreated={onMapCreation} // eslint-disable-line react/jsx-handler-names
         >
 
             <ImageOverlay
