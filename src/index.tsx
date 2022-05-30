@@ -10,6 +10,9 @@ import '@fontsource/roboto/700.css';
 import { Provider } from 'react-redux';
 import store, { persistor } from './store';
 import { PersistGate } from 'redux-persist/integration/react';
+import { createStandaloneToast } from '@chakra-ui/toast';
+
+const { ToastContainer } = createStandaloneToast();
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -27,6 +30,7 @@ root.render(
                     theme={theme}
                 >
                     <App />
+                    <ToastContainer />
                 </ChakraProvider>
             </PersistGate>
         </Provider>

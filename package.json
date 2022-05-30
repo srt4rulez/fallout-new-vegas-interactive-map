@@ -4,7 +4,7 @@
     "private": true,
     "homepage": ".",
     "dependencies": {
-        "@chakra-ui/react": "^1.6.10",
+        "@chakra-ui/react": "^2.1.2",
         "@emotion/react": "^11",
         "@emotion/styled": "^11",
         "@fontsource/roboto": "^4.5.1",
