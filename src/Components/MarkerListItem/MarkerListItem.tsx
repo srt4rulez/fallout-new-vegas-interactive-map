@@ -8,7 +8,7 @@ import {
 } from '@chakra-ui/react';
 
 export interface MarkerListItemProps {
-    tag?: React.ComponentType | keyof JSX.IntrinsicElements;
+    tag?: React.ComponentType<React.PropsWithChildren<unknown>> | keyof JSX.IntrinsicElements;
     className?: string;
     isFound?: boolean;
     onMarkCheckboxChange?: React.InputHTMLAttributes<Element>['onChange'];

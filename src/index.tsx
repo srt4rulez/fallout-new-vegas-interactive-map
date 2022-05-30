@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import 'leaflet-defaulticon-compatibility';
 import './index.scss';
 import App from 'Components/App/App';
@@ -10,8 +10,15 @@ import '@fontsource/roboto/700.css';
 import { Provider } from 'react-redux';
 import store, { persistor } from './store';
 import { PersistGate } from 'redux-persist/integration/react';
+import { createStandaloneToast } from '@chakra-ui/toast';
 
-ReactDOM.render(
+const { ToastContainer } = createStandaloneToast();
+
+const root = ReactDOM.createRoot(
+    document.getElementById('root') as HTMLElement
+);
+
+root.render(
     <React.StrictMode>
         <Provider
             store={store}
@@ -23,9 +30,9 @@ ReactDOM.render(
                     theme={theme}
                 >
                     <App />
+                    <ToastContainer />
                 </ChakraProvider>
             </PersistGate>
         </Provider>
-    </React.StrictMode>,
-    document.getElementById('root')
+    </React.StrictMode>
 );

@@ -62,17 +62,6 @@ const App = (): JSX.Element => {
 
     };
 
-    const handleMapCreation = (map: L.Map): void => {
-
-        map.on('click', (event: L.LeafletMouseEvent) => {
-            // Allow figuring out what lat + lng we are clicking.
-            if ((window as any).debug === true) { // eslint-disable-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
-                console.log(event.latlng);
-            }
-        });
-
-    };
-
     const handleMarkerTitleClick = (markerData: MarkerInterface = {}): () => void => React.useCallback((): void => {
 
         const marker = markerData.id && markersRef.current[markerData.id] || null;
@@ -185,7 +174,6 @@ const App = (): JSX.Element => {
 
             <MojaveWastelandMap
                 className="app__mojave-wasteland-map"
-                onMapCreation={handleMapCreation}
                 onMarkerAdd={handleMarkerAdd}
             />
 
