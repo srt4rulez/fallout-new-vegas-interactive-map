@@ -58,11 +58,10 @@ const MojaveWastelandMarker = ({
     const MarkerIcon = (
         <Box
             // color will be inherited from FontAwesomeIcon
-            sx={{
-                // use css variable directly
+            style={{
                 color: type ? `var(--chakra-colors-${typeColorMap[type].replace('.', '-')})` : '',
+                fontSize: iconSizeY,
             }}
-            fontSize={iconSizeY}
             className={classNames([
                 'mojave-wasteland-marker__icon',
             ])}
