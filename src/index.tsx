@@ -26,11 +26,11 @@ root.render(
             <PersistGate
                 persistor={persistor}
             >
+                <ToastContainer />
                 <ChakraProvider
                     theme={theme}
                 >
                     <App />
-                    <ToastContainer />
                 </ChakraProvider>
             </PersistGate>
         </Provider>
