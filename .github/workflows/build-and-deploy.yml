@@ -28,7 +28,7 @@ jobs:
                     NODE_ENV: production
 
             -
-                uses: JamesIves/github-pages-deploy-action@v4.3.3
+                uses: JamesIves/github-pages-deploy-action@v4.3.4
                 with:
                     branch: gh-pages
                     folder: build
