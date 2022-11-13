@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.ca85706d.css",
-    "main.js": "./static/js/main.90a188bc.js",
+    "main.js": "./static/js/main.c1b7ad0e.js",
     "static/media/mojave-wasteland-map.jpg": "./static/media/mojave-wasteland-map.a46f7234df7c3b3ba2bc.jpg",
     "static/media/fallout-nv-logo.png": "./static/media/fallout-nv-logo.35f1fe39fa8f2cab8f26.png",
     "static/media/roboto-all-700-normal.woff": "./static/media/roboto-all-700-normal.a457fde362a540fcadff.woff",
@@ -22,10 +22,10 @@
     "static/media/roboto-greek-ext-700-normal.woff2": "./static/media/roboto-greek-ext-700-normal.bd9854c751441ccc1a70.woff2",
     "index.html": "./index.html",
     "main.ca85706d.css.map": "./static/css/main.ca85706d.css.map",
-    "main.90a188bc.js.map": "./static/js/main.90a188bc.js.map"
+    "main.c1b7ad0e.js.map": "./static/js/main.c1b7ad0e.js.map"
   },
   "entrypoints": [
     "static/css/main.ca85706d.css",
-    "static/js/main.90a188bc.js"
+    "static/js/main.c1b7ad0e.js"
   ]
 }
